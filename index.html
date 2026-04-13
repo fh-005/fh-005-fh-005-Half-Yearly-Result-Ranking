@@ -3,666 +3,1320 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Duaripara Government College — Result 2026</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<title>Duaripara Govt. College — Result 2026</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg0:#020617;--bg1:#0a0f1e;--bg2:#0f172a;--bg3:#1e293b;--bg4:#263348;
-  --accent:#6366f1;--accent2:#8b5cf6;--accent3:#10b981;--accent4:#f59e0b;
-  --text:#f1f5f9;--text2:#94a3b8;--text3:#64748b;
-  --border:rgba(99,102,241,0.18);--border2:rgba(99,102,241,0.08);
-  --r:14px;--r2:9px;--r3:6px;--shadow:0 4px 32px rgba(0,0,0,0.5);
+  --emerald:#059669;--emerald-l:#d1fae5;--emerald-d:#064e3b;
+  --sky:#0284c7;--sky-l:#e0f2fe;--sky-d:#0c4a6e;
+  --amber:#d97706;--amber-l:#fef3c7;
+  --rose:#e11d48;--rose-l:#ffe4e6;
+  --violet:#7c3aed;--violet-l:#ede9fe;
+  --slate:#334155;--slate-l:#f8fafc;--slate-m:#94a3b8;
+  --white:#ffffff;--ink:#0f172a;
+  --border:#e2e8f0;--border2:#f1f5f9;
+  --r:12px;--r2:8px;--r3:6px;
+  --shadow:0 1px 3px rgba(0,0,0,0.08),0 4px 16px rgba(0,0,0,0.06);
+  --shadow2:0 0 0 3px rgba(2,132,199,0.15);
+  --font:'Plus Jakarta Sans',system-ui,sans-serif;
+  --mono:'DM Mono',monospace;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Space Grotesk',system-ui,sans-serif;background:var(--bg0);color:var(--text);min-height:100vh;line-height:1.5}
-::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:3px}
-.app{display:flex;flex-direction:column;min-height:100vh}
-.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--bg0) 0%,#0d1033 60%,var(--bg0) 100%);border-bottom:1px solid var(--border);padding:40px 28px 32px}
-.hero-glow{position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(99,102,241,0.12) 0%,transparent 70%);pointer-events:none}
-.hero-inner{max-width:1280px;margin:0 auto;position:relative;z-index:1}
-.hero-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(99,102,241,0.14);border:1px solid rgba(99,102,241,0.35);padding:4px 14px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#a5b4fc;margin-bottom:14px}
-.hero h1{font-size:clamp(20px,4vw,38px);font-weight:700;line-height:1.15;background:linear-gradient(135deg,#e0e7ff 0%,#a5b4fc 50%,#c4b5fd 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
-.hero-sub{color:var(--text2);font-size:14px}
-.hero-stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.hero-stat{background:rgba(255,255,255,0.04);border:1px solid var(--border2);border-radius:var(--r2);padding:14px 22px;backdrop-filter:blur(12px);transition:border-color 0.2s,background 0.2s}
-.hero-stat:hover{border-color:var(--border);background:rgba(255,255,255,0.07)}
-.hero-stat .val{font-size:26px;font-weight:700;color:var(--accent3)}
-.hero-stat .lbl{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px}
-.nav{background:rgba(10,15,30,0.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--border2);display:flex;gap:0;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:200;padding:0 28px}
-.nav::-webkit-scrollbar{display:none}
-.nav-btn{background:none;border:none;color:var(--text3);font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:600;padding:15px 20px;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.2s;letter-spacing:0.02em}
-.nav-btn:hover{color:var(--text2)}
-.nav-btn.active{color:#a5b4fc;border-bottom-color:var(--accent)}
-.main{max-width:1280px;margin:0 auto;padding:28px;flex:1;width:100%}
-.sec-title{font-size:17px;font-weight:700;margin-bottom:20px;color:var(--text);display:flex;align-items:center;gap:10px}
-.sec-title::after{content:'';flex:1;height:1px;background:var(--border2)}
-.card{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r);padding:20px;transition:border-color 0.2s;margin-bottom:18px}
-.card:hover{border-color:var(--border)}
-.card-title{font-size:13px;color:var(--text2);font-weight:600;margin-bottom:14px}
-.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:18px;margin-bottom:18px}
-.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:14px;margin-bottom:20px}
-.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:12px;margin-bottom:20px}
-.g6{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:12px;margin-bottom:20px}
-.stat-card{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r2);padding:16px 18px;transition:all 0.2s}
-.stat-card:hover{border-color:var(--border);transform:translateY(-2px)}
-.stat-card .sv{font-size:26px;font-weight:700}
-.stat-card .sl{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px}
-.subj-card{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:16px;transition:all 0.2s}
-.subj-card:hover{border-color:var(--border);transform:translateY(-2px)}
-.subj-card .sc-name{font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;font-weight:600}
-.subj-card .sc-avg{font-size:30px;font-weight:700}
-.subj-card .sc-bar{height:4px;border-radius:2px;background:var(--bg4);margin-top:10px;overflow:hidden}
-.subj-card .sc-fill{height:100%;border-radius:2px}
-.subj-card .sc-meta{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--text3)}
-.chart-wrap{position:relative;width:100%}
-.tbl-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--border2);margin-bottom:16px}
-table{width:100%;border-collapse:collapse;font-size:13px}
-thead{position:sticky;top:0;z-index:10}
-th{background:var(--bg3);color:var(--text3);font-weight:600;text-align:left;padding:11px 13px;border-bottom:1px solid var(--border2);white-space:nowrap;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;cursor:pointer;user-select:none}
-th:hover{color:var(--text)}
-td{padding:9px 13px;border-bottom:1px solid var(--border2);vertical-align:middle}
-tr:last-child td{border-bottom:none}
-tr:hover td{background:rgba(99,102,241,0.05)}
-.rank{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;font-size:12px;font-weight:700;background:var(--bg4);color:var(--text2)}
-.rank.gold{background:rgba(250,180,0,0.14);color:#fbbf24}
-.rank.silver{background:rgba(192,192,192,0.14);color:#cbd5e1}
-.rank.bronze{background:rgba(180,100,30,0.14);color:#d97706}
-.gp{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:700}
-.gp-Ap{background:rgba(16,185,129,0.14);color:#10b981}
-.gp-A{background:rgba(6,182,212,0.14);color:#06b6d4}
-.gp-Am{background:rgba(99,102,241,0.14);color:#818cf8}
-.gp-B{background:rgba(139,92,246,0.14);color:#a78bfa}
-.gp-C{background:rgba(245,158,11,0.14);color:#f59e0b}
-.gp-D{background:rgba(249,115,22,0.14);color:#fb923c}
-.gp-F{background:rgba(239,68,68,0.14);color:#f87171}
-.search-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-.inp{background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;padding:9px 14px;border-radius:var(--r2);outline:none;flex:1;min-width:180px;transition:border-color 0.2s}
-.inp:focus{border-color:var(--accent)}
-.inp::placeholder{color:var(--text3)}
-select.inp option{background:var(--bg3)}
-.btn{background:var(--accent);color:#fff;border:none;border-radius:var(--r2);font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:600;padding:9px 18px;cursor:pointer;transition:opacity 0.2s,transform 0.1s;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
-.btn:hover{opacity:0.88}
-.btn:active{transform:scale(0.97)}
-.btn-sm{padding:5px 11px;font-size:12px}
-.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--text2)}
-.btn-ghost:hover{border-color:var(--accent);color:var(--text)}
-.btn-success{background:var(--accent3)}
-.pager{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:14px}
-.pager-btn{background:var(--bg3);border:1px solid var(--border2);color:var(--text2);font-family:'Space Grotesk',system-ui,sans-serif;font-size:12px;font-weight:600;padding:5px 11px;border-radius:var(--r3);cursor:pointer;transition:all 0.15s}
-.pager-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
-.pager-btn:hover:not(.active){border-color:var(--accent);color:var(--text)}
-.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
-.tab-btn{background:var(--bg3);border:1px solid var(--border2);color:var(--text2);font-family:'Space Grotesk',system-ui,sans-serif;font-size:12px;font-weight:600;padding:7px 14px;border-radius:var(--r3);cursor:pointer;transition:all 0.15s}
-.tab-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
-.ac-wrap{position:relative;flex:1}
-.ac-dropdown{position:absolute;top:calc(100% + 4px);left:0;right:0;z-index:100;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;box-shadow:var(--shadow)}
-.ac-item{padding:9px 14px;cursor:pointer;display:flex;gap:10px;align-items:center;font-size:13px;transition:background 0.1s}
-.ac-item:hover{background:rgba(99,102,241,0.12)}
-.ac-roll{font-size:11px;color:var(--text3);font-family:'JetBrains Mono',monospace}
-.sd-header{background:linear-gradient(135deg,var(--bg3) 0%,rgba(99,102,241,0.1) 100%);border-radius:var(--r) var(--r) 0 0;padding:24px;border-bottom:1px solid var(--border2)}
-.sd-name{font-size:22px;font-weight:700;margin-bottom:6px}
-.sd-meta{color:var(--text2);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 20px}
-.sd-meta strong{color:var(--text)}
-.sd-body{padding:20px}
-.marks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:22px}
-.mark-box{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:14px;border-left-width:3px}
-.mark-box .mb-subj{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px}
-.mark-box .mb-total{font-size:28px;font-weight:700}
-.mark-box .mb-break{font-size:11px;color:var(--text3);margin-top:4px;font-family:'JetBrains Mono',monospace}
-.vs-label{color:var(--text3);font-weight:700;font-size:20px;padding:0 6px;align-self:center}
-.diff-pos{color:#a5b4fc;font-weight:700}
-.diff-neg{color:#10b981;font-weight:700}
-.diff-zero{color:var(--text3)}
-.empty{text-align:center;padding:72px 20px;color:var(--text3)}
-.empty-icon{font-size:52px;margin-bottom:14px}
-.mono{font-family:'JetBrains Mono',monospace}
-.scroll-top{position:fixed;bottom:24px;right:24px;z-index:300;background:var(--accent);color:#fff;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(99,102,241,0.45);transition:transform 0.2s,opacity 0.2s;opacity:0}
-.scroll-top.visible{opacity:1}
-.scroll-top:hover{transform:scale(1.12)}
+body{font-family:var(--font);background:#f0f9ff;color:var(--ink);min-height:100vh;font-size:14px}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--border2)}
+::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+
+/* HERO / LANDING */
+.hero{
+  background:linear-gradient(135deg,#0c4a6e 0%,#075985 40%,#0369a1 70%,#0284c7 100%);
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:40px 20px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);
+  border-radius:999px;padding:5px 14px;font-size:12px;font-weight:600;
+  color:#bae6fd;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:20px;
+}
+.hero h1{
+  font-size:clamp(24px,5vw,48px);font-weight:800;color:#fff;
+  text-align:center;line-height:1.15;margin-bottom:8px;
+}
+.hero-sub{color:#bae6fd;text-align:center;font-size:15px;margin-bottom:40px;font-weight:500}
+.search-hero-wrap{
+  background:rgba(255,255,255,0.12);backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.2);border-radius:var(--r);
+  padding:28px;width:100%;max-width:560px;position:relative;
+}
+.search-hero-label{color:#bae6fd;font-size:13px;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.search-input-wrap{position:relative}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#7dd3fc;font-size:20px;pointer-events:none}
+.search-inp{
+  width:100%;background:rgba(255,255,255,0.95);border:2px solid transparent;
+  border-radius:var(--r2);padding:14px 14px 14px 46px;
+  font-family:var(--font);font-size:15px;font-weight:500;color:var(--ink);
+  outline:none;transition:border-color 0.2s,box-shadow 0.2s;
+}
+.search-inp:focus{border-color:#7dd3fc;box-shadow:var(--shadow2)}
+.search-inp::placeholder{color:#94a3b8}
+.ac-drop{
+  position:absolute;top:calc(100% + 6px);left:0;right:0;z-index:300;
+  background:#fff;border:1px solid var(--border);border-radius:var(--r);
+  overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.15);display:none;
+}
+.ac-item{
+  padding:11px 16px;cursor:pointer;display:flex;align-items:center;gap:12px;
+  transition:background 0.1s;border-bottom:1px solid var(--border2);
+}
+.ac-item:last-child{border-bottom:none}
+.ac-item:hover{background:#f0f9ff}
+.ac-avatar{
+  width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--emerald));
+  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;
+  flex-shrink:0;
+}
+.ac-info{flex:1;min-width:0}
+.ac-name{font-weight:600;font-size:13px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ac-roll{font-size:11px;color:var(--slate-m);font-family:var(--mono)}
+.hero-stats{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px}
+.hero-stat{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:var(--r2);padding:12px 18px;text-align:center;min-width:90px}
+.hero-stat .v{font-size:24px;font-weight:800;color:#fff}
+.hero-stat .l{font-size:11px;color:#bae6fd;text-transform:uppercase;letter-spacing:0.06em;margin-top:2px}
+.scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.5);font-size:12px;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer}
+.scroll-hint i{font-size:20px;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* MAIN APP */
+.app-wrap{background:#f0f9ff;min-height:100vh}
+.topbar{
+  background:#fff;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;
+  position:sticky;top:0;z-index:200;padding:0 20px;
+  box-shadow:0 1px 8px rgba(0,0,0,0.06);
+}
+.topbar::-webkit-scrollbar{display:none}
+.topbar-brand{font-weight:800;font-size:15px;color:var(--sky-d);margin-right:20px;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.nav-btn{
+  background:none;border:none;color:var(--slate-m);
+  font-family:var(--font);font-size:13px;font-weight:600;
+  padding:16px 16px;cursor:pointer;white-space:nowrap;
+  border-bottom:2px solid transparent;transition:all 0.2s;
+  display:flex;align-items:center;gap:6px;
+}
+.nav-btn:hover{color:var(--sky)}
+.nav-btn.active{color:var(--sky);border-bottom-color:var(--sky)}
+.main{max-width:1320px;margin:0 auto;padding:24px 20px}
 .page{display:none}.page.active{display:block}
-@media(max-width:640px){.main{padding:14px}.hero{padding:20px 14px}.nav-btn{padding:12px 13px;font-size:12px}.hero h1{font-size:22px}.sd-name{font-size:18px}}
+.sec-title{
+  font-size:16px;font-weight:700;margin-bottom:18px;color:var(--ink);
+  display:flex;align-items:center;gap:8px;
+}
+.sec-title i{color:var(--sky);font-size:18px}
+.sec-title::after{content:'';flex:1;height:1px;background:var(--border);margin-left:8px}
+
+/* CARDS */
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:16px;margin-bottom:16px}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:14px;margin-bottom:18px}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:12px;margin-bottom:18px}
+.g7{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:12px;margin-bottom:18px}
+
+/* STAT CARDS */
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:16px;box-shadow:var(--shadow);transition:transform 0.2s,box-shadow 0.2s}
+.stat-card:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+.stat-card .sv{font-size:28px;font-weight:800}
+.stat-card .sl{font-size:11px;color:var(--slate-m);text-transform:uppercase;letter-spacing:0.06em;margin-top:4px;font-weight:600}
+.stat-card .si{width:40px;height:40px;border-radius:var(--r2);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px}
+
+/* SUBJECT CARDS */
+.subj-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:16px;box-shadow:var(--shadow)}
+.subj-card .sc-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.subj-card .sc-name{font-size:12px;color:var(--slate-m);font-weight:700;text-transform:uppercase;letter-spacing:0.06em}
+.subj-card .sc-avg{font-size:32px;font-weight:800;line-height:1}
+.subj-bar{height:5px;background:var(--border2);border-radius:3px;margin-top:10px;overflow:hidden}
+.subj-bar-fill{height:100%;border-radius:3px}
+.subj-meta{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--slate-m);font-weight:500}
+
+/* GRADE PILLS */
+.gp{display:inline-flex;align-items:center;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
+.gAp{background:#d1fae5;color:#065f46}.gA{background:#cffafe;color:#164e63}
+.gAm{background:#ede9fe;color:#4c1d95}.gB{background:#e0e7ff;color:#3730a3}
+.gC{background:#fef3c7;color:#92400e}.gD{background:#ffedd5;color:#9a3412}
+.gF{background:#ffe4e6;color:#9f1239}
+
+/* BADGES */
+.rank-badge{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;font-size:12px;font-weight:700;background:var(--border2);color:var(--slate-m)}
+.rank-badge.gold{background:#fef3c7;color:#d97706}
+.rank-badge.silver{background:#f1f5f9;color:#64748b}
+.rank-badge.bronze{background:#ffedd5;color:#ea580c}
+
+/* STATUS BADGE */
+.status-pass{background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700}
+.status-fail{background:#ffe4e6;color:#9f1239;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--border);background:#fff;margin-bottom:16px;box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead{position:sticky;top:0;z-index:5}
+th{background:#f8fafc;color:var(--slate-m);font-weight:700;text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;cursor:pointer;user-select:none}
+th:hover{color:var(--sky)}
+td{padding:9px 12px;border-bottom:1px solid var(--border2);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f8fbff}
+
+/* SEARCH ROW */
+.search-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center}
+.inp{
+  background:#fff;border:1px solid var(--border);color:var(--ink);
+  font-family:var(--font);font-size:13px;padding:9px 13px;
+  border-radius:var(--r2);outline:none;flex:1;min-width:200px;
+  transition:border-color 0.2s,box-shadow 0.2s;
+}
+.inp:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(2,132,199,0.1)}
+.inp::placeholder{color:#94a3b8}
+select.inp option{background:#fff}
+
+/* BUTTONS */
+.btn{
+  background:var(--sky);color:#fff;border:none;border-radius:var(--r2);
+  font-family:var(--font);font-size:13px;font-weight:600;padding:9px 18px;
+  cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
+}
+.btn:hover{background:var(--sky-d);transform:translateY(-1px)}
+.btn-sm{padding:5px 11px;font-size:12px}
+.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--slate);font-weight:600}
+.btn-ghost:hover{border-color:var(--sky);color:var(--sky);background:#f0f9ff;transform:none}
+.btn-emerald{background:var(--emerald)}
+.btn-emerald:hover{background:var(--emerald-d)}
+
+/* PAGER */
+.pager{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.pager-btn{background:#fff;border:1px solid var(--border);color:var(--slate-m);font-family:var(--font);font-size:12px;font-weight:600;padding:5px 11px;border-radius:var(--r3);cursor:pointer;transition:all 0.15s}
+.pager-btn.active{background:var(--sky);color:#fff;border-color:var(--sky)}
+.pager-btn:hover:not(.active){border-color:var(--sky);color:var(--sky)}
+
+/* TABS */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.tab-btn{background:#fff;border:1px solid var(--border);color:var(--slate-m);font-family:var(--font);font-size:12px;font-weight:600;padding:7px 14px;border-radius:var(--r3);cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:5px}
+.tab-btn.active{background:var(--sky);color:#fff;border-color:var(--sky)}
+.tab-btn:hover:not(.active){border-color:var(--sky);color:var(--sky)}
+
+/* AUTOCOMPLETE INAPP */
+.ac-wrap-inline{position:relative;flex:1}
+.ac-drop-inline{position:absolute;top:calc(100% + 4px);left:0;right:0;z-index:100;background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.1);display:none}
+.ac-item-inline{padding:10px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;font-size:13px;transition:background 0.1s;border-bottom:1px solid var(--border2)}
+.ac-item-inline:last-child{border-bottom:none}
+.ac-item-inline:hover{background:#f0f9ff}
+.ac-roll-inline{font-size:11px;color:var(--slate-m);font-family:var(--mono)}
+
+/* STUDENT DETAIL */
+.sd-hero{background:linear-gradient(135deg,#0c4a6e,#0284c7);border-radius:var(--r) var(--r) 0 0;padding:24px;color:#fff}
+.sd-name{font-size:22px;font-weight:800;margin-bottom:6px}
+.sd-meta{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:13px;color:#bae6fd}
+.sd-meta strong{color:#fff}
+.sd-body{padding:20px;background:#fff;border-radius:0 0 var(--r) var(--r);border:1px solid var(--border);border-top:none}
+.marks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:20px}
+.mark-box{background:#f8fafc;border:1px solid var(--border);border-radius:var(--r2);padding:14px;border-left:4px solid}
+.mark-box .mb-subj{font-size:10px;color:var(--slate-m);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;font-weight:700}
+.mark-box .mb-total{font-size:28px;font-weight:800;line-height:1}
+.mark-box .mb-break{font-size:11px;color:var(--slate-m);margin-top:4px;font-family:var(--mono)}
+
+/* CHART */
+.chart-wrap{position:relative;width:100%}
+
+/* EMPTY STATE */
+.empty{text-align:center;padding:60px 20px;color:var(--slate-m)}
+.empty i{font-size:56px;margin-bottom:14px;color:#cbd5e1;display:block}
+.empty-txt{font-size:15px;font-weight:600;color:var(--slate);margin-bottom:6px}
+.empty-sub{font-size:13px}
+
+/* SCROLL TOP */
+.scroll-top{position:fixed;bottom:24px;right:24px;z-index:300;background:var(--sky);color:#fff;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(2,132,199,0.4);transition:all 0.2s;opacity:0}
+.scroll-top.vis{opacity:1}
+.scroll-top:hover{transform:scale(1.1)}
+
+.mono{font-family:var(--mono)}
+.fw7{font-weight:700}.fw8{font-weight:800}
+.sky{color:var(--sky)}.emerald{color:var(--emerald)}.amber{color:var(--amber)}.rose{color:var(--rose)}
+
+@media(max-width:640px){
+  .main{padding:16px 12px}
+  .topbar{padding:0 12px}
+  .topbar-brand{display:none}
+  .hero h1{font-size:26px}
+  .search-hero-wrap{padding:20px}
+  .sd-name{font-size:18px}
+}
 </style>
 </head>
 <body>
-<div class="app">
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-inner">
-    <div class="hero-chip">📊 Half Yearly 2026</div>
-    <h1>Duaripara Government College</h1>
-    <div class="hero-sub">Science Department · Result Management &amp; Analytics System</div>
-    <div class="hero-stats" id="heroStats"></div>
-  </div>
-</div>
-
-<!-- NAV -->
-<nav class="nav">
-  <button class="nav-btn active" onclick="showPage(0)">📊 Overview</button>
-  <button class="nav-btn" onclick="showPage(1)">🏆 Rankings</button>
-  <button class="nav-btn" onclick="showPage(2)">🎓 Student Detail</button>
-  <button class="nav-btn" onclick="showPage(3)">⚖️ Compare</button>
-  <button class="nav-btn" onclick="showPage(4)">📚 Subject Analysis</button>
-</nav>
-
-<div class="main">
-
-<!-- PAGE 0: OVERVIEW -->
-<div class="page active" id="page0">
-  <div class="sec-title">📊 Overview</div>
-  <div class="g4" id="overviewStats"></div>
-  <div class="sec-title">Subject Performance</div>
-  <div class="g3" id="subjectCards"></div>
-  <div class="g2">
-    <div class="card"><div class="card-title">Average Marks by Subject</div><div class="chart-wrap" style="height:220px"><canvas id="chartAvg"></canvas></div></div>
-    <div class="card"><div class="card-title">Grade Distribution (All Subjects)</div><div class="chart-wrap" style="height:220px"><canvas id="chartDonut"></canvas></div></div>
-  </div>
-  <div class="g2">
-    <div class="card"><div class="card-title">Pass Rate by Subject (%)</div><div class="chart-wrap" style="height:200px"><canvas id="chartPass"></canvas></div></div>
-    <div class="card"><div class="card-title">Score Distribution (Total Marks)</div><div class="chart-wrap" style="height:200px"><canvas id="chartDist"></canvas></div></div>
-  </div>
-  <div class="sec-title">Top 10 Students</div>
-  <div class="tbl-wrap"><table id="top10Table"></table></div>
-</div>
-
-<!-- PAGE 1: RANKINGS -->
-<div class="page" id="page1">
-  <div class="sec-title">🏆 Rankings</div>
-  <div class="search-row">
-    <input class="inp" id="rankSearch" placeholder="Search by name or roll…" oninput="renderRankings()">
-    <select class="inp" id="rankSubj" style="flex:0 0 auto;min-width:160px" onchange="renderRankings()">
-      <option value="all">Sort by Total</option>
-      <option value="0">Sort by Bangla</option>
-      <option value="1">Sort by English</option>
-      <option value="2">Sort by Physics</option>
-      <option value="3">Sort by Chemistry</option>
-      <option value="4">Sort by Biology</option>
-      <option value="5">Sort by Math</option>
-    </select>
-    <button class="btn btn-ghost" id="sortDirBtn" onclick="toggleSortDir()">↓ High to Low</button>
-  </div>
-  <div id="rankCount" style="font-size:13px;color:var(--text3);margin-bottom:12px"></div>
-  <div class="tbl-wrap"><table id="rankTable"></table></div>
-  <div class="pager" id="rankPager"></div>
-</div>
-
-<!-- PAGE 2: STUDENT DETAIL -->
-<div class="page" id="page2">
-  <div class="sec-title">🎓 Student Detail</div>
-  <div class="search-row" style="max-width:520px;margin-bottom:24px">
-    <div class="ac-wrap">
-      <input class="inp" id="stuSearch" placeholder="Search by name or roll number…" oninput="acSearch()" style="width:100%">
-      <div class="ac-dropdown" id="acDrop" style="display:none"></div>
+<!-- HERO LANDING -->
+<section class="hero" id="heroSection">
+  <div class="hero-badge"><i class="ri-government-line"></i> Half Yearly · 2026</div>
+  <h1>Duaripara Government College</h1>
+  <div class="hero-sub">Science Department · Result Management System</div>
+  
+  <div class="search-hero-wrap">
+    <div class="search-hero-label"><i class="ri-search-2-line"></i> Search Student by Name or Roll Number</div>
+    <div class="search-input-wrap">
+      <i class="ri-search-line search-icon"></i>
+      <input class="search-inp" id="heroSearch" placeholder="e.g. Tanzila or 271001…" oninput="heroAC()" autocomplete="off">
+      <div class="ac-drop" id="heroAcDrop"></div>
     </div>
   </div>
-  <div id="stuEmpty" class="empty"><div class="empty-icon">🔍</div><div>Search for a student to view their detailed result report</div></div>
-  <div id="stuDetail" style="display:none"></div>
-</div>
 
-<!-- PAGE 3: COMPARE -->
-<div class="page" id="page3">
-  <div class="sec-title">⚖️ Compare</div>
-  <div class="search-row">
-    <div class="ac-wrap">
-      <input class="inp" id="cmp1" placeholder="Student 1 — name or roll" oninput="acSearch1()" style="width:100%">
-      <div class="ac-dropdown" id="acDrop1" style="display:none"></div>
-    </div>
-    <span class="vs-label">VS</span>
-    <div class="ac-wrap">
-      <input class="inp" id="cmp2" placeholder="Student 2 — name or roll" oninput="acSearch2()" style="width:100%">
-      <div class="ac-dropdown" id="acDrop2" style="display:none"></div>
-    </div>
+  <div class="hero-stats" id="heroStats"></div>
+
+  <div class="scroll-hint" onclick="goToApp()">
+    <span>View Full Dashboard</span>
+    <i class="ri-arrow-down-line"></i>
   </div>
-  <div id="cmpEmpty" class="empty"><div class="empty-icon">⚖️</div><div>Search and select two students to compare their results side by side</div></div>
-  <div id="cmpDetail" style="display:none"></div>
-</div>
+</section>
 
-<!-- PAGE 4: SUBJECT ANALYSIS -->
-<div class="page" id="page4">
-  <div class="sec-title">📚 Subject Analysis</div>
-  <div class="tabs" id="subjTabs"></div>
-  <div class="g4" id="subjStats"></div>
-  <div class="g2">
-    <div class="card"><div class="card-title" id="subjDistTitle">Grade Distribution</div><div class="chart-wrap" style="height:220px"><canvas id="chartSubjDist"></canvas></div></div>
-    <div class="card"><div class="card-title" id="subjTop10Title">Top 10</div><div id="subjTop10List"></div></div>
+<!-- APP -->
+<div class="app-wrap" id="appWrap" style="display:none">
+  <nav class="topbar">
+    <div class="topbar-brand"><i class="ri-graduation-cap-fill" style="color:var(--sky)"></i>DGC Result 2026</div>
+    <button class="nav-btn active" onclick="showPage(0)"><i class="ri-dashboard-line"></i>Overview</button>
+    <button class="nav-btn" onclick="showPage(1)"><i class="ri-trophy-line"></i>Rankings</button>
+    <button class="nav-btn" onclick="showPage(2)"><i class="ri-user-line"></i>Student</button>
+    <button class="nav-btn" onclick="showPage(3)"><i class="ri-scales-line"></i>Compare</button>
+    <button class="nav-btn" onclick="showPage(4)"><i class="ri-book-2-line"></i>Subjects</button>
+    <button class="nav-btn" onclick="showPage(5)"><i class="ri-pie-chart-2-line"></i>Statistics</button>
+  </nav>
+  <div class="main">
+
+    <!-- PAGE 0: OVERVIEW -->
+    <div class="page active" id="page0">
+      <div class="sec-title"><i class="ri-dashboard-line"></i>Class Overview</div>
+      <div class="g4" id="overviewStats"></div>
+      <div class="sec-title"><i class="ri-bar-chart-2-line"></i>Subject Performance</div>
+      <div id="subjectCards"></div>
+      <div class="g2">
+        <div class="card"><div style="font-size:13px;font-weight:700;margin-bottom:14px;color:var(--slate)">Average Marks by Subject</div><div class="chart-wrap" style="height:220px"><canvas id="chartAvg"></canvas></div></div>
+        <div class="card"><div style="font-size:13px;font-weight:700;margin-bottom:14px;color:var(--slate)">Overall Grade Distribution</div><div class="chart-wrap" style="height:220px"><canvas id="chartDonut"></canvas></div></div>
+      </div>
+      <div class="g2">
+        <div class="card"><div style="font-size:13px;font-weight:700;margin-bottom:14px;color:var(--slate)">Pass Rate by Subject (%)</div><div class="chart-wrap" style="height:200px"><canvas id="chartPass"></canvas></div></div>
+        <div class="card"><div style="font-size:13px;font-weight:700;margin-bottom:14px;color:var(--slate)">Total Score Distribution</div><div class="chart-wrap" style="height:200px"><canvas id="chartDist"></canvas></div></div>
+      </div>
+      <div class="sec-title"><i class="ri-medal-line"></i>Top 10 Students</div>
+      <div class="tbl-wrap"><table id="top10Table"></table></div>
+    </div>
+
+    <!-- PAGE 1: RANKINGS -->
+    <div class="page" id="page1">
+      <div class="sec-title"><i class="ri-trophy-line"></i>Student Rankings</div>
+      <div class="search-row">
+        <input class="inp" id="rankSearch" placeholder="Search name or roll…" oninput="renderRankings()" style="max-width:280px">
+        <select class="inp" id="rankSubj" style="flex:0 0 auto;min-width:160px" onchange="renderRankings()">
+          <option value="all">Sort by Total</option>
+          <option value="0">Sort by Bangla</option>
+          <option value="1">Sort by English</option>
+          <option value="2">Sort by Physics</option>
+          <option value="3">Sort by Chemistry</option>
+          <option value="4">Sort by Biology</option>
+          <option value="5">Sort by Math</option>
+          <option value="6">Sort by ICT</option>
+        </select>
+        <button class="btn btn-ghost" id="sortDirBtn" onclick="toggleSortDir()"><i class="ri-sort-desc"></i>High to Low</button>
+        <select class="inp" id="filterStatus" style="flex:0 0 auto;min-width:130px" onchange="renderRankings()">
+          <option value="all">All Students</option>
+          <option value="pass">Passed Only</option>
+          <option value="fail">Failed Only</option>
+        </select>
+        <button class="btn btn-emerald btn-sm" onclick="exportCSV()"><i class="ri-file-excel-line"></i>Export CSV</button>
+        <button class="btn btn-ghost btn-sm" onclick="exportSummary()"><i class="ri-printer-line"></i>Class Report</button>
+      </div>
+      <div id="rankCount" style="font-size:12px;color:var(--slate-m);margin-bottom:10px;font-weight:500"></div>
+      <div class="tbl-wrap"><table id="rankTable"></table></div>
+      <div class="pager" id="rankPager"></div>
+    </div>
+
+    <!-- PAGE 2: STUDENT DETAIL -->
+    <div class="page" id="page2">
+      <div class="sec-title"><i class="ri-user-line"></i>Student Detail</div>
+      <div class="search-row" style="max-width:500px;margin-bottom:24px">
+        <div class="ac-wrap-inline" style="flex:1">
+          <input class="inp" id="stuSearch" placeholder="Search student by name or roll…" oninput="stuAC()" style="width:100%" autocomplete="off">
+          <div class="ac-drop-inline" id="stuAcDrop"></div>
+        </div>
+      </div>
+      <div id="stuEmpty" class="empty"><i class="ri-user-search-line"></i><div class="empty-txt">Search for a student</div><div class="empty-sub">Enter a name or roll number above to view detailed results</div></div>
+      <div id="stuDetail"></div>
+    </div>
+
+    <!-- PAGE 3: COMPARE -->
+    <div class="page" id="page3">
+      <div class="sec-title"><i class="ri-scales-line"></i>Compare Students</div>
+      <div class="search-row">
+        <div class="ac-wrap-inline">
+          <input class="inp" id="cmp1" placeholder="Student 1 — name or roll" oninput="cmpAC1()" autocomplete="off">
+          <div class="ac-drop-inline" id="cmpDrop1"></div>
+        </div>
+        <span style="font-size:18px;font-weight:800;color:var(--slate-m);padding:0 4px">VS</span>
+        <div class="ac-wrap-inline">
+          <input class="inp" id="cmp2" placeholder="Student 2 — name or roll" oninput="cmpAC2()" autocomplete="off">
+          <div class="ac-drop-inline" id="cmpDrop2"></div>
+        </div>
+      </div>
+      <div id="cmpEmpty" class="empty"><i class="ri-scales-line"></i><div class="empty-txt">Select two students to compare</div><div class="empty-sub">Use the search fields above to pick students</div></div>
+      <div id="cmpDetail"></div>
+    </div>
+
+    <!-- PAGE 4: SUBJECTS -->
+    <div class="page" id="page4">
+      <div class="sec-title"><i class="ri-book-2-line"></i>Subject Analysis</div>
+      <div class="tabs" id="subjTabs"></div>
+      <div class="g4" id="subjStats"></div>
+      <div class="g2">
+        <div class="card"><div id="subjDistTitle" style="font-size:13px;font-weight:700;margin-bottom:14px;color:var(--slate)">Grade Distribution</div><div class="chart-wrap" style="height:220px"><canvas id="chartSubjDist"></canvas></div></div>
+        <div class="card"><div id="subjTop10Title" style="font-size:13px;font-weight:700;margin-bottom:14px;color:var(--slate)">Top 10</div><div id="subjTop10List"></div></div>
+      </div>
+      <div class="sec-title" id="subjAllTitle"><i class="ri-list-check-2"></i>All Students</div>
+      <div class="tbl-wrap"><table id="subjTable"></table></div>
+    </div>
+
+    <!-- PAGE 5: STATISTICS -->
+    <div class="page" id="page5">
+      <div class="sec-title"><i class="ri-pie-chart-2-line"></i>Class Statistics & Reports</div>
+      <div class="g4" id="statsCards"></div>
+      <div class="g2">
+        <div class="card"><div style="font-size:13px;font-weight:700;margin-bottom:14px">GPA Distribution</div><div class="chart-wrap" style="height:220px"><canvas id="chartGpaDist"></canvas></div></div>
+        <div class="card"><div style="font-size:13px;font-weight:700;margin-bottom:14px">Subject Pass Rates</div><div class="chart-wrap" style="height:220px"><canvas id="chartPassRates"></canvas></div></div>
+      </div>
+      <div class="sec-title"><i class="ri-trophy-2-line"></i>Subject Toppers</div>
+      <div class="g7" id="subjectToppers"></div>
+      <div class="sec-title"><i class="ri-group-line"></i>Grade-wise Student Count</div>
+      <div class="tbl-wrap"><table id="gradeWiseTable"></table></div>
+    </div>
+
   </div>
-  <div class="sec-title" id="subjAllTitle">All Students</div>
-  <div class="tbl-wrap"><table id="subjTable"></table></div>
 </div>
 
-</div><!-- /main -->
-</div><!-- /app -->
+<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="ri-arrow-up-line"></i></button>
 
-<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
-// ═══════════════════════════════════════
-// DATA
-// ═══════════════════════════════════════
-const RAW=[{sl:1,name:"TANZILA",roll:"271001",ct:[8,5,8,7,9,3],sub:[41,63,24,39,41,22],obj:[19,0,24,16,20,6]},{sl:2,name:"SADIA KAWKAB",roll:"271002",ct:[8,8,7,8,9,6],sub:[44,64,36,47,46,38],obj:[23,0,27,20,26,17]},{sl:3,name:"MD. SIFAT ULLAH",roll:"271003",ct:[8,8,8,8,8,7],sub:[50,54,50,50,48,47],obj:[20,0,27,20,26,20]},{sl:4,name:"MD. MISHRATUL",roll:"271004",ct:[5,7,4,7,8,6],sub:[22,54,21,21,33,21],obj:[21,0,28,21,27,18]},{sl:5,name:"MD. NURE AHNAF",roll:"271005",ct:[6,8,7,7,7,6],sub:[41,64,32,30,40,8],obj:[18,0,20,16,23,17]},{sl:6,name:"MD. AFTAB HOSEN SAAD",roll:"271006",ct:[5,5,4,5,6,4],sub:[31,64,3,6,11,0],obj:[9,0,15,14,9,15]},{sl:7,name:"MD. HABIBUR",roll:"271007",ct:[7,6,5,2,6,5],sub:[22,47,17,14,20,34],obj:[14,0,12,14,15,11]},{sl:8,name:"SULAYMAN",roll:"271008",ct:[5,7,3,5,7,6],sub:[31,56,27,38,34,10],obj:[20,0,17,14,16,9]},{sl:9,name:"FAHIMA FATIMA",roll:"271009",ct:[9,8,8,5,7,10],sub:[43,59,21,18,40,39],obj:[19,0,16,16,16,20]},{sl:10,name:"ANNY AKTER ISRAT",roll:"271010",ct:[9,8,7,6,0,10],sub:[36,60,50,41,0,44],obj:[15,0,17,17,0,23]},{sl:11,name:"SAMIA RAHMAN",roll:"271011",ct:[8,8,8,6,8,6],sub:[38,54,18,15,39,22],obj:[18,0,26,11,24,9]},{sl:12,name:"BIGITA AHMMED",roll:"271012",ct:[8,6,6,5,6,4],sub:[27,45,18,26,28,21],obj:[5,0,21,17,24,14]},{sl:13,name:"NUSRAT JHAHAN",roll:"271013",ct:[9,7,7,7,8,7],sub:[36,51,10,18,33,8],obj:[18,0,17,10,17,10]},{sl:14,name:"MEHENAZ MIM",roll:"271014",ct:[9,6,7,7,8,5],sub:[26,51,10,11,27,8],obj:[18,0,14,15,12,11]},{sl:15,name:"MD. SHAJIDUL HASAN SHAJID",roll:"271015",ct:[8,6,0,6,7,5],sub:[38,51,24,28,18,8],obj:[19,0,16,14,18,16]},{sl:16,name:"MD. JAKIR ALI",roll:"271016",ct:[7,6,6,7,7,4],sub:[32,48,32,33,32,3],obj:[22,0,23,20,17,10]},{sl:17,name:"MD. ASHIQUR RAHMAN ANIK",roll:"271017",ct:[7,7,3,4,6,4],sub:[33,32,42,22,21,0],obj:[14,0,9,10,12,9]},{sl:18,name:"TANDRA HALDER",roll:"271018",ct:[8,6,7,5,6,0],sub:[36,31,12,22,30,0],obj:[13,0,11,15,20,0]},{sl:19,name:"SAJIA AKTER",roll:"271019",ct:[8,7,8,8,8,0],sub:[34,45,23,40,35,0],obj:[20,0,22,15,24,0]},{sl:20,name:"TAPATI MANDAL",roll:"271020",ct:[8,7,8,8,8,0],sub:[31,48,23,38,33,0],obj:[17,0,20,14,24,0]},{sl:21,name:"MARIA BINTAY",roll:"271021",ct:[8,8,8,6,7,6],sub:[35,51,26,38,36,10],obj:[16,0,15,16,21,9]},{sl:22,name:"NUJHAT HOSSAIN",roll:"271022",ct:[7,0,7,6,7,6],sub:[47,72,28,47,42,10],obj:[19,0,20,17,23,15]},{sl:23,name:"MAISHA ADIBA",roll:"271023",ct:[8,8,7,5,7,6],sub:[35,63,32,40,50,17],obj:[4,0,18,18,21,14]},{sl:24,name:"ALIF BINTE",roll:"271024",ct:[8,8,7,5,8,0],sub:[38,59,21,40,47,0],obj:[19,0,20,18,18,0]},{sl:25,name:"FAHMIDA IKRA",roll:"271025",ct:[8,6,7,6,5,5],sub:[36,60,9,17,30,0],obj:[16,0,10,12,11,12]},{sl:26,name:"MST RUKU KHATUN",roll:"271026",ct:[9,7,7,4,8,10],sub:[38,30,21,0,5,0],obj:[15,0,11,15,16,14]},{sl:27,name:"RUBIYA ISLAM SAMIA",roll:"271027",ct:[9,6,7,5,8,6],sub:[30,36,17,38,29,10],obj:[19,0,23,15,26,12]},{sl:28,name:"NIJHUM AKTER MAISHA",roll:"271028",ct:[8,7,7,7,7,9],sub:[22,33,9,21,26,15],obj:[16,0,14,16,17,12]},{sl:29,name:"MOSA FATEMA AKTER SULTANA",roll:"271029",ct:[6,6,5,1,8,3],sub:[42,63,12,24,32,15],obj:[18,0,14,18,20,9]},{sl:30,name:"AKHI AKTER",roll:"271030",ct:[6,7,5,1,7,2],sub:[39,63,11,22,29,12],obj:[20,0,11,16,18,15]},{sl:31,name:"HAFSA MARIAM",roll:"271031",ct:[8,7,8,4,9,6],sub:[40,63,41,46,45,51],obj:[22,0,22,17,22,22]},{sl:32,name:"NUSRAT JHAHAN",roll:"271032",ct:[7,6,6,7,6,6],sub:[26,56,21,29,39,24],obj:[16,0,20,17,18,11]},{sl:33,name:"FARZANA AKTER",roll:"271033",ct:[7,7,6,7,6,9],sub:[24,51,2,15,29,12],obj:[14,0,17,17,16,8]},{sl:34,name:"MD. SALMAN TALUKDER ASAD",roll:"271034",ct:[8,6,4,6,6,5],sub:[23,55,4,17,23,16],obj:[14,0,10,11,15,15]},{sl:35,name:"MD. FAMIM HOSSAIN",roll:"271035",ct:[8,6,4,4,6,3],sub:[31,41,0,15,0,17],obj:[14,0,0,10,0,18]},{sl:36,name:"LABIB MOLLICK",roll:"271036",ct:[7,7,3,4,5,3],sub:[26,59,16,30,20,22],obj:[15,0,14,14,15,15]},{sl:37,name:"JANNAT AKTER",roll:"271037",ct:[8,6,7,2,6,3],sub:[26,30,3,2,17,0],obj:[7,0,10,5,14,9]},{sl:38,name:"MD. MAHAMUDUL",roll:"271038",ct:[0,0,0,0,0,0],sub:[26,42,0,0,0,0],obj:[5,0,0,0,0,0]},{sl:39,name:"MD. RAIUN",roll:"271039",ct:[4,6,6,7,5,6],sub:[26,55,9,24,17,10],obj:[18,0,17,16,16,14]},{sl:40,name:"MD. TAUSIF",roll:"271040",ct:[5,7,4,5,6,4],sub:[22,49,4,18,10,10],obj:[19,0,9,18,16,12]},{sl:41,name:"SAYMON ISLAM",roll:"271041",ct:[6,5,4,5,4,2],sub:[22,45,9,15,10,3],obj:[17,0,12,16,12,11]},{sl:42,name:"MONJURI MRIDU",roll:"271042",ct:[7,6,0,0,0,0],sub:[0,63,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:43,name:"MD. FAHAD",roll:"271043",ct:[7,6,6,8,5,7],sub:[8,51,8,18,11,10],obj:[23,0,9,18,18,16]},{sl:44,name:"ROBIUL ISLAM",roll:"271045",ct:[6,7,4,7,5,3],sub:[24,38,8,21,9,10],obj:[15,0,8,12,18,14]},{sl:45,name:"MD. SHAHRIAR APON",roll:"271046",ct:[7,7,6,8,5,6],sub:[24,54,12,27,18,6],obj:[17,0,11,11,20,17]},{sl:46,name:"MUSHFIQUR",roll:"271047",ct:[7,5,6,8,6,6],sub:[36,63,12,28,21,9],obj:[14,0,9,11,21,16]},{sl:47,name:"JIHAD HOSSAIN SHUROB",roll:"271048",ct:[6,5,6,6,5,3],sub:[23,45,4,16,17,3],obj:[10,0,10,15,15,6]},{sl:48,name:"ISMAIL HOSSAIN",roll:"271049",ct:[6,7,6,7,6,4],sub:[26,52,15,26,14,10],obj:[17,0,8,16,16,14]},{sl:49,name:"MD. NEAZ",roll:"271050",ct:[7,6,3,8,5,4],sub:[24,48,10,21,17,10],obj:[17,0,10,16,17,14]},{sl:50,name:"ABDUL AUAL ISLAM SOADH",roll:"271051",ct:[6,5,5,4,4,5],sub:[26,42,26,9,9,12],obj:[15,0,12,15,17,26]},{sl:51,name:"NAFIS SHAHRIAR",roll:"271052",ct:[0,0,4,0,0,0],sub:[26,65,0,0,10,10],obj:[20,0,0,0,12,24]},{sl:52,name:"TOUHID-UZ-",roll:"271053",ct:[0,0,4,0,0,0],sub:[31,63,47,36,23,15],obj:[20,0,23,10,22,18]},{sl:53,name:"MD. MUSFIQ AL",roll:"271054",ct:[7,7,4,9,9,6],sub:[40,69,56,36,35,26],obj:[15,0,21,12,23,18]},{sl:54,name:"ANWER HOSSEN",roll:"271055",ct:[5,6,0,5,4,3],sub:[22,45,5,2,6,0],obj:[7,0,6,10,6,14]},{sl:55,name:"MD. SOHEL RAHMAN",roll:"271056",ct:[6,6,5,5,4,3],sub:[31,33,5,8,6,0],obj:[10,0,15,10,10,18]},{sl:56,name:"MOBASHER",roll:"271057",ct:[0,5,0,0,5,0],sub:[30,42,9,4,5,0],obj:[10,0,0,10,14,20]},{sl:57,name:"MD. SHAHRIAR KABIR",roll:"271058",ct:[7,6,5,8,4,8],sub:[31,42,5,4,6,0],obj:[12,0,5,10,15,21]},{sl:58,name:"SHADMAN SIYAM",roll:"271059",ct:[7,6,5,9,5,9],sub:[30,49,44,50,14,48],obj:[17,0,16,15,17,26]},{sl:59,name:"FATEMA JAHAN ALO",roll:"271060",ct:[9,6,7,7,7,10],sub:[42,56,23,28,22,44],obj:[21,0,15,14,18,18]},{sl:60,name:"MUHAMMADULL",roll:"271061",ct:[7,5,8,3,7,5],sub:[26,60,39,30,35,21],obj:[19,0,21,12,18,14]},{sl:61,name:"MASHRAFE",roll:"271062",ct:[7,5,5,4,5,6],sub:[34,42,40,23,11,10],obj:[17,0,20,12,20,20]},{sl:62,name:"SUMAIYA AKTER",roll:"271063",ct:[7,5,6,3,7,10],sub:[38,48,35,6,17,34],obj:[12,0,16,12,16,21]},{sl:63,name:"SOHANA AKTER",roll:"271064",ct:[7,5,6,3,6,10],sub:[28,30,12,8,6,0],obj:[5,0,14,14,12,20]},{sl:64,name:"MD. SAMIR",roll:"271065",ct:[4,4,5,2,6,3],sub:[23,30,10,9,6,0],obj:[16,0,14,15,14,18]},{sl:65,name:"MD. FAHIM",roll:"271066",ct:[7,6,6,4,5,6],sub:[23,38,0,0,0,0],obj:[15,0,0,0,0,0]},{sl:66,name:"LAMIA AKTER",roll:"271067",ct:[8,6,3,4,6,4],sub:[30,49,0,0,0,0],obj:[17,0,0,0,0,0]},{sl:67,name:"SUBAH SHAHRIN",roll:"271068",ct:[6,6,0,3,7,6],sub:[29,54,30,21,32,11],obj:[16,0,12,11,15,18]},{sl:68,name:"MST. FARZANA",roll:"271069",ct:[7,6,6,5,8,5],sub:[28,49,48,36,39,34],obj:[15,0,16,16,18,22]},{sl:69,name:"SAMIRA AKTER",roll:"271070",ct:[9,5,6,5,7,4],sub:[36,59,36,16,28,11],obj:[18,0,14,16,20,18]},{sl:70,name:"MD. MADUD HOSSAIN SRABON",roll:"271071",ct:[8,5,6,5,7,8],sub:[26,43,14,10,9,3],obj:[18,0,10,17,16,16]},{sl:71,name:"MD. NAFI",roll:"271072",ct:[7,6,7,5,8,4],sub:[34,34,29,26,30,10],obj:[13,0,12,18,15,14]},{sl:72,name:"ABDULLAH",roll:"271073",ct:[6,7,8,4,6,6],sub:[35,30,40,17,24,3],obj:[16,0,14,10,14,11]},{sl:73,name:"MST. ASHAMONI AKTER",roll:"271074",ct:[9,6,8,3,4,8],sub:[26,47,26,23,28,41],obj:[5,0,10,6,12,17]},{sl:74,name:"MD. SAJJAD HOSSAIN",roll:"271075",ct:[7,5,8,3,7,10],sub:[28,38,11,29,20,36],obj:[15,0,18,11,14,26]},{sl:75,name:"MD. KHALID HASAN",roll:"271076",ct:[6,0,6,0,7,0],sub:[28,30,0,6,4,10],obj:[16,0,0,12,8,23]},{sl:76,name:"TAHSIN SIKDER",roll:"271077",ct:[6,4,5,3,6,6],sub:[29,48,29,17,23,10],obj:[16,0,16,14,17,21]},{sl:77,name:"MD. NAZMUL",roll:"271078",ct:[7,5,8,2,6,6],sub:[26,46,16,9,16,8],obj:[17,0,14,15,17,18]},{sl:78,name:"MST ALO MONI",roll:"271079",ct:[8,5,5,0,6,6],sub:[30,36,40,17,11,3],obj:[4,0,9,17,10,6]},{sl:79,name:"SHEIKH NAHID ALAM",roll:"271080",ct:[7,6,7,3,7,4],sub:[23,18,14,6,11,3],obj:[19,0,14,16,17,14]},{sl:80,name:"SK. MAHZABIN IMROZE",roll:"271081",ct:[7,6,4,0,8,4],sub:[29,41,3,0,24,0],obj:[3,0,11,6,16,8]},{sl:81,name:"NISHITA AKTHER",roll:"271082",ct:[7,6,6,6,9,0],sub:[32,46,26,14,38,0],obj:[2,0,12,10,16,0]},{sl:82,name:"AYAS SULAIM SEHBA",roll:"271083",ct:[8,8,4,5,8,4],sub:[39,49,21,27,27,10],obj:[20,0,10,14,16,18]},{sl:83,name:"SYED PRANTO MIA",roll:"271084",ct:[6,4,7,3,7,4],sub:[26,31,2,0,6,0],obj:[18,0,10,11,15,18]},{sl:84,name:"MD. JOBAIR HASAN RAHIN",roll:"271085",ct:[6,5,7,3,5,5],sub:[36,42,12,16,20,3],obj:[3,0,10,14,15,17]},{sl:85,name:"TALHA JUBAYED",roll:"271086",ct:[7,6,5,6,8,5],sub:[26,54,41,22,23,8],obj:[21,0,12,18,17,12]},{sl:86,name:"MD. SOBUJ AHMED",roll:"271087",ct:[6,4,6,2,5,6],sub:[38,42,22,21,23,3],obj:[20,0,18,21,18,16]},{sl:87,name:"MORIOM AKTER",roll:"271088",ct:[8,7,4,4,8,5],sub:[47,47,45,29,45,0],obj:[18,0,6,17,20,17]},{sl:88,name:"MOHAMMAD",roll:"271089",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:89,name:"ABU JOR ANSARY",roll:"271090",ct:[7,6,6,4,8,6],sub:[26,40,40,40,27,12],obj:[18,0,16,15,18,12]},{sl:90,name:"MD. FUHAD",roll:"271091",ct:[6,6,7,2,8,6],sub:[28,40,44,21,6,10],obj:[17,0,23,18,15,23]},{sl:91,name:"MD. SHAHRIAR INTESER SRABON",roll:"271092",ct:[7,6,0,5,7,4],sub:[22,54,0,0,0,0],obj:[10,0,0,0,0,6]},{sl:92,name:"MST. BIPASHA AKTER",roll:"271093",ct:[8,6,5,3,8,5],sub:[31,54,56,46,40,9],obj:[0,0,18,20,20,12]},{sl:93,name:"ILMA AKTER SUBORNA",roll:"271094",ct:[7,7,7,2,8,4],sub:[34,41,17,15,20,10],obj:[20,0,10,16,15,12]},{sl:94,name:"SIMRAN AKTER",roll:"271095",ct:[9,5,7,4,5,4],sub:[28,50,24,24,27,8],obj:[19,0,15,21,17,9]},{sl:95,name:"TOASIN AHMED",roll:"271096",ct:[7,5,0,1,3,6],sub:[25,23,6,4,8,0],obj:[7,0,20,18,17,16]},{sl:96,name:"MEHRAB HASAN",roll:"271097",ct:[0,6,6,1,2,6],sub:[26,33,23,24,20,3],obj:[18,0,9,17,20,16]},{sl:97,name:"MD. RADHOYAN",roll:"271099",ct:[0,6,7,3,6,4],sub:[26,31,41,32,27,24],obj:[20,0,20,17,17,16]},{sl:98,name:"PARTHO BABU",roll:"271100",ct:[7,5,5,3,4,6],sub:[42,54,46,45,0,22],obj:[18,0,22,20,0,23]},{sl:99,name:"ADRITA HASAN ARSHE",roll:"271101",ct:[7,7,4,3,6,2],sub:[31,51,32,24,30,9],obj:[17,0,14,17,23,11]},{sl:100,name:"SHANTANU DAS",roll:"271102",ct:[6,5,6,2,7,6],sub:[19,60,38,23,28,15],obj:[14,0,11,17,23,11]},{sl:101,name:"MST. AIRIN AKTER AKHI",roll:"271103",ct:[7,6,5,2,7,4],sub:[30,54,48,26,29,8],obj:[13,0,16,18,20,11]},{sl:102,name:"ANIKA ANJUM",roll:"271104",ct:[8,5,6,6,8,5],sub:[40,63,23,27,36,17],obj:[20,0,16,17,22,10]},{sl:103,name:"YEASMIN KHATUN",roll:"271105",ct:[8,5,5,4,8,5],sub:[33,65,26,27,26,32],obj:[18,0,18,12,20,6]},{sl:104,name:"FATEMA AKTER MIM",roll:"271106",ct:[8,6,3,3,7,5],sub:[35,65,6,26,27,10],obj:[15,0,10,15,16,6]},{sl:105,name:"SAYED ANUAR SHUYO",roll:"271107",ct:[6,5,7,4,7,8],sub:[23,50,3,26,22,0],obj:[16,0,20,20,22,9]},{sl:106,name:"MD. NAYEM",roll:"271108",ct:[7,6,6,4,7,4],sub:[39,60,15,35,38,0],obj:[17,0,17,17,21,9]},{sl:107,name:"SHAFI AL",roll:"271110",ct:[4,6,7,3,6,4],sub:[36,63,47,32,32,30],obj:[21,0,14,18,22,16]},{sl:108,name:"SHIHAB HOSSAIN",roll:"271111",ct:[6,5,6,4,7,6],sub:[19,51,30,32,32,15],obj:[14,0,14,18,23,10]},{sl:109,name:"MD. SOUROV HOSSAIN",roll:"271112",ct:[0,6,5,4,4,6],sub:[22,49,0,12,0,0],obj:[15,0,12,14,0,9]},{sl:110,name:"S.M. RAFIU",roll:"271114",ct:[6,6,5,6,0,0],sub:[26,51,30,12,0,0],obj:[17,0,16,6,0,0]},{sl:111,name:"SUSHANTA SUTRADHAR",roll:"271115",ct:[8,6,6,6,8,7],sub:[38,56,56,36,46,18],obj:[20,0,17,20,26,12]},{sl:112,name:"MST SUMAIY",roll:"271116",ct:[8,5,6,7,7,4],sub:[26,37,0,30,34,0],obj:[17,0,0,17,22,0]},{sl:113,name:"AFRIN SULTANA MAHIA",roll:"271117",ct:[4,7,4,3,6,1],sub:[31,45,35,18,28,21],obj:[13,0,15,17,18,12]},{sl:114,name:"BITHI AKTER",roll:"271118",ct:[7,6,6,6,6,6],sub:[32,49,34,21,34,28],obj:[12,0,17,18,18,5]},{sl:115,name:"AFRIDA MONI",roll:"271119",ct:[8,5,4,8,7,0],sub:[34,60,38,18,32,0],obj:[21,0,14,16,21,0]},{sl:116,name:"SUMAYTA AMIN",roll:"271120",ct:[8,5,6,3,6,4],sub:[41,61,22,15,33,10],obj:[17,0,17,12,17,11]},{sl:117,name:"MD. RAYHAN SHARIF",roll:"271121",ct:[8,7,7,6,8,5],sub:[24,51,12,0,5,5],obj:[9,0,15,12,11,9]},{sl:118,name:"SHEIKH ABDUR RAHMAN",roll:"271122",ct:[7,5,4,4,6,6],sub:[13,33,8,0,2,5],obj:[11,0,12,12,10,5]},{sl:119,name:"JIHAN MOLLAH",roll:"271123",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:120,name:"ARIFA ISLAM",roll:"271124",ct:[8,7,6,6,6,5],sub:[22,30,0,0,0,0],obj:[15,0,0,0,0,0]},{sl:121,name:"AFSANA AKTER",roll:"271125",ct:[8,8,5,7,6,7],sub:[29,36,20,34,27,10],obj:[13,0,9,16,15,12]},{sl:122,name:"MD. SANJID-E HAQUE",roll:"271126",ct:[7,8,6,6,9,4],sub:[38,57,38,36,42,28],obj:[20,0,16,16,21,15]},{sl:123,name:"MOST. RAFIATUN",roll:"271127",ct:[7,6,7,2,7,4],sub:[28,60,4,15,26,3],obj:[23,0,15,16,14,16]},{sl:124,name:"TANVIR SAKER",roll:"271128",ct:[7,7,6,2,7,4],sub:[22,34,12,5,11,0],obj:[16,0,16,12,17,10]},{sl:125,name:"MAHIMA HOSSAIN",roll:"271129",ct:[7,6,7,2,7,4],sub:[22,55,0,0,0,4],obj:[9,0,0,0,0,9]},{sl:126,name:"MST. MEHERUN",roll:"271130",ct:[7,6,7,2,5,4],sub:[17,33,18,0,8,5],obj:[14,0,16,0,11,15]},{sl:127,name:"MARUFA AKTHER MUNNI",roll:"271131",ct:[7,6,7,2,6,4],sub:[22,42,33,11,33,12],obj:[15,0,16,18,15,14]},{sl:128,name:"NOUSIN JAHAN MILI",roll:"271132",ct:[6,6,6,5,5,4],sub:[25,51,22,9,41,5],obj:[15,0,17,16,17,10]},{sl:129,name:"MD. ATIKUR",roll:"271133",ct:[8,7,0,10,9,8],sub:[43,54,56,41,45,39],obj:[24,0,26,20,21,24]},{sl:130,name:"MOSTAKIM",roll:"271134",ct:[4,6,4,5,7,5],sub:[39,42,21,21,34,8],obj:[21,0,12,21,20,17]},{sl:131,name:"MD. MIRAJ",roll:"271135",ct:[0,0,0,6,6,4],sub:[17,31,21,2,6,0],obj:[11,0,14,11,15,11]},{sl:132,name:"MD. FAHIM",roll:"271136",ct:[6,7,6,5,6,6],sub:[29,55,34,30,34,39],obj:[15,0,22,15,14,22]},{sl:133,name:"MD. BIPLOB MIYA",roll:"271137",ct:[6,7,4,2,7,6],sub:[0,46,30,6,20,3],obj:[10,0,15,6,9,9]},{sl:134,name:"MD. MAHIM",roll:"271138",ct:[6,7,5,3,6,8],sub:[22,40,20,11,26,5],obj:[13,0,14,11,14,11]},{sl:135,name:"HAFSA AKTER",roll:"271139",ct:[0,0,0,0,0,0],sub:[28,66,0,0,0,0],obj:[14,0,0,0,0,0]},{sl:136,name:"JUBAYER HASSAN",roll:"271140",ct:[6,7,6,7,6,6],sub:[23,58,9,5,18,5],obj:[19,0,6,17,21,10]},{sl:137,name:"MD. KAWSER",roll:"271141",ct:[7,7,0,7,0,5],sub:[14,40,0,3,8,0],obj:[16,0,0,11,10,15]},{sl:138,name:"MD. ARAFAT HOSSAIN",roll:"271142",ct:[8,8,5,2,6,4],sub:[35,55,33,29,36,0],obj:[16,0,16,12,18,18]},{sl:139,name:"MD. SUMON",roll:"271143",ct:[0,0,5,2,7,8],sub:[26,37,41,22,26,0],obj:[21,0,20,18,18,16]},{sl:140,name:"MD. TAWHID ISLAM",roll:"271144",ct:[8,6,5,3,6,8],sub:[19,45,35,11,26,0],obj:[21,0,23,12,18,20]},{sl:141,name:"MD. MUNNA",roll:"271145",ct:[5,7,7,7,7,9],sub:[35,56,39,18,33,0],obj:[13,0,22,10,20,0]},{sl:142,name:"MD. LIKHON",roll:"271146",ct:[5,7,7,6,5,3],sub:[33,47,41,12,30,18],obj:[13,0,21,11,18,20]},{sl:143,name:"ALIF",roll:"271147",ct:[7,7,0,4,6,0],sub:[33,56,48,33,32,53],obj:[14,0,18,10,12,18]},{sl:144,name:"MD. YOUSUF ALI",roll:"271148",ct:[6,6,7,9,6,0],sub:[25,47,14,6,21,0],obj:[11,0,11,11,23,0]},{sl:145,name:"FABIHA",roll:"271149",ct:[5,8,6,0,6,2],sub:[30,63,0,4,11,8],obj:[17,0,0,12,10,16]},{sl:146,name:"SAMIM OSMAN",roll:"271150",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:147,name:"SHIFA BINTA AMIN",roll:"271151",ct:[0,0,0,0,0,0],sub:[0,0,0,15,0,0],obj:[0,0,0,12,0,10]},{sl:148,name:"MD. MOMENUR HOSSAIN",roll:"271152",ct:[4,5,6,5,7,1],sub:[24,63,6,27,27,15],obj:[17,0,10,11,15,10]},{sl:149,name:"MST FARZANA",roll:"271153",ct:[6,6,6,1,6,3],sub:[30,55,4,17,18,15],obj:[15,0,17,15,16,12]},{sl:150,name:"SAYMA",roll:"271154",ct:[4,4,5,0,4,4],sub:[30,48,4,12,22,5],obj:[16,0,12,15,17,16]},{sl:151,name:"TOUFIQ ALAHI",roll:"271155",ct:[4,5,0,4,4,5],sub:[2,31,0,2,3,0],obj:[18,0,0,16,6,12]},{sl:152,name:"MD. MONIR HOSSAIN",roll:"271156",ct:[5,6,7,4,7,4],sub:[37,59,28,21,38,12],obj:[18,0,15,15,20,17]},{sl:153,name:"MAIMUNA ALI",roll:"271157",ct:[7,5,4,8,8,7],sub:[24,60,11,16,24,10],obj:[21,0,14,16,18,10]},{sl:154,name:"ABDUR RAHMAN",roll:"271158",ct:[6,5,7,5,8,5],sub:[27,63,4,15,28,0],obj:[19,0,12,16,18,10]},{sl:155,name:"AFRITHA",roll:"271159",ct:[7,7,6,4,6,6],sub:[26,59,10,5,29,0],obj:[17,0,9,15,16,14]},{sl:156,name:"HOSSAIN TAWHID",roll:"271160",ct:[6,5,7,2,6,5],sub:[3,56,0,0,3,12],obj:[18,0,0,12,5,14]},{sl:157,name:"MD. AL-AMIN BHUIYA",roll:"271161",ct:[6,7,6,5,9,0],sub:[33,59,35,39,38,17],obj:[20,0,11,12,20,15]},{sl:158,name:"MD. MAZHARUL",roll:"271162",ct:[6,7,6,2,6,6],sub:[37,54,0,0,0,5],obj:[16,0,0,0,0,11]},{sl:159,name:"MST MONALISA KHATUN",roll:"271163",ct:[6,6,6,8,7,6],sub:[22,31,11,8,12,0],obj:[14,0,14,12,14,16]},{sl:160,name:"MARUFA AKTER JUTHI",roll:"271164",ct:[6,6,7,8,6,0],sub:[31,57,27,38,35,48],obj:[15,0,22,15,18,20]},{sl:161,name:"MD. RAHIM",roll:"271165",ct:[6,6,6,7,5,0],sub:[14,52,5,14,9,3],obj:[10,0,12,10,5,11]},{sl:162,name:"MD. SIYAMUR",roll:"271166",ct:[6,6,7,8,8,4],sub:[16,52,4,17,5,3],obj:[15,0,8,10,9,12]},{sl:163,name:"EYASIN MOLLA",roll:"271167",ct:[0,0,4,0,0,0],sub:[3,31,0,0,4,0],obj:[15,0,8,14,12,0]},{sl:164,name:"MOHAMMAD RAFI",roll:"271168",ct:[6,7,6,4,8,0],sub:[22,63,10,15,27,0],obj:[10,0,12,15,17,16]},{sl:165,name:"MD. AL KUDRAT ABIR",roll:"271169",ct:[6,7,7,2,9,0],sub:[28,66,12,12,21,12],obj:[14,0,18,14,15,16]},{sl:166,name:"SHARIF MAHMUDUL",roll:"271170",ct:[5,5,4,3,9,4],sub:[29,54,9,12,23,15],obj:[16,0,18,12,16,21]},{sl:167,name:"LAMIA NUR",roll:"271171",ct:[6,6,6,3,8,2],sub:[23,46,17,0,33,8],obj:[19,0,15,14,21,10]},{sl:168,name:"MD. RIYAD",roll:"271172",ct:[6,5,0,8,0,4],sub:[6,50,0,4,11,0],obj:[12,0,17,12,15,8]},{sl:169,name:"MST SHURAVI ISLAM MARZIA",roll:"271173",ct:[6,5,6,2,7,4],sub:[29,45,9,10,15,0],obj:[12,0,16,14,10,15]},{sl:170,name:"SAAD BIN FARUK",roll:"271174",ct:[6,3,4,4,5,5],sub:[2,63,8,16,12,8],obj:[14,0,15,15,15,9]},{sl:171,name:"SHREEPARNA",roll:"271175",ct:[6,5,6,8,7,8],sub:[17,42,21,28,17,5],obj:[13,0,12,15,12,10]},{sl:172,name:"MST TASHMIM MISHAT TANHA",roll:"271176",ct:[8,6,6,2,7,4],sub:[26,46,15,24,21,0],obj:[17,0,18,15,16,17]},{sl:173,name:"SAMIA ISLAM RAISA",roll:"271177",ct:[0,0,0,0,0,0],sub:[31,36,10,16,15,0],obj:[19,0,9,21,12,20]},{sl:174,name:"MST TAHMINA AKTER",roll:"271178",ct:[6,7,6,3,7,3],sub:[25,36,12,11,11,5],obj:[12,0,12,16,14,11]},{sl:175,name:"SAMIA AKTER SHITHI",roll:"271179",ct:[6,7,6,8,7,6],sub:[28,42,10,8,33,17],obj:[12,0,14,12,20,17]},{sl:176,name:"SHIDRATUL MONTAHA SHIFA",roll:"271180",ct:[7,6,3,2,8,4],sub:[35,45,12,12,15,3],obj:[17,0,10,12,16,14]},{sl:177,name:"MD. RAFI RAIYAN",roll:"271181",ct:[0,3,2,3,6,3],sub:[17,44,4,12,5,2],obj:[12,0,14,12,10,15]},{sl:178,name:"ZUBAEAR",roll:"271182",ct:[5,6,0,0,0,0],sub:[0,46,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:179,name:"UMMAY AIMAN",roll:"271183",ct:[5,7,7,7,10,6],sub:[42,64,29,50,45,22],obj:[17,0,22,21,21,12]},{sl:180,name:"FAIZA RAHMAN MITHILA",roll:"271184",ct:[6,5,7,8,8,6],sub:[30,30,21,26,14,3],obj:[13,0,18,14,20,15]},{sl:181,name:"SHUVO BISWAS JOY",roll:"271185",ct:[5,5,4,4,7,6],sub:[26,38,16,36,27,27],obj:[16,0,17,17,22,15]},{sl:182,name:"MD. IFTAKHARUL ISLAM KHAN",roll:"271186",ct:[2,4,1,1,2,1],sub:[16,65,0,21,18,3],obj:[9,0,0,8,15,18]},{sl:183,name:"LAMIA AKTER POLI",roll:"271187",ct:[6,7,4,4,7,6],sub:[29,30,16,21,14,8],obj:[12,0,10,15,17,9]},{sl:184,name:"HASIN TAHIR",roll:"271188",ct:[8,8,3,4,8,6],sub:[23,41,17,22,24,24],obj:[13,0,12,14,16,12]},{sl:185,name:"SADMAN IBNE",roll:"271189",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:186,name:"ANIK CHANDRA DAS",roll:"271190",ct:[5,4,9,7,9,10],sub:[27,38,39,39,22,3],obj:[20,0,15,15,17,17]},{sl:187,name:"URMITA AKTHER",roll:"271191",ct:[4,6,2,5,8,6],sub:[27,46,16,11,6,5],obj:[12,0,12,10,10,9]},{sl:188,name:"MD. ARIF HOSEN",roll:"271192",ct:[4,6,1,3,7,4],sub:[28,49,12,16,20,17],obj:[11,0,18,10,21,14]},{sl:189,name:"OMAR IMTIAZ",roll:"271193",ct:[4,6,1,4,8,7],sub:[19,42,17,21,15,22],obj:[13,0,22,14,15,15]},{sl:190,name:"MD. RATUL HASAN",roll:"271194",ct:[4,6,3,4,8,3],sub:[27,45,0,27,16,5],obj:[13,0,0,12,18,12]},{sl:191,name:"MD. MIJAN ALAM",roll:"271195",ct:[3,5,3,4,8,0],sub:[24,44,4,12,12,0],obj:[12,0,12,10,12,0]},{sl:192,name:"NADIYA AKTER SORNA",roll:"271196",ct:[6,8,2,3,8,3],sub:[36,59,15,18,23,8],obj:[11,0,11,12,16,14]},{sl:193,name:"MD. HASIBUL",roll:"271197",ct:[5,5,0,5,8,4],sub:[19,38,0,0,0,0],obj:[14,0,0,0,0,0]},{sl:194,name:"SAUDA SULTANA",roll:"271198",ct:[4,6,2,3,0,0],sub:[22,45,22,4,10,0],obj:[10,0,8,14,10,0]},{sl:195,name:"AKHI AKTER",roll:"271199",ct:[4,6,4,2,7,3],sub:[26,46,21,23,32,5],obj:[10,0,14,14,14,8]},{sl:196,name:"UTSO BARDHON",roll:"271200",ct:[4,4,2,6,8,10],sub:[27,37,9,21,26,0],obj:[17,0,14,17,11,17]},{sl:197,name:"MD. SAJJAD AHMMED",roll:"271201",ct:[4,6,5,5,4,7],sub:[18,54,20,16,18,3],obj:[10,0,15,6,17,12]},{sl:198,name:"ABDUR",roll:"271202",ct:[4,6,2,5,8,5],sub:[24,36,14,5,4,8],obj:[15,0,16,10,8,12]},{sl:199,name:"MD. ALVE",roll:"271203",ct:[3,6,2,4,8,6],sub:[25,36,10,10,10,29],obj:[16,0,12,10,15,10]},{sl:200,name:"MD. YEAMIN",roll:"271204",ct:[4,5,1,4,6,6],sub:[17,30,4,4,4,0],obj:[10,0,10,14,15,10]},{sl:201,name:"A H M G MAHFUJ",roll:"271205",ct:[6,6,7,3,9,4],sub:[23,50,16,20,23,5],obj:[14,0,10,3,16,15]},{sl:202,name:"MD. MUSHFIAUR RAHMAN MURAD",roll:"271206",ct:[4,5,0,5,6,3],sub:[19,47,23,26,16,5],obj:[10,0,12,10,17,16]},{sl:203,name:"TAHMID AL TAHSIN",roll:"271209",ct:[5,7,2,5,4,3],sub:[24,54,11,2,18,0],obj:[15,0,14,10,15,12]},{sl:204,name:"MD. AL-AMIN",roll:"271210",ct:[4,5,3,3,5,2],sub:[25,30,18,22,22,0],obj:[17,0,10,10,16,6]},{sl:205,name:"MD. ALVI RAHMAN LABIB",roll:"271211",ct:[0,0,3,0,4,0],sub:[19,33,0,0,0,0],obj:[14,0,0,10,0,6]},{sl:206,name:"MD. OMIT HASAN SIAM",roll:"271212",ct:[4,6,4,5,7,3],sub:[19,44,11,0,18,0],obj:[13,0,10,0,12,5]},{sl:207,name:"MD. ANTOR MATABBAR",roll:"271213",ct:[5,6,1,4,9,5],sub:[12,30,6,2,4,0],obj:[9,0,8,4,11,10]},{sl:208,name:"MD. ASHRAFUL ISLAM",roll:"271214",ct:[0,5,1,2,4,3],sub:[17,45,0,0,0,0],obj:[10,0,0,0,0,0]},{sl:209,name:"MD. NAJMUL",roll:"271215",ct:[6,5,3,4,8,5],sub:[25,43,32,29,9,12],obj:[15,0,18,11,10,12]},{sl:210,name:"MD. MISAD SAMAD",roll:"271216",ct:[5,5,4,3,8,5],sub:[26,44,14,15,11,5],obj:[15,0,9,10,15,16]},{sl:211,name:"MD. BIJOY HOSSAIN BADHAN",roll:"271217",ct:[6,7,3,2,7,3],sub:[16,37,3,0,4,0],obj:[15,0,14,6,14,12]},{sl:212,name:"MD. MINHAJUL",roll:"271218",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:213,name:"AYON ROY ABIR",roll:"271219",ct:[2,5,0,4,6,7],sub:[16,30,4,6,2,5],obj:[10,0,9,10,10,10]},{sl:214,name:"YEAMONY AKTHER",roll:"271220",ct:[0,0,0,0,0,0],sub:[23,30,2,6,8,3],obj:[14,0,9,4,12,15]},{sl:215,name:"MD. SHAYED HASSAN",roll:"271221",ct:[4,6,4,2,8,3],sub:[25,41,17,14,26,10],obj:[15,0,11,11,17,14]},{sl:216,name:"FARJANA AKTER",roll:"271222",ct:[4,6,4,6,9,9],sub:[26,19,0,6,9,27],obj:[17,0,0,5,8,18]},{sl:217,name:"MD. ROBIUL ALAM RABBI",roll:"271223",ct:[3,4,0,4,5,3],sub:[3,16,0,4,0,3],obj:[9,0,0,5,0,21]},{sl:218,name:"NUSRAT JAHAN MAHI",roll:"271224",ct:[5,7,4,4,10,7],sub:[24,50,6,21,20,5],obj:[15,0,9,10,16,16]},{sl:219,name:"BIPRORAJ",roll:"271225",ct:[0,0,0,0,0,0],sub:[19,58,0,0,0,0],obj:[10,0,0,0,0,0]},{sl:220,name:"MD. JUWEL RANA",roll:"271226",ct:[5,6,4,4,9,3],sub:[22,48,21,24,30,29],obj:[15,0,12,5,22,8]},{sl:221,name:"HARUN MIA",roll:"271227",ct:[3,4,3,5,6,3],sub:[22,21,4,0,5,0],obj:[16,0,10,10,17,5]},{sl:222,name:"MD. SIFAT",roll:"271228",ct:[4,0,0,5,4,3],sub:[15,14,0,0,0,0],obj:[10,0,9,5,12,12]},{sl:223,name:"MD. NADIM MIA",roll:"271229",ct:[4,4,2,5,8,3],sub:[16,30,2,0,0,3],obj:[10,0,10,5,0,12]},{sl:224,name:"UMME ZAHAN",roll:"271230",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:225,name:"AFSAA AKTHER",roll:"271231",ct:[6,7,3,4,6,3],sub:[17,32,0,0,0,0],obj:[17,0,0,0,0,0]},{sl:226,name:"SANJIDA ISLAM",roll:"271232",ct:[4,6,5,4,9,7],sub:[23,30,11,3,12,5],obj:[19,0,10,8,14,16]},{sl:227,name:"EVA AKTER SANJIDA",roll:"271233",ct:[4,6,6,4,3,9],sub:[22,30,14,8,11,10],obj:[17,0,10,5,15,16]},{sl:228,name:"ROHAN ISLAM",roll:"271234",ct:[0,0,2,5,7,3],sub:[14,0,5,5,10,0],obj:[15,0,20,12,10,8]},{sl:229,name:"HASIBUL ISLAM OMAR",roll:"271235",ct:[6,6,3,4,7,3],sub:[17,31,6,6,8,0],obj:[15,0,21,11,15,5]},{sl:230,name:"MD. MESKAT AHAMED",roll:"271236",ct:[6,6,5,4,9,3],sub:[25,42,17,26,23,10],obj:[19,0,21,11,16,14]},{sl:231,name:"MD. TARIKUL",roll:"271237",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:232,name:"JANNATUL FARDAOUS",roll:"271238",ct:[5,7,3,4,10,6],sub:[26,50,10,34,29,5],obj:[19,0,10,10,18,15]},{sl:233,name:"MD. NUR SAYED ISLAM LIMON",roll:"271239",ct:[0,0,0,0,0,6],sub:[26,41,9,15,21,8],obj:[20,0,14,8,18,11]},{sl:234,name:"KANIZ FATEMA MARIA",roll:"271240",ct:[4,6,3,4,8,0],sub:[23,41,12,14,22,10],obj:[17,0,12,6,17,16]},{sl:235,name:"SUBRIN JAHAN TRISHA",roll:"271241",ct:[5,7,0,4,3,1],sub:[19,42,0,0,6,3],obj:[15,0,0,10,14,15]},{sl:236,name:"TANZILA AZIZ ANGKUR",roll:"271242",ct:[4,7,1,1,5,1],sub:[23,50,10,9,29,5],obj:[16,0,6,10,14,12]},{sl:237,name:"MD. SAHED",roll:"271243",ct:[4,4,3,1,4,0],sub:[17,21,0,0,0,0],obj:[14,0,0,0,0,0]},{sl:238,name:"MD. ALAMIN",roll:"271244",ct:[4,5,3,3,4,0],sub:[26,30,0,10,5,0],obj:[20,0,0,12,9,0]},{sl:239,name:"MD. MAHINUR",roll:"271245",ct:[4,4,6,2,3,10],sub:[25,30,24,6,17,0],obj:[20,0,20,10,14,0]},{sl:240,name:"ADNAN ISLAM",roll:"271246",ct:[0,0,0,0,0,0],sub:[19,30,6,11,9,0],obj:[14,0,14,8,10,0]},{sl:241,name:"SAMIR MOLLA",roll:"271247",ct:[5,5,5,5,7,3],sub:[23,49,10,3,15,8],obj:[17,0,11,8,15,14]},{sl:242,name:"OMOR FARUK",roll:"271248",ct:[0,0,4,0,0,0],sub:[23,30,0,3,5,5],obj:[17,0,0,8,9,8]},{sl:243,name:"MD. YEASIN ABDULLAH",roll:"271249",ct:[4,4,5,5,9,4],sub:[26,34,15,18,18,5],obj:[18,0,10,10,17,16]},{sl:244,name:"SUBONNA AKTER SANTA",roll:"271250",ct:[4,7,8,1,4,3],sub:[23,35,5,8,14,0],obj:[18,0,12,11,14,12]},{sl:245,name:"TAHRIM RASHID",roll:"271251",ct:[4,6,8,5,8,3],sub:[26,54,0,15,15,9],obj:[19,0,17,8,11,14]},{sl:246,name:"MST KEYA AKTER",roll:"271252",ct:[5,6,2,1,3,3],sub:[14,30,3,11,5,0],obj:[13,0,12,10,10,10]},{sl:247,name:"ATIKA AKTAR",roll:"271253",ct:[0,0,0,0,0,0],sub:[0,0,9,21,12,0],obj:[0,0,17,18,14,0]},{sl:248,name:"MD. SHOWRAV",roll:"271254",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:249,name:"JANNATUL NAIM",roll:"271255",ct:[6,7,8,2,4,2],sub:[23,32,6,14,3,4],obj:[17,0,9,11,10,10]},{sl:250,name:"ASADULLAH GALIB",roll:"271256",ct:[4,3,4,2,3,1],sub:[18,39,3,0,5,0],obj:[15,0,16,16,17,16]},{sl:251,name:"MAINUR AKTER ONONNA",roll:"271257",ct:[6,7,3,0,3,2],sub:[19,38,4,11,12,0],obj:[15,0,16,17,18,11]},{sl:252,name:"MD. HUJAIFA",roll:"271258",ct:[5,8,7,5,9,4],sub:[20,45,9,10,12,3],obj:[15,0,12,16,17,15]},{sl:253,name:"SADIYA AKTHER",roll:"271259",ct:[7,7,5,1,6,3],sub:[39,40,6,21,18,12],obj:[21,0,15,15,11,12]},{sl:254,name:"JANNATUN NAYEEM",roll:"271260",ct:[6,1,1,1,7,0],sub:[24,41,4,21,29,12],obj:[18,0,15,14,12,6]},{sl:255,name:"SHARIFUL ISLAM",roll:"271261",ct:[5,5,2,1,3,3],sub:[26,32,15,21,12,8],obj:[19,0,12,14,12,2]},{sl:256,name:"MUHAMMAD",roll:"271262",ct:[4,6,3,1,4,2],sub:[19,52,0,0,0,0],obj:[15,0,0,0,0,0]},{sl:257,name:"MD. ASHIQUR",roll:"271263",ct:[4,5,3,0,5,3],sub:[19,32,2,4,3,0],obj:[15,0,14,15,5,18]},{sl:258,name:"MD. FAHIM MATUBBAR",roll:"271265",ct:[3,1,4,1,5,2],sub:[19,0,4,0,5,0],obj:[14,0,15,0,12,17]},{sl:259,name:"MD. ARIQUL ISLAM ABIR",roll:"271266",ct:[4,1,0,0,6,0],sub:[17,30,3,11,6,0],obj:[13,0,15,14,10,15]},{sl:260,name:"JANNAT KAMAL JERIN",roll:"271267",ct:[5,4,9,1,2,3],sub:[26,46,4,21,27,0],obj:[19,0,11,14,11,12]},{sl:261,name:"PRODIP",roll:"271268",ct:[4,7,0,0,8,3],sub:[23,31,0,0,4,8],obj:[19,0,0,0,9,6]},{sl:262,name:"MD. AYMAN",roll:"271269",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:263,name:"MD. SOJIB",roll:"271270",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:264,name:"TASMIYA TASNEEM",roll:"271271",ct:[5,6,3,1,5,3],sub:[30,45,4,14,16,0],obj:[21,0,14,10,10,15]},{sl:265,name:"MD. TOHIDUL ISLAM",roll:"271272",ct:[3,5,3,0,2,0],sub:[23,36,3,3,4,0],obj:[20,0,12,11,8,10]},{sl:266,name:"FAHAD HOSSAIN",roll:"271273",ct:[4,5,4,0,5,4],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:267,name:"NAYEEM",roll:"271274",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:268,name:"SIRAJUM MONIRA",roll:"271275",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:269,name:"MD. MAHFUGUR RAHMAN",roll:"271276",ct:[5,7,3,5,9,2],sub:[25,45,8,0,5,0],obj:[19,0,12,16,15,6]},{sl:270,name:"ASADULLAH JAKI",roll:"271277",ct:[4,5,8,5,8,5],sub:[25,46,35,44,38,36],obj:[19,0,27,17,18,11]},{sl:271,name:"SHIRAJUM MUNIR",roll:"271278",ct:[4,5,0,2,0,1],sub:[22,55,0,21,0,0],obj:[17,0,0,12,0,0]},{sl:272,name:"ABDUR RAHMAN HUZAIFA",roll:"271279",ct:[3,4,6,3,7,2],sub:[19,9,2,0,3,0],obj:[15,0,9,10,10,8]},{sl:273,name:"MD. NAZIM",roll:"271281",ct:[5,6,7,3,6,4],sub:[26,54,26,28,24,22],obj:[19,0,14,10,12,16]},{sl:274,name:"MD. LIYKOT",roll:"271282",ct:[6,2,5,5,9,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:275,name:"MARJIA AKTER TRISHA",roll:"271283",ct:[3,0,4,0,4,3],sub:[25,30,3,0,5,0],obj:[19,0,10,11,6,11]},{sl:276,name:"AFTAB ALOM",roll:"271284",ct:[0,0,0,0,0,0],sub:[19,61,11,12,6,5],obj:[17,0,12,14,11,10]},{sl:277,name:"MD. KHAIRUL BASAR KHANDAKAR",roll:"271285",ct:[4,2,0,1,2,1],sub:[23,30,9,11,9,3],obj:[17,0,8,11,10,9]},{sl:278,name:"MIR SHAFEEUL ISLAM",roll:"271286",ct:[6,6,0,3,8,1],sub:[24,48,15,30,29,15],obj:[17,0,16,15,17,14]},{sl:279,name:"MD FAHIM HOSSAIN",roll:"271287",ct:[0,5,2,3,4,3],sub:[23,55,24,24,21,10],obj:[17,0,11,15,12,14]},{sl:280,name:"MUMTAHINA ANJUM",roll:"271288",ct:[6,8,2,2,6,2],sub:[23,51,6,26,27,5],obj:[17,0,12,16,16,15]},{sl:281,name:"SAYMA AKTER ETU",roll:"271289",ct:[6,7,6,8,6,2],sub:[26,51,28,38,38,12],obj:[19,0,16,21,20,12]},{sl:282,name:"MD. SHAFINUL ISLAM",roll:"271290",ct:[0,0,0,0,0,0],sub:[26,30,3,3,12,5],obj:[19,0,9,15,11,10]},{sl:283,name:"MD. TASIN AHMED",roll:"271291",ct:[0,0,0,0,0,0],sub:[17,36,0,8,0,0],obj:[14,0,0,5,0,12]},{sl:284,name:"RADEEF JOARDDER",roll:"271292",ct:[0,0,0,0,0,0],sub:[8,30,6,10,14,5],obj:[9,0,14,11,18,15]},{sl:285,name:"MD. RIFAT HOSSAIN",roll:"271293",ct:[0,0,0,0,0,0],sub:[25,70,16,21,8,22],obj:[14,0,11,15,12,17]},{sl:286,name:"NOWSHIN TABASSUM",roll:"271295",ct:[0,0,0,0,0,0],sub:[26,30,0,0,0,0],obj:[19,0,0,0,0,0]},{sl:287,name:"MARIYA ISLAM",roll:"271296",ct:[0,0,0,0,0,0],sub:[26,30,0,0,0,0],obj:[20,0,0,0,0,0]},{sl:288,name:"SYED MOYNUL HASAN",roll:"271297",ct:[0,0,0,0,0,0],sub:[25,52,3,9,15,0],obj:[20,0,20,12,12,12]},{sl:289,name:"MURSHIDA ZAHAN NUPUR",roll:"271298",ct:[0,0,0,0,0,0],sub:[27,51,18,32,24,0],obj:[22,0,17,20,20,10]},{sl:290,name:"YEAHIA HASAN",roll:"271299",ct:[0,0,0,0,0,0],sub:[25,30,0,0,0,0],obj:[19,0,0,0,0,0]},{sl:291,name:"ZIHADUL ISLAM ZIHAD",roll:"271300",ct:[0,0,0,0,0,0],sub:[25,45,0,21,15,0],obj:[18,0,0,15,8,0]},{sl:292,name:"MD. SIAM SARKAR",roll:"271301",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:293,name:"MD. SUMON",roll:"271302",ct:[0,0,0,0,0,0],sub:[23,36,0,9,8,0],obj:[17,0,0,11,9,0]},{sl:294,name:"MUHAMMAD RAISUL",roll:"271303",ct:[0,0,0,0,0,0],sub:[19,9,0,0,0,0],obj:[15,0,0,0,0,0]},{sl:295,name:"MST. SUCHI RAHAMAN",roll:"271304",ct:[0,0,0,0,0,0],sub:[0,34,0,0,3,0],obj:[0,0,0,0,4,12]},{sl:296,name:"MD. KAZI TAHMIM",roll:"271305",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:297,name:"MD HASIN RAIHAN",roll:"271306",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:298,name:"MD. ANAMUL HAQUE",roll:"271307",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:299,name:"TAHMID",roll:"271308",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:300,name:"CHOWDHURY MUBIN",roll:"271309",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:301,name:"KAZI MD NAZMU",roll:"271310",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]},{sl:302,name:"JAHIDUL ISLAM",roll:"271311",ct:[0,0,0,0,0,0],sub:[0,0,0,0,0,0],obj:[0,0,0,0,0,0]}];
+// ══════════════════════════════════════
+// DATA — 7 subjects: Bangla, English, Physics, Chemistry, Biology, Math, ICT
+// ICT data extracted from the PDF tabulation sheet (Agri col is 0 for all, ICT is next)
+// ══════════════════════════════════════
+const RAW=[
+{sl:1,name:"TANZILA",roll:"271001",ct:[8,5,8,7,9,3,9],sub:[41,63,24,39,41,22,47],obj:[19,0,24,16,20,6,23]},
+{sl:2,name:"SADIA KAWKAB",roll:"271002",ct:[8,8,7,8,9,6,9],sub:[44,64,36,47,46,38,51],obj:[23,0,27,20,26,17,29]},
+{sl:3,name:"MD. SIFAT ULLAH",roll:"271003",ct:[8,8,8,8,8,7,8],sub:[50,54,50,50,48,47,46],obj:[20,0,27,20,26,20,29]},
+{sl:4,name:"MD. MISHRATUL",roll:"271004",ct:[5,7,4,7,8,6,8],sub:[22,54,21,21,33,21,46],obj:[21,0,28,21,27,18,28]},
+{sl:5,name:"MD. NURE AHNAF",roll:"271005",ct:[6,8,7,7,7,6,9],sub:[41,64,32,30,40,8,40],obj:[18,0,20,16,23,17,22]},
+{sl:6,name:"MD. AFTAB HOSEN SAAD",roll:"271006",ct:[5,5,4,5,6,4,0],sub:[31,64,3,6,11,0,12],obj:[9,0,15,14,9,15,17]},
+{sl:7,name:"MD. HABIBUR",roll:"271007",ct:[7,6,5,2,6,5,7],sub:[22,47,17,14,20,34,44],obj:[14,0,12,14,15,11,22]},
+{sl:8,name:"SULAYMAN",roll:"271008",ct:[5,7,3,5,7,6,7],sub:[31,56,27,38,34,10,38],obj:[20,0,17,14,16,9,22]},
+{sl:9,name:"FAHIMA FATIMA",roll:"271009",ct:[9,8,8,5,7,10,7],sub:[43,59,21,18,40,39,39],obj:[19,0,16,16,16,20,21]},
+{sl:10,name:"ANNY AKTER ISRAT",roll:"271010",ct:[9,8,7,6,0,10,9],sub:[36,60,50,41,0,44,52],obj:[15,0,17,17,0,23,26]},
+{sl:11,name:"SAMIA RAHMAN",roll:"271011",ct:[8,8,8,6,8,6,8],sub:[38,54,18,15,39,22,41],obj:[18,0,26,11,24,9,23]},
+{sl:12,name:"BIGITA AHMMED",roll:"271012",ct:[8,6,6,5,6,4,8],sub:[27,45,18,26,28,21,35],obj:[5,0,21,17,24,14,28]},
+{sl:13,name:"NUSRAT JHAHAN",roll:"271013",ct:[9,7,7,7,8,7,9],sub:[36,51,10,18,33,8,45],obj:[18,0,17,10,17,10,22]},
+{sl:14,name:"MEHENAZ MIM",roll:"271014",ct:[9,6,7,7,8,5,9],sub:[26,51,10,11,27,8,47],obj:[18,0,14,15,12,11,23]},
+{sl:15,name:"MD. SHAJIDUL HASAN SHAJID",roll:"271015",ct:[8,6,0,6,7,5,8],sub:[38,51,24,28,18,8,47],obj:[19,0,16,14,18,16,21]},
+{sl:16,name:"MD. JAKIR ALI",roll:"271016",ct:[7,6,6,7,7,4,6],sub:[32,48,32,33,32,3,29],obj:[22,0,23,20,17,10,23]},
+{sl:17,name:"MD. ASHIQUR RAHMAN ANIK",roll:"271017",ct:[7,7,3,4,6,4,7],sub:[33,32,42,22,21,0,10],obj:[14,0,9,10,12,9,12]},
+{sl:18,name:"TANDRA HALDER",roll:"271018",ct:[8,6,7,5,6,0,10],sub:[36,31,12,22,30,0,11],obj:[13,0,11,15,20,0,11]},
+{sl:19,name:"SAJIA AKTER",roll:"271019",ct:[8,7,8,8,8,0,8],sub:[34,45,23,40,35,0,36],obj:[20,0,22,15,24,0,21]},
+{sl:20,name:"TAPATI MANDAL",roll:"271020",ct:[8,7,8,8,8,0,8],sub:[31,48,23,38,33,0,45],obj:[17,0,20,14,24,0,22]},
+{sl:21,name:"MARIA BINTAY",roll:"271021",ct:[8,8,8,6,7,6,8],sub:[35,51,26,38,36,10,22],obj:[16,0,15,16,21,9,12]},
+{sl:22,name:"NUJHAT HOSSAIN",roll:"271022",ct:[7,0,7,6,7,6,9],sub:[47,72,28,47,42,10,35],obj:[19,0,20,17,23,15,21]},
+{sl:23,name:"MAISHA ADIBA",roll:"271023",ct:[8,8,7,5,7,6,9],sub:[35,63,32,40,50,17,50],obj:[4,0,18,18,21,14,26]},
+{sl:24,name:"ALIF BINTE",roll:"271024",ct:[8,8,7,5,8,0,8],sub:[38,59,21,40,47,0,34],obj:[19,0,20,18,18,0,26]},
+{sl:25,name:"FAHMIDA IKRA",roll:"271025",ct:[8,6,7,6,5,5,8],sub:[36,60,9,17,30,0,22],obj:[16,0,10,12,11,12,15]},
+{sl:26,name:"MST RUKU KHATUN",roll:"271026",ct:[9,7,7,4,8,10,10],sub:[38,30,21,0,5,0,20],obj:[15,0,11,15,16,14,14]},
+{sl:27,name:"RUBIYA ISLAM SAMIA",roll:"271027",ct:[9,6,7,5,8,6,7],sub:[30,36,17,38,29,10,40],obj:[19,0,23,15,26,12,18]},
+{sl:28,name:"NIJHUM AKTER MAISHA",roll:"271028",ct:[8,7,7,7,7,9,10],sub:[22,33,9,21,26,15,24],obj:[16,0,14,16,17,12,15]},
+{sl:29,name:"MOSA FATEMA AKTER SULTANA",roll:"271029",ct:[6,6,5,1,8,3,6],sub:[42,63,12,24,32,15,35],obj:[18,0,14,18,20,9,21]},
+{sl:30,name:"AKHI AKTER",roll:"271030",ct:[6,7,5,1,7,2,5],sub:[39,63,11,22,29,12,35],obj:[20,0,11,16,18,15,24]},
+{sl:31,name:"HAFSA MARIAM",roll:"271031",ct:[8,7,8,4,9,6,9],sub:[40,63,41,46,45,51,48],obj:[22,0,22,17,22,22,26]},
+{sl:32,name:"NUSRAT JHAHAN",roll:"271032",ct:[7,6,6,7,6,6,10],sub:[26,56,21,29,39,24,36],obj:[16,0,20,17,18,11,24]},
+{sl:33,name:"FARZANA AKTER",roll:"271033",ct:[7,7,6,7,6,9,9],sub:[24,51,2,15,29,12,23],obj:[14,0,17,17,16,8,14]},
+{sl:34,name:"MD. SALMAN TALUKDER ASAD",roll:"271034",ct:[8,6,4,6,6,5,8],sub:[23,55,4,17,23,16,41],obj:[14,0,10,11,15,15,26]},
+{sl:35,name:"MD. FAMIM HOSSAIN",roll:"271035",ct:[8,6,4,4,6,3,8],sub:[31,41,0,15,0,17,29],obj:[14,0,0,10,0,18,27]},
+{sl:36,name:"LABIB MOLLICK",roll:"271036",ct:[7,7,3,4,5,3,8],sub:[26,59,16,30,20,22,47],obj:[15,0,14,14,15,15,22]},
+{sl:37,name:"JANNAT AKTER",roll:"271037",ct:[8,6,7,2,6,3,9],sub:[26,30,3,2,17,0,6],obj:[7,0,10,5,14,9,10]},
+{sl:38,name:"MD. MAHAMUDUL",roll:"271038",ct:[0,0,0,0,0,0,0],sub:[26,42,0,0,0,0,30],obj:[5,0,0,0,0,0,0]},
+{sl:39,name:"MD. RAIUN",roll:"271039",ct:[4,6,6,7,5,6,4],sub:[26,55,9,24,17,10,0],obj:[18,0,17,16,16,14,0]},
+{sl:40,name:"MD. TAUSIF",roll:"271040",ct:[5,7,4,5,6,4,6],sub:[22,49,4,18,10,10,30],obj:[19,0,9,18,16,12,14]},
+{sl:41,name:"SAYMON ISLAM",roll:"271041",ct:[6,5,4,5,4,2,0],sub:[22,45,9,15,10,3,35],obj:[17,0,12,16,12,11,14]},
+{sl:42,name:"MONJURI MRIDU",roll:"271042",ct:[7,6,0,0,0,0,10],sub:[0,63,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:43,name:"MD. FAHAD",roll:"271043",ct:[7,6,6,8,5,7,7],sub:[8,51,8,18,11,10,15],obj:[23,0,9,18,18,16,15]},
+{sl:44,name:"ROBIUL ISLAM",roll:"271045",ct:[6,7,4,7,5,3,6],sub:[24,38,8,21,9,10,28],obj:[15,0,8,12,18,14,27]},
+{sl:45,name:"MD. SHAHRIAR APON",roll:"271046",ct:[7,7,6,8,5,6,6],sub:[24,54,12,27,18,6,38],obj:[17,0,11,11,20,17,22]},
+{sl:46,name:"MUSHFIQUR",roll:"271047",ct:[7,5,6,8,6,6,4],sub:[36,63,12,28,21,9,36],obj:[14,0,9,11,21,16,17]},
+{sl:47,name:"JIHAD HOSSAIN SHUROB",roll:"271048",ct:[6,5,6,6,5,3,6],sub:[23,45,4,16,17,3,14],obj:[10,0,10,15,15,6,17]},
+{sl:48,name:"ISMAIL HOSSAIN",roll:"271049",ct:[6,7,6,7,6,4,8],sub:[26,52,15,26,14,10,27],obj:[17,0,8,16,16,14,16]},
+{sl:49,name:"MD. NEAZ",roll:"271050",ct:[7,6,3,8,5,4,8],sub:[24,48,10,21,17,10,23],obj:[17,0,10,16,17,14,16]},
+{sl:50,name:"ABDUL AUAL ISLAM SOADH",roll:"271051",ct:[6,5,5,4,4,5,7],sub:[26,42,26,9,9,12,24],obj:[15,0,12,15,17,26,26]},
+{sl:51,name:"NAFIS SHAHRIAR",roll:"271052",ct:[0,0,4,0,0,0,0],sub:[26,65,0,0,10,10,22],obj:[20,0,0,0,12,24,24]},
+{sl:52,name:"TOUHID-UZ-",roll:"271053",ct:[0,0,4,0,0,0,0],sub:[31,63,47,36,23,15,44],obj:[20,0,23,10,22,18,26]},
+{sl:53,name:"MD. MUSFIQ AL",roll:"271054",ct:[7,7,4,9,9,6,9],sub:[40,69,56,36,35,26,42],obj:[15,0,21,12,23,18,23]},
+{sl:54,name:"ANWER HOSSEN",roll:"271055",ct:[5,6,0,5,4,3,5],sub:[22,45,5,2,6,0,11],obj:[7,0,6,10,6,14,14]},
+{sl:55,name:"MD. SOHEL RAHMAN",roll:"271056",ct:[6,6,5,5,4,3,7],sub:[31,33,5,8,6,0,5],obj:[10,0,15,10,10,18,22]},
+{sl:56,name:"MOBASHER",roll:"271057",ct:[0,5,0,0,5,0,7],sub:[30,42,9,4,5,0,10],obj:[10,0,0,10,14,20,26]},
+{sl:57,name:"MD. SHAHRIAR KABIR",roll:"271058",ct:[7,6,5,8,4,8,7],sub:[31,42,5,4,6,0,16],obj:[12,0,5,10,15,21,22]},
+{sl:58,name:"SHADMAN SIYAM",roll:"271059",ct:[7,6,5,9,5,9,7],sub:[30,49,44,50,14,48,39],obj:[17,0,16,15,17,26,23]},
+{sl:59,name:"FATEMA JAHAN ALO",roll:"271060",ct:[9,6,7,7,7,10,10],sub:[42,56,23,28,22,44,26],obj:[21,0,15,14,18,18,23]},
+{sl:60,name:"MUHAMMADULL",roll:"271061",ct:[7,5,8,3,7,5,5],sub:[26,60,39,30,35,21,44],obj:[19,0,21,12,18,14,27]},
+{sl:61,name:"MASHRAFE",roll:"271062",ct:[7,5,5,4,5,6,6],sub:[34,42,40,23,11,10,45],obj:[17,0,20,12,20,20,23]},
+{sl:62,name:"SUMAIYA AKTER",roll:"271063",ct:[7,5,6,3,7,10,5],sub:[38,48,35,6,17,34,26],obj:[12,0,16,12,16,21,21]},
+{sl:63,name:"SOHANA AKTER",roll:"271064",ct:[7,5,6,3,6,10,4],sub:[28,30,12,8,6,0,12],obj:[5,0,14,14,12,20,21]},
+{sl:64,name:"MD. SAMIR",roll:"271065",ct:[4,4,5,2,6,3,4],sub:[23,30,10,9,6,0,28],obj:[16,0,14,15,14,18,21]},
+{sl:65,name:"MD. FAHIM",roll:"271066",ct:[7,6,6,4,5,6,6],sub:[23,38,0,0,0,0,0],obj:[15,0,0,0,0,0,0]},
+{sl:66,name:"LAMIA AKTER",roll:"271067",ct:[8,6,3,4,6,4,5],sub:[30,49,0,0,0,0,0],obj:[17,0,0,0,0,0,0]},
+{sl:67,name:"SUBAH SHAHRIN",roll:"271068",ct:[6,6,0,3,7,6,5],sub:[29,54,30,21,32,11,17],obj:[16,0,12,11,15,18,24]},
+{sl:68,name:"MST. FARZANA",roll:"271069",ct:[7,6,6,5,8,5,4],sub:[28,49,48,36,39,34,50],obj:[15,0,16,16,18,22,26]},
+{sl:69,name:"SAMIRA AKTER",roll:"271070",ct:[9,5,6,5,7,4,4],sub:[36,59,36,16,28,11,38],obj:[18,0,14,16,20,18,26]},
+{sl:70,name:"MD. MADUD HOSSAIN SRABON",roll:"271071",ct:[8,5,6,5,7,8,7],sub:[26,43,14,10,9,3,11],obj:[18,0,10,17,16,16,20]},
+{sl:71,name:"MD. NAFI",roll:"271072",ct:[7,6,7,5,8,4,5],sub:[34,34,29,26,30,10,22],obj:[13,0,12,18,15,14,23]},
+{sl:72,name:"ABDULLAH",roll:"271073",ct:[6,7,8,4,6,6,5],sub:[35,30,40,17,24,3,10],obj:[16,0,14,10,14,11,21]},
+{sl:73,name:"MST. ASHAMONI AKTER",roll:"271074",ct:[9,6,8,3,4,8,5],sub:[26,47,26,23,28,41,27],obj:[5,0,10,6,12,17,16]},
+{sl:74,name:"MD. SAJJAD HOSSAIN",roll:"271075",ct:[7,5,8,3,7,10,4],sub:[28,38,11,29,20,36,21],obj:[15,0,18,11,14,26,27]},
+{sl:75,name:"MD. KHALID HASAN",roll:"271076",ct:[6,0,6,0,7,0,0],sub:[28,30,0,6,4,10,12],obj:[16,0,0,12,8,23,24]},
+{sl:76,name:"TAHSIN SIKDER",roll:"271077",ct:[6,4,5,3,6,6,4],sub:[29,48,29,17,23,10,24],obj:[16,0,16,14,17,21,24]},
+{sl:77,name:"MD. NAZMUL",roll:"271078",ct:[7,5,8,2,6,6,6],sub:[26,46,16,9,16,8,34],obj:[17,0,14,15,17,18,24]},
+{sl:78,name:"MST ALO MONI",roll:"271079",ct:[8,5,5,0,6,6,5],sub:[30,36,40,17,11,3,28],obj:[4,0,9,17,10,6,15]},
+{sl:79,name:"SHEIKH NAHID ALAM",roll:"271080",ct:[7,6,7,3,7,4,4],sub:[23,18,14,6,11,3,10],obj:[19,0,14,16,17,14,26]},
+{sl:80,name:"SK. MAHZABIN IMROZE",roll:"271081",ct:[7,6,4,0,8,4,4],sub:[29,41,3,0,24,0,0],obj:[3,0,11,6,16,8,18]},
+{sl:81,name:"NISHITA AKTHER",roll:"271082",ct:[7,6,6,6,9,0,4],sub:[32,46,26,14,38,0,30],obj:[2,0,12,10,16,0,23]},
+{sl:82,name:"AYAS SULAIM SEHBA",roll:"271083",ct:[8,8,4,5,8,4,7],sub:[39,49,21,27,27,10,46],obj:[20,0,10,14,16,18,27]},
+{sl:83,name:"SYED PRANTO MIA",roll:"271084",ct:[6,4,7,3,7,4,6],sub:[26,31,2,0,6,0,21],obj:[18,0,10,11,15,18,24]},
+{sl:84,name:"MD. JOBAIR HASAN RAHIN",roll:"271085",ct:[6,5,7,3,5,5,6],sub:[36,42,12,16,20,3,23],obj:[3,0,10,14,15,17,23]},
+{sl:85,name:"TALHA JUBAYED",roll:"271086",ct:[7,6,5,6,8,5,7],sub:[26,54,41,22,23,8,42],obj:[21,0,12,18,17,12,26]},
+{sl:86,name:"MD. SOBUJ AHMED",roll:"271087",ct:[6,4,6,2,5,6,4],sub:[38,42,22,21,23,3,36],obj:[20,0,18,21,18,16,22]},
+{sl:87,name:"MORIOM AKTER",roll:"271088",ct:[8,7,4,4,8,5,6],sub:[47,47,45,29,45,0,35],obj:[18,0,6,17,20,17,22]},
+{sl:88,name:"MOHAMMAD",roll:"271089",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:89,name:"ABU JOR ANSARY",roll:"271090",ct:[7,6,6,4,8,6,6],sub:[26,40,40,40,27,12,38],obj:[18,0,16,15,18,12,18]},
+{sl:90,name:"MD. FUHAD",roll:"271091",ct:[6,6,7,2,8,6,4],sub:[28,40,44,21,6,10,47],obj:[17,0,23,18,15,23,24]},
+{sl:91,name:"MD. SHAHRIAR INTESER SRABON",roll:"271092",ct:[7,6,0,5,7,4,5],sub:[22,54,0,0,0,0,15],obj:[10,0,0,0,0,6,16]},
+{sl:92,name:"MST. BIPASHA AKTER",roll:"271093",ct:[8,6,5,3,8,5,5],sub:[31,54,56,46,40,9,42],obj:[0,0,18,20,20,12,23]},
+{sl:93,name:"ILMA AKTER SUBORNA",roll:"271094",ct:[7,7,7,2,8,4,4],sub:[34,41,17,15,20,10,21],obj:[20,0,10,16,15,12,26]},
+{sl:94,name:"SIMRAN AKTER",roll:"271095",ct:[9,5,7,4,5,4,5],sub:[28,50,24,24,27,8,45],obj:[19,0,15,21,17,9,26]},
+{sl:95,name:"TOASIN AHMED",roll:"271096",ct:[7,5,0,1,3,6,6],sub:[25,23,6,4,8,0,10],obj:[7,0,20,18,17,16,21]},
+{sl:96,name:"MEHRAB HASAN",roll:"271097",ct:[0,6,6,1,2,6,10],sub:[26,33,23,24,20,3,30],obj:[18,0,9,17,20,16,18]},
+{sl:97,name:"MD. RADHOYAN",roll:"271099",ct:[0,6,7,3,6,4,7],sub:[26,31,41,32,27,24,27],obj:[20,0,20,17,17,16,24]},
+{sl:98,name:"PARTHO BABU",roll:"271100",ct:[7,5,5,3,4,6,0],sub:[42,54,46,45,0,22,48],obj:[18,0,22,20,0,23,23]},
+{sl:99,name:"ADRITA HASAN ARSHE",roll:"271101",ct:[7,7,4,3,6,2,4],sub:[31,51,32,24,30,9,23],obj:[17,0,14,17,23,11,17]},
+{sl:100,name:"SHANTANU DAS",roll:"271102",ct:[6,5,6,2,7,6,4],sub:[19,60,38,23,28,15,22],obj:[14,0,11,17,23,11,17]},
+{sl:101,name:"MST. AIRIN AKTER AKHI",roll:"271103",ct:[7,6,5,2,7,4,6],sub:[30,54,48,26,29,8,33],obj:[13,0,16,18,20,11,17]},
+{sl:102,name:"ANIKA ANJUM",roll:"271104",ct:[8,5,6,6,8,5,4],sub:[40,63,23,27,36,17,42],obj:[20,0,16,17,22,10,27]},
+{sl:103,name:"YEASMIN KHATUN",roll:"271105",ct:[8,5,5,4,8,5,4],sub:[33,65,26,27,26,32,39],obj:[18,0,18,12,20,6,21]},
+{sl:104,name:"FATEMA AKTER MIM",roll:"271106",ct:[8,6,3,3,7,5,6],sub:[35,65,6,26,27,10,16],obj:[15,0,10,15,16,6,20]},
+{sl:105,name:"SAYED ANUAR SHUYO",roll:"271107",ct:[6,5,7,4,7,8,6],sub:[23,50,3,26,22,0,21],obj:[16,0,20,20,22,9,23]},
+{sl:106,name:"MD. NAYEM",roll:"271108",ct:[7,6,6,4,7,4,7],sub:[39,60,15,35,38,0,32],obj:[17,0,17,17,21,9,27]},
+{sl:107,name:"SHAFI AL",roll:"271110",ct:[4,6,7,3,6,4,8],sub:[36,63,47,32,32,30,39],obj:[21,0,14,18,22,16,21]},
+{sl:108,name:"SHIHAB HOSSAIN",roll:"271111",ct:[6,5,6,4,7,6,9],sub:[19,51,30,32,32,15,34],obj:[14,0,14,18,23,10,21]},
+{sl:109,name:"MD. SOUROV HOSSAIN",roll:"271112",ct:[0,6,5,4,4,6,4],sub:[22,49,0,12,0,0,17],obj:[15,0,12,14,0,9,20]},
+{sl:110,name:"S.M. RAFIU",roll:"271114",ct:[6,6,5,6,0,0,6],sub:[26,51,30,12,0,0,21],obj:[17,0,16,6,0,0,18]},
+{sl:111,name:"SUSHANTA SUTRADHAR",roll:"271115",ct:[8,6,6,6,8,7,6],sub:[38,56,56,36,46,18,46],obj:[20,0,17,20,26,12,27]},
+{sl:112,name:"MST SUMAIY",roll:"271116",ct:[8,5,6,7,7,4,5],sub:[26,37,0,30,34,0,24],obj:[17,0,0,17,22,0,28]},
+{sl:113,name:"AFRIN SULTANA MAHIA",roll:"271117",ct:[4,7,4,3,6,1,4],sub:[31,45,35,18,28,21,26],obj:[13,0,15,17,18,12,16]},
+{sl:114,name:"BITHI AKTER",roll:"271118",ct:[7,6,6,6,6,6,9],sub:[32,49,34,21,34,28,33],obj:[12,0,17,18,18,5,20]},
+{sl:115,name:"AFRIDA MONI",roll:"271119",ct:[8,5,4,8,7,0,5],sub:[34,60,38,18,32,0,36],obj:[21,0,14,16,21,0,22]},
+{sl:116,name:"SUMAYTA AMIN",roll:"271120",ct:[8,5,6,3,6,4,5],sub:[41,61,22,15,33,10,27],obj:[17,0,17,12,17,11,21]},
+{sl:117,name:"MD. RAYHAN SHARIF",roll:"271121",ct:[8,7,7,6,8,5,9],sub:[24,51,12,0,5,5,15],obj:[9,0,15,12,11,9,20]},
+{sl:118,name:"SHEIKH ABDUR RAHMAN",roll:"271122",ct:[7,5,4,4,6,6,0],sub:[13,33,8,0,2,5,14],obj:[11,0,12,12,10,5,20]},
+{sl:119,name:"JIHAN MOLLAH",roll:"271123",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:120,name:"ARIFA ISLAM",roll:"271124",ct:[8,7,6,6,6,5,8],sub:[22,30,0,0,0,0,0],obj:[15,0,0,0,0,0,0]},
+{sl:121,name:"AFSANA AKTER",roll:"271125",ct:[8,8,5,7,6,7,8],sub:[29,36,20,34,27,10,42],obj:[13,0,9,16,15,12,23]},
+{sl:122,name:"MD. SANJID-E HAQUE",roll:"271126",ct:[7,8,6,6,9,4,10],sub:[38,57,38,36,42,28,51],obj:[20,0,16,16,21,15,28]},
+{sl:123,name:"MOST. RAFIATUN",roll:"271127",ct:[7,6,7,2,7,4,0],sub:[28,60,4,15,26,3,35],obj:[23,0,15,16,14,16,22]},
+{sl:124,name:"TANVIR SAKER",roll:"271128",ct:[7,7,6,2,7,4,7],sub:[22,34,12,5,11,0,10],obj:[16,0,16,12,17,10,20]},
+{sl:125,name:"MAHIMA HOSSAIN",roll:"271129",ct:[7,6,7,2,7,4,8],sub:[22,55,0,0,0,4,21],obj:[9,0,0,0,0,9,20]},
+{sl:126,name:"MST. MEHERUN",roll:"271130",ct:[7,6,7,2,5,4,6],sub:[17,33,18,0,8,5,27],obj:[14,0,16,0,11,15,21]},
+{sl:127,name:"MARUFA AKTHER MUNNI",roll:"271131",ct:[7,6,7,2,6,4,8],sub:[22,42,33,11,33,12,34],obj:[15,0,16,18,15,14,29]},
+{sl:128,name:"NOUSIN JAHAN MILI",roll:"271132",ct:[6,6,6,5,5,4,7],sub:[25,51,22,9,41,5,32],obj:[15,0,17,16,17,10,18]},
+{sl:129,name:"MD. ATIKUR",roll:"271133",ct:[8,7,0,10,9,8,8],sub:[43,54,56,41,45,39,47],obj:[24,0,26,20,21,24,27]},
+{sl:130,name:"MOSTAKIM",roll:"271134",ct:[4,6,4,5,7,5,0],sub:[39,42,21,21,34,8,36],obj:[21,0,12,21,20,17,17]},
+{sl:131,name:"MD. MIRAJ",roll:"271135",ct:[0,0,0,6,6,4,0],sub:[17,31,21,2,6,0,9],obj:[11,0,14,11,15,11,6]},
+{sl:132,name:"MD. FAHIM",roll:"271136",ct:[6,7,6,5,6,6,8],sub:[29,55,34,30,34,39,46],obj:[15,0,22,15,14,22,28]},
+{sl:133,name:"MD. BIPLOB MIYA",roll:"271137",ct:[6,7,4,2,7,6,8],sub:[0,46,30,6,20,3,46],obj:[10,0,15,6,9,9,27]},
+{sl:134,name:"MD. MAHIM",roll:"271138",ct:[6,7,5,3,6,8,0],sub:[22,40,20,11,26,5,27],obj:[13,0,14,11,14,11,22]},
+{sl:135,name:"HAFSA AKTER",roll:"271139",ct:[0,0,0,0,0,0,0],sub:[28,66,0,0,0,0,0],obj:[14,0,0,0,0,0,0]},
+{sl:136,name:"JUBAYER HASSAN",roll:"271140",ct:[6,7,6,7,6,6,0],sub:[23,58,9,5,18,5,35],obj:[19,0,6,17,21,10,17]},
+{sl:137,name:"MD. KAWSER",roll:"271141",ct:[7,7,0,7,0,5,0],sub:[14,40,0,3,8,0,16],obj:[16,0,0,11,10,15,17]},
+{sl:138,name:"MD. ARAFAT HOSSAIN",roll:"271142",ct:[8,8,5,2,6,4,8],sub:[35,55,33,29,36,0,39],obj:[16,0,16,12,18,18,21]},
+{sl:139,name:"MD. SUMON",roll:"271143",ct:[0,0,5,2,7,8,0],sub:[26,37,41,22,26,0,34],obj:[21,0,20,18,18,16,21]},
+{sl:140,name:"MD. TAWHID ISLAM",roll:"271144",ct:[8,6,5,3,6,8,9],sub:[19,45,35,11,26,0,34],obj:[21,0,23,12,18,20,21]},
+{sl:141,name:"MD. MUNNA",roll:"271145",ct:[5,7,7,7,7,9,8],sub:[35,56,39,18,33,0,39],obj:[13,0,22,10,20,0,26]},
+{sl:142,name:"MD. LIKHON",roll:"271146",ct:[5,7,7,6,5,3,7],sub:[33,47,41,12,30,18,42],obj:[13,0,21,11,18,20,27]},
+{sl:143,name:"ALIF",roll:"271147",ct:[7,7,0,4,6,0,9],sub:[33,56,48,33,32,53,39],obj:[14,0,18,10,12,18,29]},
+{sl:144,name:"MD. YOUSUF ALI",roll:"271148",ct:[6,6,7,9,6,0,7],sub:[25,47,14,6,21,0,35],obj:[11,0,11,11,23,0,16]},
+{sl:145,name:"FABIHA",roll:"271149",ct:[5,8,6,0,6,2,7],sub:[30,63,0,4,11,8,40],obj:[17,0,0,12,10,16,22]},
+{sl:146,name:"SAMIM OSMAN",roll:"271150",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:147,name:"SHIFA BINTA AMIN",roll:"271151",ct:[0,0,0,0,0,0,0],sub:[0,0,0,15,0,0,30],obj:[0,0,0,12,0,10,21]},
+{sl:148,name:"MD. MOMENUR HOSSAIN",roll:"271152",ct:[4,5,6,5,7,1,0],sub:[24,63,6,27,27,15,32],obj:[17,0,10,11,15,10,24]},
+{sl:149,name:"MST FARZANA",roll:"271153",ct:[6,6,6,1,6,3,8],sub:[30,55,4,17,18,15,27],obj:[15,0,17,15,16,12,27]},
+{sl:150,name:"SAYMA",roll:"271154",ct:[4,4,5,0,4,4,4],sub:[30,48,4,12,22,5,26],obj:[16,0,12,15,17,16,26]},
+{sl:151,name:"TOUFIQ ALAHI",roll:"271155",ct:[4,5,0,4,4,5,8],sub:[2,31,0,2,3,0,16],obj:[18,0,0,16,6,12,21]},
+{sl:152,name:"MD. MONIR HOSSAIN",roll:"271156",ct:[5,6,7,4,7,4,4],sub:[37,59,28,21,38,12,40],obj:[18,0,15,15,20,17,26]},
+{sl:153,name:"MAIMUNA ALI",roll:"271157",ct:[7,5,4,8,8,7,8],sub:[24,60,11,16,24,10,46],obj:[21,0,14,16,18,10,26]},
+{sl:154,name:"ABDUR RAHMAN",roll:"271158",ct:[6,5,7,5,8,5,0],sub:[27,63,4,15,28,0,50],obj:[19,0,12,16,18,10,22]},
+{sl:155,name:"AFRITHA",roll:"271159",ct:[7,7,6,4,6,6,6],sub:[26,59,10,5,29,0,27],obj:[17,0,9,15,16,14,18]},
+{sl:156,name:"HOSSAIN TAWHID",roll:"271160",ct:[6,5,7,2,6,5,9],sub:[3,56,0,0,3,12,23],obj:[18,0,0,12,5,14,18]},
+{sl:157,name:"MD. AL-AMIN BHUIYA",roll:"271161",ct:[6,7,6,5,9,0,0],sub:[33,59,35,39,38,17,0],obj:[20,0,11,12,20,15,21]},
+{sl:158,name:"MD. MAZHARUL",roll:"271162",ct:[6,7,6,2,6,6,8],sub:[37,54,0,0,0,5,27],obj:[16,0,0,0,0,11,17]},
+{sl:159,name:"MST MONALISA KHATUN",roll:"271163",ct:[6,6,6,8,7,6,8],sub:[22,31,11,8,12,0,33],obj:[14,0,14,12,14,16,20]},
+{sl:160,name:"MARUFA AKTER JUTHI",roll:"271164",ct:[6,6,7,8,6,0,8],sub:[31,57,27,38,35,48,40],obj:[15,0,22,15,18,20,20]},
+{sl:161,name:"MD. RAHIM",roll:"271165",ct:[6,6,6,7,5,0,8],sub:[14,52,5,14,9,3,48],obj:[10,0,12,10,5,11,16]},
+{sl:162,name:"MD. SIYAMUR",roll:"271166",ct:[6,6,7,8,8,4,9],sub:[16,52,4,17,5,3,44],obj:[15,0,8,10,9,12,20]},
+{sl:163,name:"EYASIN MOLLA",roll:"271167",ct:[0,0,4,0,0,0,0],sub:[3,31,0,0,4,0,6],obj:[15,0,8,14,12,0,22]},
+{sl:164,name:"MOHAMMAD RAFI",roll:"271168",ct:[6,7,6,4,8,0,8],sub:[22,63,10,15,27,0,30],obj:[10,0,12,15,17,16,23]},
+{sl:165,name:"MD. AL KUDRAT ABIR",roll:"271169",ct:[6,7,7,2,9,0,9],sub:[28,66,12,12,21,12,38],obj:[14,0,18,14,15,16,24]},
+{sl:166,name:"SHARIF MAHMUDUL",roll:"271170",ct:[5,5,4,3,9,4,10],sub:[29,54,9,12,23,15,40],obj:[16,0,18,12,16,21,24]},
+{sl:167,name:"LAMIA NUR",roll:"271171",ct:[6,6,6,3,8,2,5],sub:[23,46,17,0,33,8,29],obj:[19,0,15,14,21,10,26]},
+{sl:168,name:"MD. RIYAD",roll:"271172",ct:[6,5,0,8,0,4,5],sub:[6,50,0,4,11,0,18],obj:[12,0,17,12,15,8,18]},
+{sl:169,name:"MST SHURAVI ISLAM MARZIA",roll:"271173",ct:[6,5,6,2,7,4,8],sub:[29,45,9,10,15,0,26],obj:[12,0,16,14,10,15,18]},
+{sl:170,name:"SAAD BIN FARUK",roll:"271174",ct:[6,3,4,4,5,5,5],sub:[2,63,8,16,12,8,34],obj:[14,0,15,15,15,9,26]},
+{sl:171,name:"SHREEPARNA",roll:"271175",ct:[6,5,6,8,7,8,0],sub:[17,42,21,28,17,5,28],obj:[13,0,12,15,12,10,22]},
+{sl:172,name:"MST TASHMIM MISHAT TANHA",roll:"271176",ct:[8,6,6,2,7,4,6],sub:[26,46,15,24,21,0,21],obj:[17,0,18,15,16,17,22]},
+{sl:173,name:"SAMIA ISLAM RAISA",roll:"271177",ct:[0,0,0,0,0,0,0],sub:[31,36,10,16,15,0,20],obj:[19,0,9,21,12,20,22]},
+{sl:174,name:"MST TAHMINA AKTER",roll:"271178",ct:[6,7,6,3,7,3,6],sub:[25,36,12,11,11,5,26],obj:[12,0,12,16,14,11,21]},
+{sl:175,name:"SAMIA AKTER SHITHI",roll:"271179",ct:[6,7,6,8,7,6,6],sub:[28,42,10,8,33,17,35],obj:[12,0,14,12,20,17,21]},
+{sl:176,name:"SHIDRATUL MONTAHA SHIFA",roll:"271180",ct:[7,6,3,2,8,4,8],sub:[35,45,12,12,15,3,33],obj:[17,0,10,12,16,14,20]},
+{sl:177,name:"MD. RAFI RAIYAN",roll:"271181",ct:[0,3,2,3,6,3,8],sub:[17,44,4,12,5,2,16],obj:[12,0,14,12,10,15,17]},
+{sl:178,name:"ZUBAEAR",roll:"271182",ct:[5,6,0,0,0,0,9],sub:[0,46,0,0,0,0,23],obj:[0,0,0,0,0,0,0]},
+{sl:179,name:"UMMAY AIMAN",roll:"271183",ct:[5,7,7,7,10,6,6],sub:[42,64,29,50,45,22,36],obj:[17,0,22,21,21,12,17]},
+{sl:180,name:"FAIZA RAHMAN MITHILA",roll:"271184",ct:[6,5,7,8,8,6,8],sub:[30,30,21,26,14,3,23],obj:[13,0,18,14,20,15,23]},
+{sl:181,name:"SHUVO BISWAS JOY",roll:"271185",ct:[5,5,4,4,7,6,5],sub:[26,38,16,36,27,27,33],obj:[16,0,17,17,22,15,23]},
+{sl:182,name:"MD. IFTAKHARUL ISLAM KHAN",roll:"271186",ct:[2,4,1,1,2,1,1],sub:[16,65,0,21,18,3,17],obj:[9,0,0,8,15,18,11]},
+{sl:183,name:"LAMIA AKTER POLI",roll:"271187",ct:[6,7,4,4,7,6,6],sub:[29,30,16,21,14,8,28],obj:[12,0,10,15,17,9,24]},
+{sl:184,name:"HASIN TAHIR",roll:"271188",ct:[8,8,3,4,8,6,4],sub:[23,41,17,22,24,24,32],obj:[13,0,12,14,16,12,21]},
+{sl:185,name:"SADMAN IBNE",roll:"271189",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:186,name:"ANIK CHANDRA DAS",roll:"271190",ct:[5,4,9,7,9,10,6],sub:[27,38,39,39,22,3,27],obj:[20,0,15,15,17,17,27]},
+{sl:187,name:"URMITA AKTHER",roll:"271191",ct:[4,6,2,5,8,6,5],sub:[27,46,16,11,6,5,22],obj:[12,0,12,10,10,9,10]},
+{sl:188,name:"MD. ARIF HOSEN",roll:"271192",ct:[4,6,1,3,7,4,6],sub:[28,49,12,16,20,17,22],obj:[11,0,18,10,21,14,14]},
+{sl:189,name:"OMAR IMTIAZ",roll:"271193",ct:[4,6,1,4,8,7,0],sub:[19,42,17,21,15,22,33],obj:[13,0,22,14,15,15,16]},
+{sl:190,name:"MD. RATUL HASAN",roll:"271194",ct:[4,6,3,4,8,3,6],sub:[27,45,0,27,16,5,29],obj:[13,0,0,12,18,12,18]},
+{sl:191,name:"MD. MIJAN ALAM",roll:"271195",ct:[3,5,3,4,8,0,2],sub:[24,44,4,12,12,0,33],obj:[12,0,12,10,12,0,16]},
+{sl:192,name:"NADIYA AKTER SORNA",roll:"271196",ct:[6,8,2,3,8,3,6],sub:[36,59,15,18,23,8,33],obj:[11,0,11,12,16,14,22]},
+{sl:193,name:"MD. HASIBUL",roll:"271197",ct:[5,5,0,5,8,4,6],sub:[19,38,0,0,0,0,34],obj:[14,0,0,0,0,0,27]},
+{sl:194,name:"SAUDA SULTANA",roll:"271198",ct:[4,6,2,3,0,0,9],sub:[22,45,22,4,10,0,28],obj:[10,0,8,14,10,0,27]},
+{sl:195,name:"AKHI AKTER",roll:"271199",ct:[4,6,4,2,7,3,5],sub:[26,46,21,23,32,5,28],obj:[10,0,14,14,14,8,16]},
+{sl:196,name:"UTSO BARDHON",roll:"271200",ct:[4,4,2,6,8,10,7],sub:[27,37,9,21,26,0,26],obj:[17,0,14,17,11,17,24]},
+{sl:197,name:"MD. SAJJAD AHMMED",roll:"271201",ct:[4,6,5,5,4,7,7],sub:[18,54,20,16,18,3,20],obj:[10,0,15,6,17,12,24]},
+{sl:198,name:"ABDUR",roll:"271202",ct:[4,6,2,5,8,5,2],sub:[24,36,14,5,4,8,10],obj:[15,0,16,10,8,12,23]},
+{sl:199,name:"MD. ALVE",roll:"271203",ct:[3,6,2,4,8,6,2],sub:[25,36,10,10,10,29,24],obj:[16,0,12,10,15,10,22]},
+{sl:200,name:"MD. YEAMIN",roll:"271204",ct:[4,5,1,4,6,6,3],sub:[17,30,4,4,4,0,0],obj:[10,0,10,14,15,10,8]},
+{sl:201,name:"A H M G MAHFUJ",roll:"271205",ct:[6,6,7,3,9,4,8],sub:[23,50,16,20,23,5,23],obj:[14,0,10,3,16,15,10]},
+{sl:202,name:"MD. MUSHFIAUR RAHMAN MURAD",roll:"271206",ct:[4,5,0,5,6,3,3],sub:[19,47,23,26,16,5,23],obj:[10,0,12,10,17,16,20]},
+{sl:203,name:"TAHMID AL TAHSIN",roll:"271209",ct:[5,7,2,5,4,3,0],sub:[24,54,11,2,18,0,10],obj:[15,0,14,10,15,12,22]},
+{sl:204,name:"MD. AL-AMIN",roll:"271210",ct:[4,5,3,3,5,2,5],sub:[25,30,18,22,22,0,17],obj:[17,0,10,10,16,6,15]},
+{sl:205,name:"MD. ALVI RAHMAN LABIB",roll:"271211",ct:[0,0,3,0,4,0,0],sub:[19,33,0,0,0,0,0],obj:[14,0,0,10,0,6,12]},
+{sl:206,name:"MD. OMIT HASAN SIAM",roll:"271212",ct:[4,6,4,5,7,3,4],sub:[19,44,11,0,18,0,0],obj:[13,0,10,0,12,5,10]},
+{sl:207,name:"MD. ANTOR MATABBAR",roll:"271213",ct:[5,6,1,4,9,5,0],sub:[12,30,6,2,4,0,8],obj:[9,0,8,4,11,10,10]},
+{sl:208,name:"MD. ASHRAFUL ISLAM",roll:"271214",ct:[0,5,1,2,4,3,6],sub:[17,45,0,0,0,0,17],obj:[10,0,0,0,0,0,15]},
+{sl:209,name:"MD. NAJMUL",roll:"271215",ct:[6,5,3,4,8,5,10],sub:[25,43,32,29,9,12,36],obj:[15,0,18,11,10,12,21]},
+{sl:210,name:"MD. MISAD SAMAD",roll:"271216",ct:[5,5,4,3,8,5,7],sub:[26,44,14,15,11,5,21],obj:[15,0,9,10,15,16,21]},
+{sl:211,name:"MD. BIJOY HOSSAIN BADHAN",roll:"271217",ct:[6,7,3,2,7,3,3],sub:[16,37,3,0,4,0,9],obj:[15,0,14,6,14,12,18]},
+{sl:212,name:"MD. MINHAJUL",roll:"271218",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,22],obj:[0,0,0,0,0,0,0]},
+{sl:213,name:"AYON ROY ABIR",roll:"271219",ct:[2,5,0,4,6,7,3],sub:[16,30,4,6,2,5,33],obj:[10,0,9,10,10,10,21]},
+{sl:214,name:"YEAMONY AKTHER",roll:"271220",ct:[0,0,0,0,0,0,0],sub:[23,30,2,6,8,3,33],obj:[14,0,9,4,12,15,16]},
+{sl:215,name:"MD. SHAYED HASSAN",roll:"271221",ct:[4,6,4,2,8,3,8],sub:[25,41,17,14,26,10,26],obj:[15,0,11,11,17,14,18]},
+{sl:216,name:"FARJANA AKTER",roll:"271222",ct:[4,6,4,6,9,9,5],sub:[26,19,0,6,9,27,15],obj:[17,0,0,5,8,18,28]},
+{sl:217,name:"MD. ROBIUL ALAM RABBI",roll:"271223",ct:[3,4,0,4,5,3,2],sub:[3,16,0,4,0,3,4],obj:[9,0,0,5,0,21,23]},
+{sl:218,name:"NUSRAT JAHAN MAHI",roll:"271224",ct:[5,7,4,4,10,7,7],sub:[24,50,6,21,20,5,11],obj:[15,0,9,10,16,16,22]},
+{sl:219,name:"BIPRORAJ",roll:"271225",ct:[0,0,0,0,0,0,0],sub:[19,58,0,0,0,0,0],obj:[10,0,0,0,0,0,0]},
+{sl:220,name:"MD. JUWEL RANA",roll:"271226",ct:[5,6,4,4,9,3,10],sub:[22,48,21,24,30,29,33],obj:[15,0,12,5,22,8,20]},
+{sl:221,name:"HARUN MIA",roll:"271227",ct:[3,4,3,5,6,3,4],sub:[22,21,4,0,5,0,0],obj:[16,0,10,10,17,5,0]},
+{sl:222,name:"MD. SIFAT",roll:"271228",ct:[4,0,0,5,4,3,2],sub:[15,14,0,0,0,0,0],obj:[10,0,9,5,12,12,14]},
+{sl:223,name:"MD. NADIM MIA",roll:"271229",ct:[4,4,2,5,8,3,7],sub:[16,30,2,0,0,3,15],obj:[10,0,10,5,0,12,16]},
+{sl:224,name:"UMME ZAHAN",roll:"271230",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:225,name:"AFSAA AKTHER",roll:"271231",ct:[6,7,3,4,6,3,2],sub:[17,32,0,0,0,0,0],obj:[17,0,0,0,0,0,0]},
+{sl:226,name:"SANJIDA ISLAM",roll:"271232",ct:[4,6,5,4,9,7,3],sub:[23,30,11,3,12,5,10],obj:[19,0,10,8,14,16,11]},
+{sl:227,name:"EVA AKTER SANJIDA",roll:"271233",ct:[4,6,6,4,3,9,4],sub:[22,30,14,8,11,10,24],obj:[17,0,10,5,15,16,21]},
+{sl:228,name:"ROHAN ISLAM",roll:"271234",ct:[0,0,2,5,7,3,0],sub:[14,0,5,5,10,0,12],obj:[15,0,20,12,10,8,21]},
+{sl:229,name:"HASIBUL ISLAM OMAR",roll:"271235",ct:[6,6,3,4,7,3,0],sub:[17,31,6,6,8,0,3],obj:[15,0,21,11,15,5,23]},
+{sl:230,name:"MD. MESKAT AHAMED",roll:"271236",ct:[6,6,5,4,9,3,0],sub:[25,42,17,26,23,10,33],obj:[19,0,21,11,16,14,23]},
+{sl:231,name:"MD. TARIKUL",roll:"271237",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:232,name:"JANNATUL FARDAOUS",roll:"271238",ct:[5,7,3,4,10,6,0],sub:[26,50,10,34,29,5,18],obj:[19,0,10,10,18,15,24]},
+{sl:233,name:"MD. NUR SAYED ISLAM LIMON",roll:"271239",ct:[0,0,0,0,0,6,0],sub:[26,41,9,15,21,8,24],obj:[20,0,14,8,18,11,16]},
+{sl:234,name:"KANIZ FATEMA MARIA",roll:"271240",ct:[4,6,3,4,8,0,3],sub:[23,41,12,14,22,10,22],obj:[17,0,12,6,17,16,20]},
+{sl:235,name:"SUBRIN JAHAN TRISHA",roll:"271241",ct:[5,7,0,4,3,1,6],sub:[19,42,0,0,6,3,15],obj:[15,0,0,10,14,15,20]},
+{sl:236,name:"TANZILA AZIZ ANGKUR",roll:"271242",ct:[4,7,1,1,5,1,3],sub:[23,50,10,9,29,5,26],obj:[16,0,6,10,14,12,20]},
+{sl:237,name:"MD. SAHED",roll:"271243",ct:[4,4,3,1,4,0,5],sub:[17,21,0,0,0,0,0],obj:[14,0,0,0,0,0,0]},
+{sl:238,name:"MD. ALAMIN",roll:"271244",ct:[4,5,3,3,4,0,10],sub:[26,30,0,10,5,0,33],obj:[20,0,0,12,9,0,22]},
+{sl:239,name:"MD. MAHINUR",roll:"271245",ct:[4,4,6,2,3,10,9],sub:[25,30,24,6,17,0,29],obj:[20,0,20,10,14,0,23]},
+{sl:240,name:"ADNAN ISLAM",roll:"271246",ct:[0,0,0,0,0,0,0],sub:[19,30,6,11,9,0,11],obj:[14,0,14,8,10,0,14]},
+{sl:241,name:"SAMIR MOLLA",roll:"271247",ct:[5,5,5,5,7,3,7],sub:[23,49,10,3,15,8,17],obj:[17,0,11,8,15,14,16]},
+{sl:242,name:"OMOR FARUK",roll:"271248",ct:[0,0,4,0,0,0,0],sub:[23,30,0,3,5,5,23],obj:[17,0,0,8,9,8,10]},
+{sl:243,name:"MD. YEASIN ABDULLAH",roll:"271249",ct:[4,4,5,5,9,4,6],sub:[26,34,15,18,18,5,33],obj:[18,0,10,10,17,16,21]},
+{sl:244,name:"SUBONNA AKTER SANTA",roll:"271250",ct:[4,7,8,1,4,3,7],sub:[23,35,5,8,14,0,18],obj:[18,0,12,11,14,12,18]},
+{sl:245,name:"TAHRIM RASHID",roll:"271251",ct:[4,6,8,5,8,3,5],sub:[26,54,0,15,15,9,32],obj:[19,0,17,8,11,14,17]},
+{sl:246,name:"MST KEYA AKTER",roll:"271252",ct:[5,6,2,1,3,3,6],sub:[14,30,3,11,5,0,2],obj:[13,0,12,10,10,10,14]},
+{sl:247,name:"ATIKA AKTAR",roll:"271253",ct:[0,0,0,0,0,0,0],sub:[0,0,9,21,12,0,11],obj:[0,0,17,18,14,0,16]},
+{sl:248,name:"MD. SHOWRAV",roll:"271254",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:249,name:"JANNATUL NAIM",roll:"271255",ct:[6,7,8,2,4,2,7],sub:[23,32,6,14,3,4,27],obj:[17,0,9,11,10,10,18]},
+{sl:250,name:"ASADULLAH GALIB",roll:"271256",ct:[4,3,4,2,3,1,4],sub:[18,39,3,0,5,0,16],obj:[15,0,16,16,17,16,16]},
+{sl:251,name:"MAINUR AKTER ONONNA",roll:"271257",ct:[6,7,3,0,3,2,5],sub:[19,38,4,11,12,0,15],obj:[15,0,16,17,18,11,16]},
+{sl:252,name:"MD. HUJAIFA",roll:"271258",ct:[5,8,7,5,9,4,7],sub:[20,45,9,10,12,3,15],obj:[15,0,12,16,17,15,20]},
+{sl:253,name:"SADIYA AKTHER",roll:"271259",ct:[7,7,5,1,6,3,7],sub:[39,40,6,21,18,12,30],obj:[21,0,15,15,11,12,18]},
+{sl:254,name:"JANNATUN NAYEEM",roll:"271260",ct:[6,1,1,1,7,0,2],sub:[24,41,4,21,29,12,27],obj:[18,0,15,14,12,6,17]},
+{sl:255,name:"SHARIFUL ISLAM",roll:"271261",ct:[5,5,2,1,3,3,4],sub:[26,32,15,21,12,8,27],obj:[19,0,12,14,12,2,22]},
+{sl:256,name:"MUHAMMAD",roll:"271262",ct:[4,6,3,1,4,2,5],sub:[19,52,0,0,0,0,0],obj:[15,0,0,0,0,0,0]},
+{sl:257,name:"MD. ASHIQUR",roll:"271263",ct:[4,5,3,0,5,3,8],sub:[19,32,2,4,3,0,6],obj:[15,0,14,15,5,18,17]},
+{sl:258,name:"MD. FAHIM MATUBBAR",roll:"271265",ct:[3,1,4,1,5,2,2],sub:[19,0,4,0,5,0,6],obj:[14,0,15,0,12,17,17]},
+{sl:259,name:"MD. ARIQUL ISLAM ABIR",roll:"271266",ct:[4,1,0,0,6,0,3],sub:[17,30,3,11,6,0,14],obj:[13,0,15,14,10,15,18]},
+{sl:260,name:"JANNAT KAMAL JERIN",roll:"271267",ct:[5,4,9,1,2,3,5],sub:[26,46,4,21,27,0,32],obj:[19,0,11,14,11,12,9]},
+{sl:261,name:"PRODIP",roll:"271268",ct:[4,7,0,0,8,3,6],sub:[23,31,0,0,4,8,15],obj:[19,0,0,0,9,6,14]},
+{sl:262,name:"MD. AYMAN",roll:"271269",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:263,name:"MD. SOJIB",roll:"271270",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:264,name:"TASMIYA TASNEEM",roll:"271271",ct:[5,6,3,1,5,3,5],sub:[30,45,4,14,16,0,28],obj:[21,0,14,10,10,15,14]},
+{sl:265,name:"MD. TOHIDUL ISLAM",roll:"271272",ct:[3,5,3,0,2,0,7],sub:[23,36,3,3,4,0,14],obj:[20,0,12,11,8,10,5]},
+{sl:266,name:"FAHAD HOSSAIN",roll:"271273",ct:[4,5,4,0,5,4,4],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:267,name:"NAYEEM",roll:"271274",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:268,name:"SIRAJUM MONIRA",roll:"271275",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:269,name:"MD. MAHFUGUR RAHMAN",roll:"271276",ct:[5,7,3,5,9,2,6],sub:[25,45,8,0,5,0,18],obj:[19,0,12,16,15,6,12]},
+{sl:270,name:"ASADULLAH JAKI",roll:"271277",ct:[4,5,8,5,8,5,9],sub:[25,46,35,44,38,36,39],obj:[19,0,27,17,18,11,24]},
+{sl:271,name:"SHIRAJUM MUNIR",roll:"271278",ct:[4,5,0,2,0,1,5],sub:[22,55,0,21,0,0,6],obj:[17,0,0,12,0,0,15]},
+{sl:272,name:"ABDUR RAHMAN HUZAIFA",roll:"271279",ct:[3,4,6,3,7,2,0],sub:[19,9,2,0,3,0,14],obj:[15,0,9,10,10,8,18]},
+{sl:273,name:"MD. NAZIM",roll:"271281",ct:[5,6,7,3,6,4,10],sub:[26,54,26,28,24,22,42],obj:[19,0,14,10,12,16,22]},
+{sl:274,name:"MD. LIYKOT",roll:"271282",ct:[6,2,5,5,9,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:275,name:"MARJIA AKTER TRISHA",roll:"271283",ct:[3,0,4,0,4,3,4],sub:[25,30,3,0,5,0,14],obj:[19,0,10,11,6,11,15]},
+{sl:276,name:"AFTAB ALOM",roll:"271284",ct:[0,0,0,0,0,0,0],sub:[19,61,11,12,6,5,33],obj:[17,0,12,14,11,10,17]},
+{sl:277,name:"MD. KHAIRUL BASAR KHANDAKAR",roll:"271285",ct:[4,2,0,1,2,1,0],sub:[23,30,9,11,9,3,16],obj:[17,0,8,11,10,9,17]},
+{sl:278,name:"MIR SHAFEEUL ISLAM",roll:"271286",ct:[6,6,0,3,8,1,0],sub:[24,48,15,30,29,15,45],obj:[17,0,16,15,17,14,20]},
+{sl:279,name:"MD FAHIM HOSSAIN",roll:"271287",ct:[0,5,2,3,4,3,0],sub:[23,55,24,24,21,10,42],obj:[17,0,11,15,12,14,27]},
+{sl:280,name:"MUMTAHINA ANJUM",roll:"271288",ct:[6,8,2,2,6,2,0],sub:[23,51,6,26,27,5,26],obj:[17,0,12,16,16,15,12]},
+{sl:281,name:"SAYMA AKTER ETU",roll:"271289",ct:[6,7,6,8,6,2,0],sub:[26,51,28,38,38,12,33],obj:[19,0,16,21,20,12,15]},
+{sl:282,name:"MD. SHAFINUL ISLAM",roll:"271290",ct:[0,0,0,0,0,0,0],sub:[26,30,3,3,12,5,34],obj:[19,0,9,15,11,10,16]},
+{sl:283,name:"MD. TASIN AHMED",roll:"271291",ct:[0,0,0,0,0,0,0],sub:[17,36,0,8,0,0,16],obj:[14,0,0,5,0,12,12]},
+{sl:284,name:"RADEEF JOARDDER",roll:"271292",ct:[0,0,0,0,0,0,0],sub:[8,30,6,10,14,5,21],obj:[9,0,14,11,18,15,22]},
+{sl:285,name:"MD. RIFAT HOSSAIN",roll:"271293",ct:[0,0,0,0,0,0,5],sub:[25,70,16,21,8,22,15],obj:[14,0,11,15,12,17,17]},
+{sl:286,name:"NOWSHIN TABASSUM",roll:"271295",ct:[0,0,0,0,0,0,0],sub:[26,30,0,0,0,0,21],obj:[19,0,0,0,0,0,11]},
+{sl:287,name:"MARIYA ISLAM",roll:"271296",ct:[0,0,0,0,0,0,0],sub:[26,30,0,0,0,0,22],obj:[20,0,0,0,0,0,16]},
+{sl:288,name:"SYED MOYNUL HASAN",roll:"271297",ct:[0,0,0,0,0,0,0],sub:[25,52,3,9,15,0,29],obj:[20,0,20,12,12,12,17]},
+{sl:289,name:"MURSHIDA ZAHAN NUPUR",roll:"271298",ct:[0,0,0,0,0,0,0],sub:[27,51,18,32,24,0,32],obj:[22,0,17,20,20,10,22]},
+{sl:290,name:"YEAHIA HASAN",roll:"271299",ct:[0,0,0,0,0,0,0],sub:[25,30,0,0,0,0,0],obj:[19,0,0,0,0,0,0]},
+{sl:291,name:"ZIHADUL ISLAM ZIHAD",roll:"271300",ct:[0,0,0,0,0,0,0],sub:[25,45,0,21,15,0,28],obj:[18,0,0,15,8,0,15]},
+{sl:292,name:"MD. SIAM SARKAR",roll:"271301",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:293,name:"MD. SUMON",roll:"271302",ct:[0,0,0,0,0,0,0],sub:[23,36,0,9,8,0,21],obj:[17,0,0,11,9,0,12]},
+{sl:294,name:"MUHAMMAD RAISUL",roll:"271303",ct:[0,0,0,0,0,0,0],sub:[19,9,0,0,0,0,0],obj:[15,0,0,0,0,0,0]},
+{sl:295,name:"MST. SUCHI RAHAMAN",roll:"271304",ct:[0,0,0,0,0,0,0],sub:[0,34,0,0,3,0,21],obj:[0,0,0,0,4,12,15]},
+{sl:296,name:"MD. KAZI TAHMIM",roll:"271305",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:297,name:"MD HASIN RAIHAN",roll:"271306",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:298,name:"MD. ANAMUL HAQUE",roll:"271307",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:299,name:"TAHMID",roll:"271308",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:300,name:"CHOWDHURY MUBIN",roll:"271309",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:301,name:"KAZI MD NAZMU",roll:"271310",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]},
+{sl:302,name:"JAHIDUL ISLAM",roll:"271311",ct:[0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0]}
+];
 
-const SUBJECTS=["Bangla","English","Physics","Chemistry","Biology","Math"];
-const SUB_SHORT=["BAN","ENG","PHY","CHEM","BIO","MATH"];
-const COLORS=["#6366f1","#8b5cf6","#ec4899","#f59e0b","#10b981","#3b82f6"];
+const SUBJECTS=["Bangla","English","Physics","Chemistry","Biology","Math","ICT"];
+const SUB_SHORT=["BAN","ENG","PHY","CHEM","BIO","MATH","ICT"];
+const COLORS=["#0284c7","#7c3aed","#059669","#d97706","#dc2626","#0891b2","#7c3aed"];
+const SUB_COLORS_BG=["#e0f2fe","#ede9fe","#d1fae5","#fef3c7","#fee2e2","#cffafe","#ede9fe"];
 
-function getGrade(mark){
-  if(mark>=80)return{letter:"A+",point:5.0,color:"#10b981"};
-  if(mark>=70)return{letter:"A",point:4.0,color:"#06b6d4"};
-  if(mark>=60)return{letter:"A-",point:3.5,color:"#6366f1"};
-  if(mark>=50)return{letter:"B",point:3.0,color:"#8b5cf6"};
-  if(mark>=40)return{letter:"C",point:2.0,color:"#f59e0b"};
-  if(mark>=33)return{letter:"D",point:1.0,color:"#f97316"};
-  return{letter:"F",point:0.0,color:"#ef4444"};
+function getGrade(m){
+  if(m>=80)return{l:"A+",p:5.0,cls:"gAp"};
+  if(m>=70)return{l:"A",p:4.0,cls:"gA"};
+  if(m>=60)return{l:"A-",p:3.5,cls:"gAm"};
+  if(m>=50)return{l:"B",p:3.0,cls:"gB"};
+  if(m>=40)return{l:"C",p:2.0,cls:"gC"};
+  if(m>=33)return{l:"D",p:1.0,cls:"gD"};
+  return{l:"F",p:0.0,cls:"gF"};
 }
-function computeGPA(totals){
-  const grades=totals.map(getGrade);
-  const sum=grades.reduce((a,g)=>a+g.point,0);
-  return+(sum/totals.length).toFixed(2);
+function gpa(totals,ct){
+  // Only include subjects where student has entry (total>0 OR ct>0)
+  const grades=totals.map((t,i)=>{
+    if(t>0||(ct&&ct[i]>0))return getGrade(t);
+    return null;
+  }).filter(g=>g!==null);
+  if(!grades.length)return 0;
+  return+(grades.reduce((a,g)=>a+g.p,0)/grades.length).toFixed(2);
 }
-function gradePill(letter){
-  const map={"A+":"Ap","A":"A","A-":"Am","B":"B","C":"C","D":"D","F":"F"};
-  return`<span class="gp gp-${map[letter]||'F'}">${letter}</span>`;
+function pill(letter){
+  const g=getGrade(letter==="A+"?80:letter==="A"?70:letter==="A-"?60:letter==="B"?50:letter==="C"?40:letter==="D"?33:0);
+  return`<span class="gp ${g.cls}">${letter}</span>`;
 }
-function rankBadge(rank){
-  const cls=rank===1?"gold":rank===2?"silver":rank===3?"bronze":"";
-  return`<span class="rank ${cls}">${rank}</span>`;
-}
+function gpill(g){return`<span class="gp ${g.cls}">${g.l}</span>`}
+function rbadge(r){const cls=r===1?"gold":r===2?"silver":r===3?"bronze":"";return`<span class="rank-badge ${cls}">${r}</span>`}
 
-// Build students
 const STUDENTS=RAW.map(s=>{
   const totals=s.ct.map((c,i)=>c+s.sub[i]+s.obj[i]);
   const grand=totals.reduce((a,b)=>a+b,0);
   const grades=totals.map(getGrade);
-  const gpa=computeGPA(totals);
-  const failCount=grades.filter(g=>g.letter==="F").length;
-  return{...s,totals,grand,grades,gpa,failCount};
+  const appeared=grand>0;
+  const failCountAll=grades.filter((g,i)=>{
+    if(!appeared)return false;
+    const hasEntry=s.ct[i]>0||s.sub[i]>0||s.obj[i]>0;
+    return hasEntry&&g.l==="F";
+  }).length;
+  const overallPass=appeared&&failCountAll===0;
+  const subjCount=totals.filter((t,i)=>t>0||s.ct[i]>0).length;
+  return{...s,totals,grand,grades,gpa:gpa(totals,s.ct),failCount:failCountAll,appeared,overallPass,subjCount};
 });
+
 const RANKED=[...STUDENTS].sort((a,b)=>b.grand-a.grand||a.sl-b.sl).map((s,i)=>({...s,rank:i+1}));
 const BY_ROLL={};RANKED.forEach(s=>{BY_ROLL[s.roll]=s;});
 
-function getSubjectStats(){
+function subjStats(){
   return SUBJECTS.map((name,i)=>{
-    const marks=STUDENTS.map(s=>s.totals[i]).filter(m=>m>0);
+    const marks=STUDENTS.filter(s=>s.totals[i]>0).map(s=>s.totals[i]);
     const avg=marks.length?+(marks.reduce((a,b)=>a+b,0)/marks.length).toFixed(1):0;
     const max=marks.length?Math.max(...marks):0;
     const min=marks.length?Math.min(...marks):0;
     const pass=marks.filter(m=>m>=33).length;
-    const fail=marks.filter(m=>m<33).length;
     const passRate=marks.length?Math.round(pass/marks.length*100):0;
-    return{name,avg,max,min,pass,fail,passRate,idx:i};
+    return{name,avg,max,min,pass,fail:marks.length-pass,passRate,total:marks.length,idx:i};
   });
 }
 
-// Chart defaults
-const darkGrid={color:"rgba(255,255,255,0.06)"};
-const tickStyle={color:"#94a3b8",font:{family:"system-ui",size:11}};
-const tooltipDef={backgroundColor:"#0f172a",titleColor:"#94a3b8",bodyColor:"#f1f5f9",borderColor:"rgba(99,102,241,0.4)",borderWidth:1,padding:10,cornerRadius:8};
-const chartInstances={};
-function destroyChart(id){if(chartInstances[id]){chartInstances[id].destroy();delete chartInstances[id];}}
-function mkBar(id,data,height){
-  destroyChart(id);
-  chartInstances[id]=new Chart(document.getElementById(id),{type:"bar",data,options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:tooltipDef},scales:{x:{grid:darkGrid,ticks:tickStyle},y:{grid:darkGrid,ticks:tickStyle}}}});
+// Chart instances
+const CI={};
+function dc(id){if(CI[id]){CI[id].destroy();delete CI[id];}}
+const darkGrid={color:"rgba(0,0,0,0.05)"};
+const tickS={color:"#64748b",font:{family:"Plus Jakarta Sans",size:11}};
+const ttpDef={backgroundColor:"#fff",titleColor:"#0f172a",bodyColor:"#334155",borderColor:"#e2e8f0",borderWidth:1,padding:12,cornerRadius:8,boxShadow:"0 4px 16px rgba(0,0,0,0.1)"};
+
+function mkBar(id,data){
+  dc(id);
+  CI[id]=new Chart(document.getElementById(id),{type:"bar",data,options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:ttpDef},scales:{x:{grid:darkGrid,ticks:tickS},y:{grid:darkGrid,ticks:tickS}}}});
 }
-function mkDoughnut(id,data){
-  destroyChart(id);
-  chartInstances[id]=new Chart(document.getElementById(id),{type:"doughnut",data,options:{responsive:true,maintainAspectRatio:false,cutout:"66%",plugins:{legend:{position:"bottom",labels:{color:"#94a3b8",font:{size:11},boxWidth:10,padding:14}},tooltip:tooltipDef}}});
-}
-function mkRadar(id,data){
-  destroyChart(id);
-  chartInstances[id]=new Chart(document.getElementById(id),{type:"radar",data,options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:"#94a3b8",font:{size:12},boxWidth:12}},tooltip:tooltipDef},scales:{r:{min:0,max:100,backgroundColor:"rgba(99,102,241,0.03)",grid:{color:"rgba(255,255,255,0.08)"},angleLines:{color:"rgba(255,255,255,0.08)"},pointLabels:{color:"#94a3b8",font:{size:12}},ticks:{color:"#64748b",backdropColor:"transparent",font:{size:10}}}}}});
+function mkDonut(id,data){
+  dc(id);
+  CI[id]=new Chart(document.getElementById(id),{type:"doughnut",data,options:{responsive:true,maintainAspectRatio:false,cutout:"65%",plugins:{legend:{position:"bottom",labels:{color:"#64748b",font:{size:11},boxWidth:10,padding:12}},tooltip:ttpDef}}});
 }
 function mkLine(id,data){
-  destroyChart(id);
-  chartInstances[id]=new Chart(document.getElementById(id),{type:"line",data,options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:"#94a3b8",font:{size:12},boxWidth:12,padding:16}},tooltip:tooltipDef},scales:{x:{grid:darkGrid,ticks:tickStyle},y:{grid:darkGrid,ticks:tickStyle}},elements:{line:{tension:0.4}}}});
+  dc(id);
+  CI[id]=new Chart(document.getElementById(id),{type:"line",data,options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:"#64748b",font:{size:11},boxWidth:10,padding:12}},tooltip:ttpDef},scales:{x:{grid:darkGrid,ticks:tickS},y:{grid:darkGrid,ticks:tickS}},elements:{line:{tension:0.4}}}});
+}
+function mkRadar(id,data){
+  dc(id);
+  CI[id]=new Chart(document.getElementById(id),{type:"radar",data,options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:"#64748b",font:{size:11}}},tooltip:ttpDef},scales:{r:{min:0,max:100,grid:{color:"rgba(0,0,0,0.08)"},angleLines:{color:"rgba(0,0,0,0.08)"},pointLabels:{color:"#64748b",font:{size:11}},ticks:{color:"#94a3b8",backdropColor:"transparent",font:{size:9}}}}}});
 }
 
-// ══════════════════════════════════════
-// PAGE NAVIGATION
-// ══════════════════════════════════════
+// ══════ HERO ══════
+function heroAC(){
+  const v=document.getElementById('heroSearch').value;
+  const drop=document.getElementById('heroAcDrop');
+  const suggs=acSuggest(v);
+  if(!suggs.length){drop.style.display='none';return;}
+  drop.innerHTML=suggs.map(s=>`<div class="ac-item" onmousedown="heroPickStudent('${s.roll}')">
+    <div class="ac-avatar">${s.name[0]}</div>
+    <div class="ac-info"><div class="ac-name">${s.name}</div><div class="ac-roll">Roll: ${s.roll} · Rank #${s.rank}</div></div>
+    <span class="${s.overallPass?'status-pass':'status-fail'}">${s.overallPass?'Pass':'Fail'}</span>
+  </div>`).join('');
+  drop.style.display='block';
+}
+function heroPickStudent(roll){
+  document.getElementById('heroSearch').value='';
+  document.getElementById('heroAcDrop').style.display='none';
+  goToApp();
+  setTimeout(()=>{
+    showPage(2);
+    document.getElementById('stuSearch').value=BY_ROLL[roll].name;
+    stuSelected=BY_ROLL[roll];
+    renderStudentDetail();
+  },100);
+}
+document.getElementById('heroSearch').addEventListener('blur',()=>setTimeout(()=>document.getElementById('heroAcDrop').style.display='none',200));
+
+// Hero stats
+function initHeroStats(){
+  const appeared=STUDENTS.filter(s=>s.appeared).length;
+  const passed=STUDENTS.filter(s=>s.overallPass).length;
+  const st=RANKED.filter(s=>s.appeared);
+  document.getElementById('heroStats').innerHTML=[
+    {v:STUDENTS.length,l:"Students"},
+    {v:appeared,l:"Appeared"},
+    {v:passed,l:"Passed"},
+    {v:st[0]?.name.split(' ')[0]||'-',l:"Top Scorer"},
+    {v:st[0]?.grand||0,l:"Highest"},
+  ].map(x=>`<div class="hero-stat"><div class="v">${x.v}</div><div class="l">${x.l}</div></div>`).join('');
+}
+initHeroStats();
+
+function goToApp(){
+  document.getElementById('heroSection').style.display='none';
+  document.getElementById('appWrap').style.display='block';
+  initOverview();
+}
+
+// ══════ NAV ══════
 let currentPage=0;
 function showPage(n){
-  document.querySelectorAll('.page').forEach((p,i)=>{p.classList.toggle('active',i===n);});
-  document.querySelectorAll('.nav-btn').forEach((b,i)=>{b.classList.toggle('active',i===n);});
+  document.querySelectorAll('.page').forEach((p,i)=>p.classList.toggle('active',i===n));
+  document.querySelectorAll('.nav-btn').forEach((b,i)=>b.classList.toggle('active',i===n));
   currentPage=n;
   window.scrollTo({top:0,behavior:'smooth'});
   if(n===0)initOverview();
   if(n===1)renderRankings();
-  if(n===4)renderSubjectPage();
+  if(n===4)renderSubjPage();
+  if(n===5)renderStatsPage();
 }
 
-// ══════════════════════════════════════
-// OVERVIEW PAGE
-// ══════════════════════════════════════
+// ══════ OVERVIEW ══════
 function initOverview(){
-  const stats=getSubjectStats();
-  const appeared=STUDENTS.filter(s=>s.grand>0).length;
-  const passed=STUDENTS.filter(s=>s.failCount===0&&s.grand>0).length;
-  const avgGrand=Math.round(STUDENTS.filter(s=>s.grand>0).reduce((a,s)=>a+s.grand,0)/appeared);
+  const ss=subjStats();
+  const appeared=STUDENTS.filter(s=>s.appeared).length;
+  const passed=STUDENTS.filter(s=>s.overallPass).length;
+  const top=RANKED.filter(s=>s.appeared);
+  const avgT=Math.round(top.reduce((a,s)=>a+s.grand,0)/top.length);
 
-  // Hero stats
-  document.getElementById('heroStats').innerHTML=[
-    {val:STUDENTS.length,lbl:"Students"},
-    {val:appeared,lbl:"Appeared"},
-    {val:SUBJECTS.length,lbl:"Subjects"},
-    {val:RANKED[0]?.name.split(" ").slice(0,2).join(" ")||"-",lbl:"Top Scorer"},
-    {val:RANKED[0]?.grand||0,lbl:"Highest Total"},
-  ].map(x=>`<div class="hero-stat"><div class="val">${x.val}</div><div class="lbl">${x.lbl}</div></div>`).join('');
-
-  // Overview stats
   document.getElementById('overviewStats').innerHTML=[
-    {v:STUDENTS.length,l:"Total Students",c:"#a5b4fc"},
-    {v:appeared,l:"Appeared",c:"#a5b4fc"},
-    {v:passed,l:"All Passed",c:"#10b981"},
-    {v:`${((passed/appeared)*100).toFixed(1)}%`,l:"Pass Rate",c:"#10b981"},
-    {v:RANKED[0]?.grand||0,l:"Highest Total",c:"#f59e0b"},
-    {v:avgGrand,l:"Class Average",c:"#a5b4fc"},
-    {v:RANKED[0]?.gpa?.toFixed(2)||0,l:"Highest GPA",c:"#10b981"},
-    {v:RANKED[0]?.name?.split(" ")[0]||"-",l:"Top Scorer",c:"#f59e0b"},
-  ].map(x=>`<div class="stat-card"><div class="sv" style="color:${x.c}">${x.v}</div><div class="sl">${x.l}</div></div>`).join('');
+    {v:STUDENTS.length,l:"Total Students",c:"var(--sky)",bg:"#e0f2fe",ic:"ri-group-line"},
+    {v:appeared,l:"Appeared",c:"var(--sky)",bg:"#e0f2fe",ic:"ri-user-follow-line"},
+    {v:passed,l:"Passed",c:"var(--emerald)",bg:"#d1fae5",ic:"ri-checkbox-circle-line"},
+    {v:`${((passed/appeared)*100).toFixed(1)}%`,l:"Pass Rate",c:"var(--emerald)",bg:"#d1fae5",ic:"ri-percent-line"},
+    {v:top[0]?.grand||0,l:"Highest Total",c:"var(--amber)",bg:"#fef3c7",ic:"ri-trophy-line"},
+    {v:avgT,l:"Class Average",c:"var(--sky)",bg:"#e0f2fe",ic:"ri-bar-chart-line"},
+    {v:top[0]?.gpa?.toFixed(2)||0,l:"Highest GPA",c:"var(--emerald)",bg:"#d1fae5",ic:"ri-star-line"},
+    {v:top[0]?.name?.split(' ')[0]||'-',l:"Top Scorer",c:"var(--violet)",bg:"#ede9fe",ic:"ri-medal-line"},
+  ].map(x=>`<div class="stat-card"><div class="si" style="background:${x.bg};color:${x.c}"><i class="${x.ic}"></i></div><div class="sv" style="color:${x.c}">${x.v}</div><div class="sl">${x.l}</div></div>`).join('');
 
-  // Subject cards
-  document.getElementById('subjectCards').innerHTML=stats.map((s,i)=>`
+  // Subject cards in a 7-column grid
+  document.getElementById('subjectCards').innerHTML=`<div class="g7" style="margin-bottom:20px">${ss.map((s,i)=>`
     <div class="subj-card">
-      <div class="sc-name">${s.name}</div>
+      <div class="sc-hd">
+        <div class="sc-name">${s.name}</div>
+        <div style="width:32px;height:32px;border-radius:8px;background:${SUB_COLORS_BG[i]};display:flex;align-items:center;justify-content:center;font-size:14px;color:${COLORS[i]}"><i class="ri-book-line"></i></div>
+      </div>
       <div class="sc-avg" style="color:${COLORS[i]}">${s.avg}</div>
-      <div class="sc-bar"><div class="sc-fill" style="width:${s.avg}%;background:${COLORS[i]}"></div></div>
-      <div class="sc-meta"><span>Max:${s.max}</span><span>Pass:${s.passRate}%</span><span>Min:${s.min}</span></div>
-    </div>`).join('');
+      <div class="subj-bar"><div class="subj-bar-fill" style="width:${Math.min(s.avg,100)}%;background:${COLORS[i]}"></div></div>
+      <div class="subj-meta"><span>Max:${s.max}</span><span>Pass:${s.passRate}%</span><span>Min:${s.min}</span></div>
+    </div>`).join('')}</div>`;
 
-  // Charts
-  mkBar('chartAvg',{labels:SUBJECTS,datasets:[{data:stats.map(s=>s.avg),backgroundColor:COLORS.map(c=>c+'cc'),borderColor:COLORS,borderWidth:1.5,borderRadius:6}]});
+  mkBar('chartAvg',{labels:SUBJECTS,datasets:[{data:ss.map(s=>s.avg),backgroundColor:COLORS.map(c=>c+'28'),borderColor:COLORS,borderWidth:2,borderRadius:6}]});
 
   const gc={"A+":0,"A":0,"A-":0,"B":0,"C":0,"D":0,"F":0};
-  STUDENTS.forEach(s=>s.grades.forEach(g=>{gc[g.letter]=(gc[g.letter]||0)+1;}));
-  mkDoughnut('chartDonut',{labels:Object.keys(gc),datasets:[{data:Object.values(gc),backgroundColor:["#10b981","#06b6d4","#6366f1","#8b5cf6","#f59e0b","#f97316","#ef4444"],borderWidth:0,hoverOffset:6}]});
+  STUDENTS.forEach(s=>s.grades.forEach(g=>{gc[g.l]=(gc[g.l]||0)+1;}));
+  mkDonut('chartDonut',{labels:Object.keys(gc),datasets:[{data:Object.values(gc),backgroundColor:["#059669","#0891b2","#7c3aed","#3b82f6","#d97706","#f97316","#ef4444"],borderWidth:0}]});
 
-  mkBar('chartPass',{labels:SUBJECTS,datasets:[{data:stats.map(s=>s.passRate),backgroundColor:stats.map(s=>s.passRate>=70?"rgba(16,185,129,0.7)":s.passRate>=40?"rgba(245,158,11,0.7)":"rgba(239,68,68,0.7)"),borderRadius:6}]});
+  mkBar('chartPass',{labels:SUBJECTS,datasets:[{data:ss.map(s=>s.passRate),backgroundColor:ss.map(s=>s.passRate>=70?"#059669":s.passRate>=40?"#d97706":"#ef4444").map(c=>c+'aa'),borderRadius:6}]});
 
   const b=[0,0,0,0,0];
-  RANKED.filter(s=>s.grand>0).forEach(s=>{if(s.grand>=400)b[4]++;else if(s.grand>=300)b[3]++;else if(s.grand>=200)b[2]++;else if(s.grand>=100)b[1]++;else b[0]++;});
-  mkBar('chartDist',{labels:["0–99","100–199","200–299","300–399","400+"],datasets:[{data:b,backgroundColor:["#ef4444cc","#f97316cc","#f59e0bcc","#06b6d4cc","#10b981cc"],borderRadius:6}]});
+  RANKED.filter(s=>s.appeared).forEach(s=>{
+    if(s.grand>=500)b[4]++;else if(s.grand>=400)b[3]++;else if(s.grand>=300)b[2]++;else if(s.grand>=200)b[1]++;else b[0]++;
+  });
+  mkBar('chartDist',{labels:["0–199","200–299","300–399","400–499","500+"],datasets:[{data:b,backgroundColor:["#ef444488","#f9731688","#d9770688","#0891b288","#05996988"],borderRadius:6}]});
 
-  // Top 10 table
-  const top10=RANKED.filter(s=>s.grand>0).slice(0,10);
-  document.getElementById('top10Table').innerHTML=`<thead><tr><th>Rank</th><th>Name</th><th>Roll</th>${SUBJECTS.map(s=>`<th>${s}</th>`).join('')}<th>Total</th><th>GPA</th></tr></thead><tbody>${top10.map(s=>`<tr><td>${rankBadge(s.rank)}</td><td style="font-weight:600">${s.name}</td><td class="mono" style="color:var(--text3);font-size:12px">${s.roll}</td>${s.totals.map(t=>`<td>${gradePill(getGrade(t).letter)}</td>`).join('')}<td style="font-weight:700;color:var(--accent3)">${s.grand}</td><td class="mono">${s.gpa.toFixed(2)}</td></tr>`).join('')}</tbody>`;
+  const top10=RANKED.filter(s=>s.appeared).slice(0,10);
+  document.getElementById('top10Table').innerHTML=`<thead><tr><th>Rank</th><th>Student</th><th>Roll</th>${SUBJECTS.map(s=>`<th>${s}</th>`).join('')}<th>Total</th><th>GPA</th><th>Status</th></tr></thead>
+  <tbody>${top10.map(s=>`<tr>
+    <td>${rbadge(s.rank)}</td>
+    <td style="font-weight:700">${s.name}</td>
+    <td class="mono" style="font-size:11px;color:var(--slate-m)">${s.roll}</td>
+    ${s.totals.map(t=>`<td>${gpill(getGrade(t))}</td>`).join('')}
+    <td class="fw8 emerald">${s.grand}</td>
+    <td class="mono">${s.gpa.toFixed(2)}</td>
+    <td><span class="${s.overallPass?'status-pass':'status-fail'}">${s.overallPass?'Pass':'Fail'}</span></td>
+  </tr>`).join('')}</tbody>`;
 }
 
-// ══════════════════════════════════════
-// RANKINGS PAGE
-// ══════════════════════════════════════
+// ══════ RANKINGS ══════
 let rankPage=1,sortDir='desc';
-const RANK_PER=30;
+const RANK_PER=25;
 
 function toggleSortDir(){
   sortDir=sortDir==='desc'?'asc':'desc';
-  document.getElementById('sortDirBtn').textContent=sortDir==='desc'?'↓ High to Low':'↑ Low to High';
+  const btn=document.getElementById('sortDirBtn');
+  btn.innerHTML=sortDir==='desc'?'<i class="ri-sort-desc"></i>High to Low':'<i class="ri-sort-asc"></i>Low to High';
   rankPage=1;renderRankings();
 }
-
 function getRankList(){
   const search=document.getElementById('rankSearch').value.toLowerCase();
   const subj=document.getElementById('rankSubj').value;
+  const status=document.getElementById('filterStatus').value;
   let arr;
-  if(subj==='all'){
-    arr=sortDir==='desc'?[...RANKED]:[...RANKED].reverse();
-  } else {
-    const idx=parseInt(subj);
-    arr=[...STUDENTS].sort((a,b)=>sortDir==='desc'?b.totals[idx]-a.totals[idx]:a.totals[idx]-b.totals[idx]);
-  }
+  if(subj==='all'){arr=sortDir==='desc'?[...RANKED]:[...RANKED].reverse();}
+  else{const idx=parseInt(subj);arr=[...STUDENTS].sort((a,b)=>sortDir==='desc'?b.totals[idx]-a.totals[idx]:a.totals[idx]-b.totals[idx]);}
   if(search.trim())arr=arr.filter(s=>s.name.toLowerCase().includes(search)||s.roll.includes(search));
+  if(status==='pass')arr=arr.filter(s=>s.overallPass);
+  if(status==='fail')arr=arr.filter(s=>s.appeared&&!s.overallPass);
   return arr;
 }
-
 function renderRankings(){
   const list=getRankList();
-  document.getElementById('rankCount').textContent=`Showing ${list.length} students`;
-  const totalPages=Math.ceil(list.length/RANK_PER);
-  if(rankPage>totalPages)rankPage=1;
+  const tot=Math.ceil(list.length/RANK_PER);
+  if(rankPage>tot)rankPage=1;
   const page=list.slice((rankPage-1)*RANK_PER,rankPage*RANK_PER);
-  document.getElementById('rankTable').innerHTML=`<thead><tr><th>#</th><th>Name</th><th>Roll</th>${SUBJECTS.map(s=>`<th>${s}</th>`).join('')}<th>Total</th><th>GPA</th><th>Fails</th><th>PDF</th></tr></thead><tbody>${page.map((s,idx)=>{
-    const dispRank=document.getElementById('rankSubj').value==='all'?s.rank:idx+1+(rankPage-1)*RANK_PER;
-    return`<tr><td>${rankBadge(dispRank)}</td><td style="font-weight:600;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name}</td><td class="mono" style="color:var(--text3);font-size:12px">${s.roll}</td>${s.totals.map(t=>`<td style="color:${getGrade(t).color};font-weight:700">${t}</td>`).join('')}<td style="font-weight:800;color:${s.grand>400?'var(--accent3)':'var(--text)'}">${s.grand}</td><td class="mono">${s.gpa.toFixed(2)}</td><td>${s.failCount>0?`<span style="color:#f87171;font-weight:700;font-size:12px">${s.failCount}F</span>`:'<span style="color:var(--accent3);font-size:12px">✓</span>'}</td><td><button class="btn btn-sm btn-ghost" onclick='downloadPDF(BY_ROLL["${s.roll}"])'>⬇ PDF</button></td></tr>`;
+  document.getElementById('rankCount').textContent=`Showing ${list.length} students`;
+  document.getElementById('rankTable').innerHTML=`<thead><tr><th>#</th><th>Name</th><th>Roll</th>${SUBJECTS.map(s=>`<th>${s}</th>`).join('')}<th>Total</th><th>GPA</th><th>Status</th><th>PDF</th></tr></thead>
+  <tbody>${page.map((s,i)=>{
+    const dispRank=document.getElementById('rankSubj').value==='all'?s.rank:i+1+(rankPage-1)*RANK_PER;
+    return`<tr>
+      <td>${rbadge(dispRank)}</td>
+      <td style="font-weight:600;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name}</td>
+      <td class="mono" style="font-size:11px;color:var(--slate-m)">${s.roll}</td>
+      ${s.totals.map(t=>{const g=getGrade(t);return`<td style="font-weight:700;color:${g.l==='F'?'var(--rose)':t>=70?'var(--emerald)':'var(--ink)'}">${t}</td>`}).join('')}
+      <td class="fw8" style="color:var(--sky)">${s.grand}</td>
+      <td class="mono">${s.gpa.toFixed(2)}</td>
+      <td><span class="${s.overallPass?'status-pass':'status-fail'}">${s.overallPass?'Pass':'Fail'}</span></td>
+      <td><button class="btn btn-ghost btn-sm" onclick='downloadPDF(BY_ROLL["${s.roll}"])'><i class="ri-download-2-line"></i></button></td>
+    </tr>`;
   }).join('')}</tbody>`;
-  // Pager
   let pager='';
-  for(let p=1;p<=totalPages;p++)pager+=`<button class="pager-btn ${p===rankPage?'active':''}" onclick="rankPage=${p};renderRankings()">${p}</button>`;
+  for(let p=1;p<=tot;p++)pager+=`<button class="pager-btn ${p===rankPage?'active':''}" onclick="rankPage=${p};renderRankings()">${p}</button>`;
   document.getElementById('rankPager').innerHTML=pager;
 }
 
-// ══════════════════════════════════════
-// AUTOCOMPLETE
-// ══════════════════════════════════════
+// ══════ AUTOCOMPLETE ══════
 function acSuggest(q){
   if(!q.trim())return[];
   const ql=q.toLowerCase();
-  return STUDENTS.filter(s=>s.name.toLowerCase().includes(ql)||s.roll.includes(ql)).slice(0,8);
+  return RANKED.filter(s=>s.name.toLowerCase().includes(ql)||s.roll.includes(ql)).slice(0,7);
 }
-function acDropHtml(suggs,onclick){
-  if(!suggs.length)return'';
-  return suggs.map(s=>`<div class="ac-item" onmousedown="${onclick}('${s.roll}')"><span style="font-weight:600">${s.name}</span><span class="ac-roll">${s.roll}</span></div>`).join('');
+function acHtml(suggs,fn){
+  return suggs.map(s=>`<div class="ac-item-inline" onmousedown="${fn}('${s.roll}')">
+    <div class="ac-avatar" style="width:30px;height:30px;font-size:12px">${s.name[0]}</div>
+    <div><div style="font-weight:600;font-size:13px">${s.name}</div><span class="ac-roll-inline">${s.roll}</span></div>
+    <span class="${s.overallPass?'status-pass':'status-fail'}" style="margin-left:auto">${s.overallPass?'Pass':'Fail'}</span>
+  </div>`).join('');
 }
 
-// Student detail AC
+// ══════ STUDENT DETAIL ══════
 let stuSelected=null;
-function acSearch(){
+function stuAC(){
   const v=document.getElementById('stuSearch').value;
-  const drop=document.getElementById('acDrop');
+  const drop=document.getElementById('stuAcDrop');
   const suggs=acSuggest(v);
-  drop.innerHTML=acDropHtml(suggs,'pickStudent');
+  drop.innerHTML=acHtml(suggs,'pickStu');
   drop.style.display=suggs.length?'block':'none';
 }
-function pickStudent(roll){
+function pickStu(roll){
   stuSelected=BY_ROLL[roll];
   document.getElementById('stuSearch').value=stuSelected.name;
-  document.getElementById('acDrop').style.display='none';
+  document.getElementById('stuAcDrop').style.display='none';
   renderStudentDetail();
 }
-document.getElementById('stuSearch').addEventListener('blur',()=>setTimeout(()=>document.getElementById('acDrop').style.display='none',150));
+document.getElementById('stuSearch').addEventListener('blur',()=>setTimeout(()=>document.getElementById('stuAcDrop').style.display='none',200));
 
 function renderStudentDetail(){
   if(!stuSelected)return;
   const s=stuSelected;
-  const stats=getSubjectStats();
+  const ss=subjStats();
   document.getElementById('stuEmpty').style.display='none';
   const det=document.getElementById('stuDetail');
-  det.style.display='block';
 
   const marksHtml=SUBJECTS.map((subj,i)=>{
     const g=getGrade(s.totals[i]);
-    return`<div class="mark-box" style="border-left-color:${COLORS[i]}"><div class="mb-subj">${subj}</div><div class="mb-total" style="color:${g.color}">${s.totals[i]}</div><div class="mb-break">CT:${s.ct[i]} + Sub:${s.sub[i]} + Obj:${s.obj[i]}</div><div style="margin-top:6px">${gradePill(g.letter)}</div></div>`;
+    return`<div class="mark-box" style="border-left-color:${COLORS[i]}">
+      <div class="mb-subj">${subj}</div>
+      <div class="mb-total" style="color:${COLORS[i]}">${s.totals[i]}</div>
+      <div class="mb-break">CT:${s.ct[i]} + Sub:${s.sub[i]} + Obj:${s.obj[i]}</div>
+      <div style="margin-top:6px">${gpill(g)}</div>
+    </div>`;
   }).join('');
 
   const diffHtml=SUBJECTS.map((sub,i)=>{
-    const diff=s.totals[i]-stats[i].avg;
-    return`<div style="background:var(--bg3);border-radius:6px;padding:3px 9px;font-size:12px">${SUB_SHORT[i]}: <span style="color:${diff>=0?'var(--accent3)':'#f87171'};font-weight:700">${diff>=0?'+':''}${diff.toFixed(1)}</span></div>`;
+    const diff=s.totals[i]-ss[i].avg;
+    return`<div style="background:#f8fafc;border-radius:6px;padding:3px 9px;font-size:12px;font-weight:600">${SUB_SHORT[i]}: <span style="color:${diff>=0?'var(--emerald)':'var(--rose)'}">${diff>=0?'+':''}${diff.toFixed(1)}</span></div>`;
   }).join('');
 
-  det.innerHTML=`<div class="card" style="padding:0">
-    <div class="sd-header">
+  det.innerHTML=`<div style="border-radius:var(--r);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)">
+    <div class="sd-hero">
       <div class="sd-name">${s.name}</div>
       <div class="sd-meta">
         <span>Roll: <strong>${s.roll}</strong></span>
-        <span>Rank: <strong style="color:var(--accent3)">#${s.rank}</strong> of ${STUDENTS.length}</span>
+        <span>Rank: <strong style="color:#fff">#${s.rank}</strong> of ${STUDENTS.filter(x=>x.appeared).length}</span>
         <span>Total: <strong>${s.grand}</strong></span>
         <span>GPA: <strong>${s.gpa.toFixed(2)}</strong></span>
-        <span>Fails: <strong style="color:${s.failCount>0?'#f87171':'var(--accent3)'}">${s.failCount}</strong></span>
+        <span>Status: <span class="${s.overallPass?'status-pass':'status-fail'}">${s.overallPass?'✓ Pass':'✗ Fail'}</span></span>
       </div>
-      <div style="margin-top:14px"><button class="btn" onclick='downloadPDF(stuSelected)'>⬇ Download PDF Report</button></div>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn" onclick="downloadPDF(stuSelected)"><i class="ri-download-2-line"></i>Download PDF</button>
+      </div>
     </div>
     <div class="sd-body">
+      ${!s.overallPass?`<div style="background:#fff1f2;border:1px solid #fecdd3;border-radius:var(--r2);padding:12px 16px;margin-bottom:16px;display:flex;align-items:center;gap:10px;color:#9f1239;font-weight:600;font-size:13px"><i class="ri-error-warning-line" style="font-size:18px"></i>This student has failed in ${s.failCount} subject(s). Overall result: <strong>FAIL</strong></div>`:''}
       <div class="marks-grid">${marksHtml}</div>
       <div class="g2">
+        <div><div style="font-size:13px;font-weight:700;margin-bottom:12px;color:var(--slate)">Performance Radar</div><div class="chart-wrap" style="height:280px"><canvas id="chartStuRadar"></canvas></div></div>
         <div>
-          <div style="font-size:13px;color:var(--text2);font-weight:600;margin-bottom:12px">Performance Radar</div>
-          <div class="chart-wrap" style="height:280px"><canvas id="chartStuRadar"></canvas></div>
-        </div>
-        <div>
-          <div style="font-size:13px;color:var(--text2);font-weight:600;margin-bottom:12px">Subject Scores vs Class Average</div>
-          <div class="chart-wrap" style="height:240px"><canvas id="chartStuBar"></canvas></div>
+          <div style="font-size:13px;font-weight:700;margin-bottom:12px;color:var(--slate)">vs. Class Average</div>
+          <div class="chart-wrap" style="height:220px"><canvas id="chartStuBar"></canvas></div>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px">${diffHtml}</div>
         </div>
       </div>
     </div>
   </div>`;
 
-  mkRadar('chartStuRadar',{labels:SUBJECTS,datasets:[{label:s.name,data:s.totals,backgroundColor:"rgba(99,102,241,0.15)",borderColor:"#6366f1",pointBackgroundColor:"#6366f1",borderWidth:2}]});
-  mkBar('chartStuBar',{labels:SUBJECTS,datasets:[{label:s.name,data:s.totals,backgroundColor:COLORS.map(c=>c+'cc'),borderColor:COLORS,borderWidth:1.5,borderRadius:6}]});
+  mkRadar('chartStuRadar',{labels:SUBJECTS,datasets:[{label:s.name,data:s.totals,backgroundColor:"rgba(2,132,199,0.1)",borderColor:"#0284c7",pointBackgroundColor:"#0284c7",borderWidth:2}]});
+  mkBar('chartStuBar',{labels:SUBJECTS,datasets:[
+    {label:s.name,data:s.totals,backgroundColor:COLORS.map(c=>c+'44'),borderColor:COLORS,borderWidth:2,borderRadius:4},
+    {label:"Class Avg",data:subjStats().map(x=>x.avg),backgroundColor:"rgba(148,163,184,0.2)",borderColor:"#94a3b8",borderWidth:2,borderRadius:4}
+  ]});
 }
 
-// ══════════════════════════════════════
-// COMPARE PAGE
-// ══════════════════════════════════════
+// ══════ COMPARE ══════
 let cmpS1=null,cmpS2=null;
-function acSearch1(){
+function cmpAC1(){
   const v=document.getElementById('cmp1').value;
-  const drop=document.getElementById('acDrop1');
-  const suggs=acSuggest(v);
-  drop.innerHTML=acDropHtml(suggs,'pickCmp1');
-  drop.style.display=suggs.length?'block':'none';
+  const drop=document.getElementById('cmpDrop1');
+  drop.innerHTML=acHtml(acSuggest(v),'pickCmp1');
+  drop.style.display=acSuggest(v).length?'block':'none';
 }
-function acSearch2(){
+function cmpAC2(){
   const v=document.getElementById('cmp2').value;
-  const drop=document.getElementById('acDrop2');
-  const suggs=acSuggest(v);
-  drop.innerHTML=acDropHtml(suggs,'pickCmp2');
-  drop.style.display=suggs.length?'block':'none';
+  const drop=document.getElementById('cmpDrop2');
+  drop.innerHTML=acHtml(acSuggest(v),'pickCmp2');
+  drop.style.display=acSuggest(v).length?'block':'none';
 }
-function pickCmp1(roll){cmpS1=BY_ROLL[roll];document.getElementById('cmp1').value=cmpS1.name;document.getElementById('acDrop1').style.display='none';renderCompare();}
-function pickCmp2(roll){cmpS2=BY_ROLL[roll];document.getElementById('cmp2').value=cmpS2.name;document.getElementById('acDrop2').style.display='none';renderCompare();}
-document.getElementById('cmp1').addEventListener('blur',()=>setTimeout(()=>document.getElementById('acDrop1').style.display='none',150));
-document.getElementById('cmp2').addEventListener('blur',()=>setTimeout(()=>document.getElementById('acDrop2').style.display='none',150));
+function pickCmp1(r){cmpS1=BY_ROLL[r];document.getElementById('cmp1').value=cmpS1.name;document.getElementById('cmpDrop1').style.display='none';renderCompare();}
+function pickCmp2(r){cmpS2=BY_ROLL[r];document.getElementById('cmp2').value=cmpS2.name;document.getElementById('cmpDrop2').style.display='none';renderCompare();}
+document.getElementById('cmp1').addEventListener('blur',()=>setTimeout(()=>document.getElementById('cmpDrop1').style.display='none',200));
+document.getElementById('cmp2').addEventListener('blur',()=>setTimeout(()=>document.getElementById('cmpDrop2').style.display='none',200));
 
 function renderCompare(){
   if(!cmpS1||!cmpS2)return;
   document.getElementById('cmpEmpty').style.display='none';
   const det=document.getElementById('cmpDetail');
-  det.style.display='block';
   const s1=cmpS1,s2=cmpS2;
 
-  const summaryCards=[s1,s2].map((s,si)=>`
-    <div class="card" style="border-color:${si===0?'rgba(99,102,241,0.4)':'rgba(16,185,129,0.4)'}">
-      <div style="font-weight:800;font-size:16px;margin-bottom:4px;color:${si===0?'#a5b4fc':'#10b981'}">${s.name}</div>
-      <div style="color:var(--text3);font-size:12px;margin-bottom:12px">Roll: ${s.roll}</div>
-      <div style="display:flex;gap:18px;flex-wrap:wrap">
-        ${[["Rank","#"+s.rank],["Total",s.grand],["GPA",s.gpa.toFixed(2)],["Fails",s.failCount]].map(([l,v])=>`<div><div style="font-size:22px;font-weight:800">${v}</div><div style="font-size:11px;color:var(--text3);text-transform:uppercase">${l}</div></div>`).join('')}
-      </div>
-    </div>`).join('');
+  const cards=[s1,s2].map((s,si)=>`<div class="card" style="border-left:4px solid ${si===0?'var(--sky)':'var(--emerald)'}">
+    <div style="font-weight:800;font-size:16px;margin-bottom:4px;color:${si===0?'var(--sky)':'var(--emerald)'}">${s.name}</div>
+    <div style="color:var(--slate-m);font-size:12px;margin-bottom:12px">Roll: ${s.roll}</div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      ${[["Rank","#"+s.rank],["Total",s.grand],["GPA",s.gpa.toFixed(2)],["Status",s.overallPass?'Pass':'Fail']].map(([l,v])=>`<div><div style="font-size:20px;font-weight:800;color:${l==='Status'?(s.overallPass?'var(--emerald)':'var(--rose)'):'var(--ink)'}">${v}</div><div style="font-size:11px;color:var(--slate-m);text-transform:uppercase;font-weight:600">${l}</div></div>`).join('')}
+    </div>
+  </div>`).join('');
 
-  const tableRows=SUBJECTS.map((sub,i)=>{
+  const rows=SUBJECTS.map((sub,i)=>{
     const diff=s1.totals[i]-s2.totals[i];
     return`<tr>
       <td style="font-weight:600">${sub}</td>
-      <td><span style="color:${getGrade(s1.totals[i]).color};font-weight:700">${s1.totals[i]}</span> <span style="font-size:11px;color:var(--text3)">(${getGrade(s1.totals[i]).letter})</span></td>
-      <td><span style="color:${getGrade(s2.totals[i]).color};font-weight:700">${s2.totals[i]}</span> <span style="font-size:11px;color:var(--text3)">(${getGrade(s2.totals[i]).letter})</span></td>
-      <td class="${diff>0?'diff-pos':diff<0?'diff-neg':'diff-zero'}">${diff>0?'+':''}${diff}</td>
-      <td style="font-weight:700;color:${diff>0?'#a5b4fc':diff<0?'#10b981':'var(--text3)'}">${diff>0?s1.name.split(' ')[0]:diff<0?s2.name.split(' ')[0]:'Tie'}</td>
+      <td><span style="font-weight:700;color:${COLORS[i]}">${s1.totals[i]}</span> ${gpill(getGrade(s1.totals[i]))}</td>
+      <td><span style="font-weight:700;color:${COLORS[i]}">${s2.totals[i]}</span> ${gpill(getGrade(s2.totals[i]))}</td>
+      <td style="font-weight:700;color:${diff>0?'var(--sky)':diff<0?'var(--emerald)':'var(--slate-m)'}">${diff>0?'+':''}${diff}</td>
+      <td style="font-weight:600;color:${diff>0?'var(--sky)':diff<0?'var(--emerald)':'var(--slate-m)'}">${diff>0?s1.name.split(' ')[0]:diff<0?s2.name.split(' ')[0]:'Tie'}</td>
     </tr>`;
   }).join('');
-  const totalDiff=s1.grand-s2.grand;
+  const td=s1.grand-s2.grand;
 
-  det.innerHTML=`
-    <div class="g2">${summaryCards}</div>
-    <div class="card">
-      <div class="card-title">Performance Radar</div>
-      <div class="chart-wrap" style="height:300px"><canvas id="chartCmpRadar"></canvas></div>
+  det.innerHTML=`<div class="g2">${cards}</div>
+  <div class="card"><div style="font-size:13px;font-weight:700;margin-bottom:14px">Performance Radar</div><div class="chart-wrap" style="height:300px"><canvas id="chartCmpRadar"></canvas></div></div>
+  <div class="card">
+    <div style="font-size:13px;font-weight:700;margin-bottom:14px">Subject Comparison</div>
+    <div class="tbl-wrap" style="margin-bottom:0">
+      <table>
+        <thead><tr><th>Subject</th><th style="color:var(--sky)">${s1.name.split(' ')[0]}</th><th style="color:var(--emerald)">${s2.name.split(' ')[0]}</th><th>Diff</th><th>Better</th></tr></thead>
+        <tbody>${rows}<tr style="background:#f8fafc;font-weight:700"><td>Total</td><td style="color:var(--sky)">${s1.grand}</td><td style="color:var(--emerald)">${s2.grand}</td><td style="color:${td>0?'var(--sky)':td<0?'var(--emerald)':'var(--slate-m)'}">${td>0?'+':''}${td}</td><td style="color:${s1.grand>=s2.grand?'var(--sky)':'var(--emerald)'}">${s1.grand>=s2.grand?s1.name.split(' ')[0]:s2.name.split(' ')[0]}</td></tr></tbody>
+      </table>
     </div>
-    <div class="card">
-      <div class="card-title">Subject-by-Subject Comparison</div>
-      <div style="overflow-x:auto">
-        <table style="min-width:480px">
-          <thead><tr><th>Subject</th><th style="color:#a5b4fc">${s1.name.split(' ')[0]}</th><th style="color:#10b981">${s2.name.split(' ')[0]}</th><th>Diff</th><th>Better</th></tr></thead>
-          <tbody>${tableRows}
-            <tr style="background:var(--bg3)">
-              <td style="font-weight:700">Total</td>
-              <td><span style="font-weight:800;color:#a5b4fc">${s1.grand}</span></td>
-              <td><span style="font-weight:800;color:#10b981">${s2.grand}</span></td>
-              <td class="${totalDiff>0?'diff-pos':totalDiff<0?'diff-neg':'diff-zero'}">${totalDiff>0?'+':''}${totalDiff}</td>
-              <td style="font-weight:700;color:${s1.grand>=s2.grand?'#a5b4fc':'#10b981'}">${s1.grand>=s2.grand?s1.name.split(' ')[0]:s2.name.split(' ')[0]}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">Score Trend by Subject</div>
-      <div class="chart-wrap" style="height:240px"><canvas id="chartCmpLine"></canvas></div>
-    </div>`;
+  </div>
+  <div class="card"><div style="font-size:13px;font-weight:700;margin-bottom:14px">Score Trend</div><div class="chart-wrap" style="height:240px"><canvas id="chartCmpLine"></canvas></div></div>`;
 
   mkRadar('chartCmpRadar',{labels:SUBJECTS,datasets:[
-    {label:s1.name,data:s1.totals,backgroundColor:"rgba(99,102,241,0.15)",borderColor:"#6366f1",pointBackgroundColor:"#6366f1",borderWidth:2},
-    {label:s2.name,data:s2.totals,backgroundColor:"rgba(16,185,129,0.15)",borderColor:"#10b981",pointBackgroundColor:"#10b981",borderWidth:2}
+    {label:s1.name,data:s1.totals,backgroundColor:"rgba(2,132,199,0.12)",borderColor:"#0284c7",pointBackgroundColor:"#0284c7",borderWidth:2},
+    {label:s2.name,data:s2.totals,backgroundColor:"rgba(5,150,105,0.12)",borderColor:"#059669",pointBackgroundColor:"#059669",borderWidth:2}
   ]});
   mkLine('chartCmpLine',{labels:SUBJECTS,datasets:[
-    {label:s1.name,data:s1.totals,borderColor:"#6366f1",backgroundColor:"rgba(99,102,241,0.1)",fill:true},
-    {label:s2.name,data:s2.totals,borderColor:"#10b981",backgroundColor:"rgba(16,185,129,0.1)",fill:true}
+    {label:s1.name,data:s1.totals,borderColor:"#0284c7",backgroundColor:"rgba(2,132,199,0.08)",fill:true},
+    {label:s2.name,data:s2.totals,borderColor:"#059669",backgroundColor:"rgba(5,150,105,0.08)",fill:true}
   ]});
 }
 
-// ══════════════════════════════════════
-// SUBJECT ANALYSIS PAGE
-// ══════════════════════════════════════
+// ══════ SUBJECT ANALYSIS ══════
 let activeSubj=0;
-function renderSubjectPage(){
-  const stats=getSubjectStats();
-  document.getElementById('subjTabs').innerHTML=SUBJECTS.map((s,i)=>`<button class="tab-btn ${i===activeSubj?'active':''}" onclick="activeSubj=${i};renderSubjectPage()">${s}</button>`).join('');
-  const s=stats[activeSubj];
+function renderSubjPage(){
+  const ss=subjStats();
+  document.getElementById('subjTabs').innerHTML=SUBJECTS.map((s,i)=>`<button class="tab-btn ${i===activeSubj?'active':''}" onclick="activeSubj=${i};renderSubjPage()"><i class="ri-book-line"></i>${s}</button>`).join('');
+  const s=ss[activeSubj];
   document.getElementById('subjStats').innerHTML=[
-    {v:s.avg,l:"Average"},{v:s.max,l:"Highest"},{v:s.min,l:"Lowest (non-zero)"},{v:s.passRate+'%',l:"Pass Rate"},{v:s.pass,l:"Passed"},{v:s.fail,l:"Failed"}
-  ].map(x=>`<div class="stat-card"><div class="sv" style="color:var(--accent3)">${x.v}</div><div class="sl">${x.l}</div></div>`).join('');
+    {v:s.avg,l:"Average",c:"var(--sky)"},{v:s.max,l:"Highest",c:"var(--emerald)"},{v:s.min,l:"Lowest",c:"var(--rose)"},
+    {v:s.passRate+'%',l:"Pass Rate",c:"var(--amber)"},{v:s.pass,l:"Passed",c:"var(--emerald)"},{v:s.fail,l:"Failed",c:"var(--rose)"}
+  ].map(x=>`<div class="stat-card"><div class="sv" style="color:${x.c}">${x.v}</div><div class="sl">${x.l}</div></div>`).join('');
 
   document.getElementById('subjDistTitle').textContent=`${SUBJECTS[activeSubj]} — Grade Distribution`;
   document.getElementById('subjTop10Title').textContent=`Top 10 in ${SUBJECTS[activeSubj]}`;
-  document.getElementById('subjAllTitle').textContent=`All Students — ${SUBJECTS[activeSubj]}`;
 
-  const buckets={"A+(80+)":0,"A(70-79)":0,"A-(60-69)":0,"B(50-59)":0,"C(40-49)":0,"D(33-39)":0,"F(<33)":0};
-  STUDENTS.forEach(st=>{const m=st.totals[activeSubj];if(m>=80)buckets["A+(80+)"]++;else if(m>=70)buckets["A(70-79)"]++;else if(m>=60)buckets["A-(60-69)"]++;else if(m>=50)buckets["B(50-59)"]++;else if(m>=40)buckets["C(40-49)"]++;else if(m>=33)buckets["D(33-39)"]++;else buckets["F(<33)"]++;});
-  mkBar('chartSubjDist',{labels:Object.keys(buckets),datasets:[{data:Object.values(buckets),backgroundColor:["#10b981cc","#06b6d4cc","#6366f1cc","#8b5cf6cc","#f59e0bcc","#f97316cc","#ef4444cc"],borderRadius:6}]});
+  const b={"A+(80+)":0,"A(70-79)":0,"A-(60-69)":0,"B(50-59)":0,"C(40-49)":0,"D(33-39)":0,"F(<33)":0};
+  STUDENTS.forEach(st=>{const m=st.totals[activeSubj];if(m>0){if(m>=80)b["A+(80+)"]++;else if(m>=70)b["A(70-79)"]++;else if(m>=60)b["A-(60-69)"]++;else if(m>=50)b["B(50-59)"]++;else if(m>=40)b["C(40-49)"]++;else if(m>=33)b["D(33-39)"]++;else b["F(<33)"]++;}});
+  mkBar('chartSubjDist',{labels:Object.keys(b),datasets:[{data:Object.values(b),backgroundColor:["#05996988","#0891b288","#7c3aed88","#3b82f688","#d9770688","#f9731688","#ef444488"],borderRadius:6}]});
 
   const sorted=[...STUDENTS].filter(st=>st.totals[activeSubj]>0).sort((a,b)=>b.totals[activeSubj]-a.totals[activeSubj]);
   document.getElementById('subjTop10List').innerHTML=sorted.slice(0,10).map((st,i)=>{
-    const mark=st.totals[activeSubj];const g=getGrade(mark);
-    return`<div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:${i<9?'1px solid var(--border2)':'none'}"><span style="font-size:12px;font-weight:700;color:var(--text3);width:22px">#${i+1}</span><span style="flex:1;font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${st.name}</span><span style="color:${g.color};font-weight:800;font-size:14px">${mark}</span>${gradePill(g.letter)}</div>`;
+    const g=getGrade(st.totals[activeSubj]);
+    return`<div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:${i<9?'1px solid var(--border2)':'none'}">
+      <span style="font-size:12px;font-weight:700;color:var(--slate-m);width:22px">#${i+1}</span>
+      <span style="flex:1;font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${st.name}</span>
+      <span style="font-weight:800;font-size:14px;color:${COLORS[activeSubj]}">${st.totals[activeSubj]}</span>
+      ${gpill(g)}
+    </div>`;
   }).join('');
 
-  document.getElementById('subjTable').innerHTML=`<thead><tr><th>#</th><th>Name</th><th>Roll</th><th>CT</th><th>Subjective</th><th>Objective</th><th>Total</th><th>Grade</th></tr></thead><tbody>${sorted.map((st,i)=>{const g=getGrade(st.totals[activeSubj]);return`<tr><td style="color:var(--text3);font-size:12px">${i+1}</td><td style="font-weight:600">${st.name}</td><td class="mono" style="color:var(--text3);font-size:12px">${st.roll}</td><td>${st.ct[activeSubj]}</td><td>${st.sub[activeSubj]}</td><td>${st.obj[activeSubj]}</td><td style="font-weight:700;color:${g.color}">${st.totals[activeSubj]}</td><td>${gradePill(g.letter)}</td></tr>`;}).join('')}</tbody>`;
+  document.getElementById('subjAllTitle').innerHTML=`<i class="ri-list-check-2"></i>All Students — ${SUBJECTS[activeSubj]}`;
+  document.getElementById('subjTable').innerHTML=`<thead><tr><th>#</th><th>Name</th><th>Roll</th><th>CT</th><th>Subjective</th><th>Objective</th><th>Total</th><th>Grade</th></tr></thead>
+  <tbody>${sorted.map((st,i)=>{const g=getGrade(st.totals[activeSubj]);return`<tr><td style="color:var(--slate-m);font-size:12px">${i+1}</td><td style="font-weight:600">${st.name}</td><td class="mono" style="font-size:11px;color:var(--slate-m)">${st.roll}</td><td>${st.ct[activeSubj]}</td><td>${st.sub[activeSubj]}</td><td>${st.obj[activeSubj]}</td><td style="font-weight:700;color:${COLORS[activeSubj]}">${st.totals[activeSubj]}</td><td>${gpill(g)}</td></tr>`;}).join('')}</tbody>`;
 }
 
-// ══════════════════════════════════════
-// PDF DOWNLOAD
-// ══════════════════════════════════════
+// ══════ PDF ══════
 function downloadPDF(student){
   if(!student)return;
-  const r=BY_ROLL[student.roll];
   const win=window.open('','_blank');
-  if(!win)return;
   const rows=SUBJECTS.map((s,i)=>{
     const g=getGrade(student.totals[i]);
-    return`<tr><td>${s}</td><td class="num">${student.ct[i]}</td><td class="num">${student.sub[i]}</td><td class="num">${student.obj[i]}</td><td class="num bold">${student.totals[i]}</td><td class="grade" style="color:${g.color}">${g.letter}</td><td class="num">${g.point.toFixed(2)}</td></tr>`;
+    const hasEntry=student.ct[i]>0||student.sub[i]>0||student.obj[i]>0;
+    return`<tr style="${g.l==='F'&&hasEntry?'background:#fff1f2':''}"><td>${s}</td><td class="c">${student.ct[i]}</td><td class="c">${student.sub[i]}</td><td class="c">${student.obj[i]}</td><td class="c b">${student.totals[i]}</td><td class="c" style="color:${g.l==='F'?'#dc2626':'#059669'};font-weight:700">${g.l}</td><td class="c">${g.p.toFixed(2)}</td></tr>`;
   }).join('');
-  win.document.write(`<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Result — ${student.name}</title><style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',Arial,sans-serif;padding:36px;color:#1e1b4b;background:#fff}.header{text-align:center;margin-bottom:28px;padding-bottom:18px;border-bottom:3px solid #6366f1}.header h1{font-size:22px;color:#4f46e5;font-weight:800;letter-spacing:-0.5px}.header h2{font-size:15px;color:#6b7280;font-weight:500;margin-top:4px}.header p{font-size:12px;color:#9ca3af;margin-top:8px}.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}.info-box{background:#f5f3ff;border-radius:10px;padding:14px 16px;border:1px solid #e0e7ff}.info-box .label{font-size:10px;color:#7c3aed;text-transform:uppercase;letter-spacing:0.08em;font-weight:700}.info-box .value{font-size:20px;font-weight:800;color:#3730a3;margin-top:3px}.summary{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:24px}.sum-box{border:2px solid #6366f1;border-radius:10px;padding:12px;text-align:center}.sum-box .sv{font-size:20px;font-weight:800;color:#4f46e5}.sum-box .sl{font-size:10px;color:#6b7280;text-transform:uppercase;margin-top:2px}table{width:100%;border-collapse:collapse;margin-bottom:20px}th{background:#4f46e5;color:#fff;padding:9px 12px;font-size:11px;text-align:left;font-weight:700}td{padding:8px 12px;border-bottom:1px solid #e8e6ff;font-size:13px}tr:nth-child(even) td{background:#faf9ff}.num{text-align:center}.bold{font-weight:800}.grade{font-weight:800;text-align:center}.total-row td{background:#f0eeff!important;font-weight:700}.footer{text-align:center;font-size:11px;color:#9ca3af;margin-top:24px;padding-top:14px;border-top:1px solid #e8e6ff}@media print{body{padding:16px}}</style></head><body>
-<div class="header"><h1>Duaripara Government College</h1><h2>Rupnagar, Mirpur, Dhaka – 1216</h2><p>Half Yearly Examination – 2026 | Science Division | Individual Result Card</p></div>
-<div class="info-grid"><div class="info-box"><div class="label">Student Name</div><div class="value" style="font-size:15px">${student.name}</div></div><div class="info-box"><div class="label">Roll Number</div><div class="value">${student.roll}</div></div><div class="info-box"><div class="label">Class Rank</div><div class="value">#${r?r.rank:"N/A"}</div></div><div class="info-box"><div class="label">GPA</div><div class="value">${student.gpa.toFixed(2)}</div></div></div>
-<div class="summary"><div class="sum-box"><div class="sv">${student.grand}</div><div class="sl">Total Marks</div></div><div class="sum-box"><div class="sv">${(student.grand/6).toFixed(1)}</div><div class="sl">Average</div></div><div class="sum-box"><div class="sv">${student.gpa.toFixed(2)}</div><div class="sl">GPA</div></div><div class="sum-box"><div class="sv">${6-student.failCount}/6</div><div class="sl">Passed</div></div><div class="sum-box"><div class="sv">${student.failCount}</div><div class="sl">Failed</div></div></div>
-<table><tr><th>Subject</th><th class="num">CT</th><th class="num">Subjective</th><th class="num">Objective</th><th class="num">Total (100)</th><th class="num">Grade</th><th class="num">Point</th></tr>${rows}<tr class="total-row"><td colspan="4" style="text-align:right;color:#4f46e5">Grand Total</td><td class="num bold">${student.grand}</td><td class="grade" style="color:#4f46e5">GPA</td><td class="num">${student.gpa.toFixed(2)}</td></tr></table>
-<div class="footer">Generated: ${new Date().toLocaleDateString("en-BD",{year:"numeric",month:"long",day:"numeric"})} | Duaripara Government College Result Management System</div>
+  win.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8"><title>${student.name} — Result</title><style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',Arial,sans-serif;padding:32px;color:#0f172a}.hdr{text-align:center;padding-bottom:18px;margin-bottom:24px;border-bottom:3px solid #0284c7}.hdr h1{font-size:22px;font-weight:800;color:#0c4a6e}.hdr h2{font-size:14px;color:#64748b;margin-top:4px}.hdr p{font-size:12px;color:#94a3b8;margin-top:6px}.info{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}.ib{background:#f0f9ff;border-radius:8px;padding:12px 14px;border-left:3px solid #0284c7}.ib .lbl{font-size:10px;color:#0284c7;text-transform:uppercase;font-weight:700;letter-spacing:.06em}.ib .val{font-size:18px;font-weight:800;color:#0c4a6e;margin-top:3px}.sum{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px}.sb{border:2px solid #e2e8f0;border-radius:8px;padding:10px;text-align:center}.sb .sv{font-size:20px;font-weight:800;color:#0284c7}.sb .sl{font-size:10px;color:#64748b;text-transform:uppercase;font-weight:600}.notice{background:${student.overallPass?'#d1fae5':'#fff1f2'};border:1px solid ${student.overallPass?'#6ee7b7':'#fecdd3'};border-radius:8px;padding:10px 14px;margin-bottom:16px;font-weight:700;color:${student.overallPass?'#065f46':'#9f1239'};font-size:13px}table{width:100%;border-collapse:collapse;margin-bottom:18px}th{background:#0284c7;color:#fff;padding:9px 10px;font-size:11px;font-weight:700;text-transform:uppercase}td{padding:8px 10px;border-bottom:1px solid #e2e8f0;font-size:13px}tr:nth-child(even) td{background:#f8fafc}.c{text-align:center}.b{font-weight:800}.total-row td{background:#f0f9ff!important;font-weight:700}.ftr{text-align:center;font-size:11px;color:#94a3b8;margin-top:20px;padding-top:14px;border-top:1px solid #e2e8f0}@media print{body{padding:16px}}</style></head><body>
+<div class="hdr"><h1>Duaripara Government College</h1><h2>Rupnagar, Mirpur, Dhaka – 1216</h2><p>Half Yearly Examination – 2026 | Science Division | Individual Result Card</p></div>
+<div class="info"><div class="ib"><div class="lbl">Student Name</div><div class="val" style="font-size:14px">${student.name}</div></div><div class="ib"><div class="lbl">Roll Number</div><div class="val">${student.roll}</div></div><div class="ib"><div class="lbl">Class Rank</div><div class="val">#${BY_ROLL[student.roll]?.rank||'N/A'}</div></div><div class="ib"><div class="lbl">GPA</div><div class="val">${student.gpa.toFixed(2)}</div></div></div>
+<div class="sum"><div class="sb"><div class="sv">${student.grand}</div><div class="sl">Total</div></div><div class="sb"><div class="sv">${student.subjCount>0?(student.grand/student.subjCount).toFixed(1):0}</div><div class="sl">Average</div></div><div class="sb"><div class="sv">${student.gpa.toFixed(2)}</div><div class="sl">GPA</div></div><div class="sb"><div class="sv">${student.subjCount-student.failCount}/${student.subjCount}</div><div class="sl">Passed</div></div><div class="sb"><div class="sv" style="color:${student.failCount>0?'#dc2626':'#059669'}">${student.overallPass?'PASS':'FAIL'}</div><div class="sl">Result</div></div></div>
+${!student.overallPass?`<div class="notice">⚠ FAIL — This student failed in ${student.failCount} subject(s). A student must pass ALL subjects to be considered overall PASS.</div>`:`<div class="notice">✓ PASS — This student has passed all subjects.</div>`}
+<table><tr><th>Subject</th><th>CT</th><th>Subjective</th><th>Objective</th><th>Total (100)</th><th>Grade</th><th>Points</th></tr>${rows}<tr class="total-row"><td colspan="4" style="text-align:right;color:#0284c7;font-weight:700">Grand Total</td><td class="c b">${student.grand}</td><td class="c" style="color:#0284c7;font-weight:700">GPA</td><td class="c">${student.gpa.toFixed(2)}</td></tr></table>
+<div class="ftr">Generated: ${new Date().toLocaleDateString("en-BD",{year:"numeric",month:"long",day:"numeric"})} · Duaripara Government College Result System</div>
 <script>window.print();<\/script></body></html>`);
   win.document.close();
 }
 
-// ══════════════════════════════════════
-// SCROLL TOP
-// ══════════════════════════════════════
-window.addEventListener('scroll',()=>{
-  document.getElementById('scrollTopBtn').classList.toggle('visible',window.scrollY>300);
-});
 
-// ══════════════════════════════════════
-// INIT
-// ══════════════════════════════════════
-initOverview();
+// ══════ CSV EXPORT ══════
+function exportCSV(){
+  const list=getRankList();
+  const hdr=['Rank','SL','Name','Roll',...SUBJECTS,'Total','GPA','Status'];
+  const rows=list.map((s,i)=>[
+    i+1,s.sl,'"'+s.name+'"',s.roll,
+    ...s.totals,s.grand,s.gpa.toFixed(2),
+    s.overallPass?'Pass':'Fail'
+  ]);
+  const csv=[hdr,...rows].map(r=>r.join(',')).join('\n');
+  const blob=new Blob([csv],{type:'text/csv'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='DGC_Results_2026.csv';
+  a.click();
+}
+
+// ══════ CLASS SUMMARY REPORT ══════
+function exportSummary(){
+  const ss=subjStats();
+  const appeared=STUDENTS.filter(s=>s.appeared).length;
+  const passed=STUDENTS.filter(s=>s.overallPass).length;
+  const top=RANKED.filter(s=>s.appeared);
+  const win=window.open('','_blank');
+  const rows=ss.map((s,i)=>`<tr>
+    <td>${s.name}</td><td class="c">${s.total}</td>
+    <td class="c">${s.avg}</td><td class="c">${s.max}</td><td class="c">${s.min}</td>
+    <td class="c">${s.pass}</td><td class="c" style="color:#dc2626">${s.fail}</td>
+    <td class="c" style="font-weight:700;color:${s.passRate>=70?'#059669':s.passRate>=40?'#d97706':'#dc2626'}">${s.passRate}%</td>
+  </tr>`).join('');
+  const gc={"A+":0,"A":0,"A-":0,"B":0,"C":0,"D":0,"F":0};
+  STUDENTS.filter(s=>s.appeared).forEach(s=>s.grades.forEach(g=>{gc[g.l]=(gc[g.l]||0)+1;}));
+  const gcRows=Object.entries(gc).map(([g,c])=>`<tr><td>${g}</td><td class="c">${c}</td><td class="c">${(c/(appeared*7)*100).toFixed(1)}%</td></tr>`).join('');
+  win.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8"><title>Class Report — DGC 2026</title>
+  <style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',Arial,sans-serif;padding:32px;color:#0f172a}
+  h1{font-size:22px;font-weight:800;color:#0c4a6e;text-align:center}h2{font-size:14px;color:#64748b;text-align:center;margin:4px 0 24px}
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:24px}
+  .sb{background:#f0f9ff;border-radius:8px;padding:12px;text-align:center;border-left:3px solid #0284c7}
+  .sv{font-size:22px;font-weight:800;color:#0c4a6e}.sl{font-size:10px;color:#0284c7;text-transform:uppercase;font-weight:700}
+  table{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:13px}
+  th{background:#0284c7;color:#fff;padding:8px 10px;font-size:11px;text-transform:uppercase}
+  td{padding:8px 10px;border-bottom:1px solid #e2e8f0}.c{text-align:center}
+  tr:nth-child(even) td{background:#f8fafc}h3{margin:20px 0 10px;font-size:15px;color:#0c4a6e}
+  .ftr{text-align:center;font-size:11px;color:#94a3b8;margin-top:20px;padding-top:14px;border-top:1px solid #e2e8f0}
+  @media print{body{padding:16px}}</style></head><body>
+  <h1>Duaripara Government College</h1>
+  <h2>Half Yearly Examination 2026 — Class Summary Report (Science)</h2>
+  <div class="stats">
+    <div class="sb"><div class="sv">${STUDENTS.length}</div><div class="sl">Total</div></div>
+    <div class="sb"><div class="sv">${appeared}</div><div class="sl">Appeared</div></div>
+    <div class="sb"><div class="sv">${passed}</div><div class="sl">Passed</div></div>
+    <div class="sb"><div class="sv">${((passed/appeared)*100).toFixed(1)}%</div><div class="sl">Pass Rate</div></div>
+    <div class="sb"><div class="sv">${top[0]?.grand||0}</div><div class="sl">Highest</div></div>
+  </div>
+  <h3>Subject-wise Statistics</h3>
+  <table><tr><th>Subject</th><th>Appeared</th><th>Average</th><th>Highest</th><th>Lowest</th><th>Passed</th><th>Failed</th><th>Pass Rate</th></tr>${rows}</table>
+  <h3>Overall Grade Distribution (All subjects combined)</h3>
+  <table><tr><th>Grade</th><th>Count</th><th>Percentage</th></tr>${gcRows}</table>
+  <h3>Top 10 Students</h3>
+  <table><tr><th>#</th><th>Name</th><th>Roll</th><th>Total</th><th>GPA</th></tr>
+  ${top.slice(0,10).map((s,i)=>`<tr><td class="c">${i+1}</td><td>${s.name}</td><td class="c">${s.roll}</td><td class="c" style="font-weight:700">${s.grand}</td><td class="c">${s.gpa.toFixed(2)}</td></tr>`).join('')}
+  </table>
+  <div class="ftr">Generated: ${new Date().toLocaleDateString("en-BD",{year:"numeric",month:"long",day:"numeric"})} · Duaripara Government College Result System</div>
+  <script>window.print();<\/script></body></html>`);
+  win.document.close();
+}
+
+// ══════ STATISTICS PAGE ══════
+function renderStatsPage(){
+  const ss=subjStats();
+  const appeared=STUDENTS.filter(s=>s.appeared);
+  const passed=STUDENTS.filter(s=>s.overallPass);
+  
+  // GPA buckets
+  const gpaBuckets={"5.0":0,"4.0-4.9":0,"3.5-3.9":0,"3.0-3.4":0,"2.0-2.9":0,"1.0-1.9":0,"0.0-0.9":0};
+  appeared.forEach(s=>{
+    const g=s.gpa;
+    if(g>=5)gpaBuckets["5.0"]++;
+    else if(g>=4)gpaBuckets["4.0-4.9"]++;
+    else if(g>=3.5)gpaBuckets["3.5-3.9"]++;
+    else if(g>=3)gpaBuckets["3.0-3.4"]++;
+    else if(g>=2)gpaBuckets["2.0-2.9"]++;
+    else if(g>=1)gpaBuckets["1.0-1.9"]++;
+    else gpaBuckets["0.0-0.9"]++;
+  });
+
+  const avgGpa=(appeared.reduce((a,s)=>a+s.gpa,0)/appeared.length).toFixed(2);
+  const avgTotal=Math.round(appeared.reduce((a,s)=>a+s.grand,0)/appeared.length);
+  
+  document.getElementById('statsCards').innerHTML=[
+    {v:appeared.length,l:"Appeared",c:"var(--sky)",bg:"#e0f2fe",ic:"ri-user-follow-line"},
+    {v:passed.length,l:"Passed",c:"var(--emerald)",bg:"#d1fae5",ic:"ri-checkbox-circle-line"},
+    {v:`${((passed.length/appeared.length)*100).toFixed(1)}%`,l:"Pass Rate",c:"var(--emerald)",bg:"#d1fae5",ic:"ri-percent-line"},
+    {v:avgGpa,l:"Avg GPA",c:"var(--sky)",bg:"#e0f2fe",ic:"ri-star-line"},
+    {v:avgTotal,l:"Avg Total",c:"var(--amber)",bg:"#fef3c7",ic:"ri-bar-chart-line"},
+    {v:RANKED.filter(s=>s.appeared)[0]?.grand||0,l:"Highest Total",c:"var(--violet)",bg:"#ede9fe",ic:"ri-trophy-line"},
+    {v:appeared.filter(s=>s.gpa>=5).length,l:"GPA 5.0",c:"var(--emerald)",bg:"#d1fae5",ic:"ri-medal-line"},
+    {v:appeared.filter(s=>s.gpa>=4).length,l:"GPA 4.0+",c:"var(--sky)",bg:"#e0f2fe",ic:"ri-award-line"},
+  ].map(x=>`<div class="stat-card"><div class="si" style="background:${x.bg};color:${x.c}"><i class="${x.ic}"></i></div><div class="sv" style="color:${x.c}">${x.v}</div><div class="sl">${x.l}</div></div>`).join('');
+
+  mkBar('chartGpaDist',{labels:Object.keys(gpaBuckets),datasets:[{data:Object.values(gpaBuckets),backgroundColor:["#059669aa","#0891b2aa","#7c3aedaa","#3b82f6aa","#d97706aa","#f97316aa","#ef4444aa"],borderRadius:6,label:"Students"}]});
+  mkBar('chartPassRates',{labels:SUBJECTS,datasets:[{data:ss.map(s=>s.passRate),backgroundColor:ss.map(s=>s.passRate>=70?"#05996988":s.passRate>=40?"#d9770688":"#ef444488"),borderRadius:6,label:"Pass Rate %"}]});
+
+  // Subject toppers
+  document.getElementById('subjectToppers').innerHTML=SUBJECTS.map((subj,i)=>{
+    const top=[...STUDENTS].filter(s=>s.totals[i]>0).sort((a,b)=>b.totals[i]-a.totals[i])[0];
+    if(!top)return`<div class="subj-card"><div class="sc-name">${subj}</div><div style="font-size:12px;color:var(--slate-m)">No data</div></div>`;
+    const g=getGrade(top.totals[i]);
+    return`<div class="subj-card" style="border-top:3px solid ${COLORS[i]}">
+      <div class="sc-hd"><div class="sc-name" style="color:${COLORS[i]}">${subj}</div><i class="ri-trophy-line" style="color:${COLORS[i]}"></i></div>
+      <div style="font-weight:800;font-size:13px;color:var(--ink);margin-bottom:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${top.name}</div>
+      <div style="font-size:11px;color:var(--slate-m);font-family:var(--mono);margin-bottom:8px">${top.roll}</div>
+      <div class="sc-avg" style="color:${COLORS[i]}">${top.totals[i]}</div>
+      <div style="margin-top:6px">${gpill(g)}</div>
+    </div>`;
+  }).join('');
+
+  // Grade-wise table per subject
+  const grades=["A+","A","A-","B","C","D","F"];
+  const gradeCounts={};
+  grades.forEach(g=>{
+    gradeCounts[g]=SUBJECTS.map((s,i)=>{
+      return STUDENTS.filter(st=>{
+        const gr=getGrade(st.totals[i]);
+        const hasEntry=st.totals[i]>0||st.ct[i]>0;
+        return hasEntry&&gr.l===g;
+      }).length;
+    });
+  });
+  document.getElementById('gradeWiseTable').innerHTML=`<thead><tr><th>Grade</th>${SUBJECTS.map(s=>`<th>${s}</th>`).join('')}<th>Total</th></tr></thead>
+  <tbody>${grades.map(g=>{
+    const vals=gradeCounts[g];
+    const tot=vals.reduce((a,b)=>a+b,0);
+    const cls=g==="A+"?"gAp":g==="A"?"gA":g==="A-"?"gAm":g==="B"?"gB":g==="C"?"gC":g==="D"?"gD":"gF";
+    return`<tr><td><span class="gp ${cls}">${g}</span></td>${vals.map(v=>`<td style="text-align:center;font-weight:600">${v}</td>`).join('')}<td style="text-align:center;font-weight:700;color:var(--sky)">${tot}</td></tr>`;
+  }).join('')}</tbody>`;
+}
+
+// ══════ SCROLL ══════
+window.addEventListener('scroll',()=>{
+  document.getElementById('scrollTopBtn').classList.toggle('vis',window.scrollY>300);
+});
 </script>
 </body>
 </html>
