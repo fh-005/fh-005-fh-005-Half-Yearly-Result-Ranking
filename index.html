@@ -318,9 +318,12 @@ select.inp option{background:#fff}
 <script>
 // ══════════════════════════════════════════════════════
 // DATA — 8 subjects: Bangla, English, Physics, Chemistry, Biology, Math, Agriculture, ICT
-// Agriculture (index 6) = 0 for all students (they take Biology as their optional subject)
-// ICT is index 7
-// Arrays: ct[8], sub[8], obj[8]
+// NOTE: Agriculture (index 6) = 0 for most students.
+// Students with "Agricultural" as additional subject have non-zero Agriculture marks.
+// 9 students have Agriculture: SL 18,19,20,24,81,191,237,238,247
+// English Objective (index 1 of obj[]) = 0 for all — English has no objective component.
+// Arrays: ct[8], sub[8], obj[8]  |  Total per subject = ct + sub + obj
+// All grand totals verified against official PDF tabulation sheet.
 // ══════════════════════════════════════════════════════
 const RAW=[
 {sl:1,name:"TANZILA",roll:"271001",ct:[8,5,8,7,9,3,0,9],sub:[41,63,24,39,41,22,0,47],obj:[19,0,24,16,20,6,0,23]},
@@ -340,13 +343,13 @@ const RAW=[
 {sl:15,name:"MD. SHAJIDUL HASAN SHAJID",roll:"271015",ct:[8,6,0,6,7,5,0,8],sub:[38,51,24,28,18,8,0,47],obj:[19,0,16,14,18,16,0,21]},
 {sl:16,name:"MD. JAKIR ALI",roll:"271016",ct:[7,6,6,7,7,4,0,6],sub:[32,48,32,33,32,3,0,29],obj:[22,0,23,20,17,10,0,23]},
 {sl:17,name:"MD. ASHIQUR RAHMAN ANIK",roll:"271017",ct:[7,7,3,4,6,4,0,7],sub:[33,32,42,22,21,0,0,10],obj:[14,0,9,10,12,9,0,12]},
-{sl:18,name:"TANDRA HALDER",roll:"271018",ct:[8,6,7,5,6,0,0,10],sub:[36,31,12,22,30,0,0,11],obj:[13,0,11,15,20,0,0,11]},
-{sl:19,name:"SAJIA AKTER",roll:"271019",ct:[8,7,8,8,8,0,0,8],sub:[34,45,23,40,35,0,0,36],obj:[20,0,22,15,24,0,0,21]},
-{sl:20,name:"TAPATI MANDAL",roll:"271020",ct:[8,7,8,8,8,0,0,8],sub:[31,48,23,38,33,0,0,45],obj:[17,0,20,14,24,0,0,22]},
+{sl:18,name:"TANDRA HALDER",roll:"271018",ct:[8,6,7,5,6,0,0,10],sub:[36,31,12,22,30,0,23,11],obj:[13,0,11,15,20,0,21,11]},
+{sl:19,name:"SAJIA AKTER",roll:"271019",ct:[8,7,8,8,8,0,0,8],sub:[34,45,23,40,35,0,29,36],obj:[20,0,22,15,24,0,19,21]},
+{sl:20,name:"TAPATI MANDAL",roll:"271020",ct:[8,7,8,8,8,0,0,8],sub:[31,48,23,38,33,0,32,45],obj:[17,0,20,14,24,0,20,22]},
 {sl:21,name:"MARIA BINTAY",roll:"271021",ct:[8,8,8,6,7,6,0,8],sub:[35,51,26,38,36,10,0,22],obj:[16,0,15,16,21,9,0,12]},
 {sl:22,name:"NUJHAT HOSSAIN",roll:"271022",ct:[7,0,7,6,7,6,0,9],sub:[47,72,28,47,42,10,0,35],obj:[19,0,20,17,23,15,0,21]},
 {sl:23,name:"MAISHA ADIBA",roll:"271023",ct:[8,8,7,5,7,6,0,9],sub:[35,63,32,40,50,17,0,50],obj:[4,0,18,18,21,14,0,26]},
-{sl:24,name:"ALIF BINTE",roll:"271024",ct:[8,8,7,5,8,0,0,8],sub:[38,59,21,40,47,0,0,34],obj:[19,0,20,18,18,0,0,26]},
+{sl:24,name:"ALIF BINTE",roll:"271024",ct:[8,8,7,5,8,0,0,8],sub:[38,59,21,40,47,0,32,34],obj:[19,0,20,18,18,0,20,26]},
 {sl:25,name:"FAHMIDA IKRA",roll:"271025",ct:[8,6,7,6,5,5,0,8],sub:[36,60,9,17,30,0,0,22],obj:[16,0,10,12,11,12,0,15]},
 {sl:26,name:"MST RUKU KHATUN",roll:"271026",ct:[9,7,7,4,8,10,0,10],sub:[38,30,21,0,5,0,0,20],obj:[15,0,11,15,16,14,0,14]},
 {sl:27,name:"RUBIYA ISLAM SAMIA",roll:"271027",ct:[9,6,7,5,8,6,0,7],sub:[30,36,17,38,29,10,0,40],obj:[19,0,23,15,26,12,0,18]},
@@ -403,7 +406,7 @@ const RAW=[
 {sl:78,name:"MST ALO MONI",roll:"271079",ct:[8,5,5,0,6,6,0,5],sub:[30,36,40,17,11,3,0,28],obj:[4,0,9,17,10,6,0,15]},
 {sl:79,name:"SHEIKH NAHID ALAM",roll:"271080",ct:[7,6,7,3,7,4,0,4],sub:[23,18,14,6,11,3,0,10],obj:[19,0,14,16,17,14,0,26]},
 {sl:80,name:"SK. MAHZABIN IMROZE",roll:"271081",ct:[7,6,4,0,8,4,0,4],sub:[29,41,3,0,24,0,0,0],obj:[3,0,11,6,16,8,0,18]},
-{sl:81,name:"NISHITA AKTHER",roll:"271082",ct:[7,6,6,6,9,0,0,4],sub:[32,46,26,14,38,0,0,30],obj:[2,0,12,10,16,0,0,23]},
+{sl:81,name:"NISHITA AKTHER",roll:"271082",ct:[7,6,6,6,9,0,0,4],sub:[32,46,26,14,38,0,34,30],obj:[2,0,12,10,16,0,19,23]},
 {sl:82,name:"AYAS SULAIM SEHBA",roll:"271083",ct:[8,8,4,5,8,4,0,7],sub:[39,49,21,27,27,10,0,46],obj:[20,0,10,14,16,18,0,27]},
 {sl:83,name:"SYED PRANTO MIA",roll:"271084",ct:[6,4,7,3,7,4,0,6],sub:[26,31,2,0,6,0,0,21],obj:[18,0,10,11,15,18,0,24]},
 {sl:84,name:"MD. JOBAIR HASAN RAHIN",roll:"271085",ct:[6,5,7,3,5,5,0,6],sub:[36,42,12,16,20,3,0,23],obj:[3,0,10,14,15,17,0,23]},
@@ -513,7 +516,7 @@ const RAW=[
 {sl:188,name:"MD. ARIF HOSEN",roll:"271192",ct:[4,6,1,3,7,4,0,6],sub:[28,49,12,16,20,17,0,22],obj:[11,0,18,10,21,14,0,14]},
 {sl:189,name:"OMAR IMTIAZ",roll:"271193",ct:[4,6,1,4,8,7,0,0],sub:[19,42,17,21,15,22,0,33],obj:[13,0,22,14,15,15,0,16]},
 {sl:190,name:"MD. RATUL HASAN",roll:"271194",ct:[4,6,3,4,8,3,0,6],sub:[27,45,0,27,16,5,0,29],obj:[13,0,0,12,18,12,0,18]},
-{sl:191,name:"MD. MIJAN ALAM",roll:"271195",ct:[3,5,3,4,8,0,0,2],sub:[24,44,4,12,12,0,0,33],obj:[12,0,12,10,12,0,0,16]},
+{sl:191,name:"MD. MIJAN ALAM",roll:"271195",ct:[3,5,3,4,8,0,0,2],sub:[24,44,4,12,12,0,20,33],obj:[12,0,12,10,12,0,16,16]},
 {sl:192,name:"NADIYA AKTER SORNA",roll:"271196",ct:[6,8,2,3,8,3,0,6],sub:[36,59,15,18,23,8,0,33],obj:[11,0,11,12,16,14,0,22]},
 {sl:193,name:"MD. HASIBUL",roll:"271197",ct:[5,5,0,5,8,4,0,6],sub:[19,38,0,0,0,0,0,34],obj:[14,0,0,0,0,0,0,27]},
 {sl:194,name:"SAUDA SULTANA",roll:"271198",ct:[4,6,2,3,0,0,0,9],sub:[22,45,22,4,10,0,0,28],obj:[10,0,8,14,10,0,0,27]},
@@ -569,7 +572,7 @@ const RAW=[
 {sl:244,name:"SUBONNA AKTER SANTA",roll:"271250",ct:[4,7,8,1,4,3,0,7],sub:[23,35,5,8,14,0,0,18],obj:[18,0,12,11,14,12,0,18]},
 {sl:245,name:"TAHRIM RASHID",roll:"271251",ct:[4,6,8,5,8,3,0,5],sub:[26,54,0,15,15,9,0,32],obj:[19,0,17,8,11,14,0,17]},
 {sl:246,name:"MST KEYA AKTER",roll:"271252",ct:[5,6,2,1,3,3,0,6],sub:[14,30,3,11,5,0,0,2],obj:[13,0,12,10,10,10,0,14]},
-{sl:247,name:"ATIKA AKTAR",roll:"271253",ct:[0,0,0,0,0,0,0,0],sub:[0,0,9,21,12,0,0,11],obj:[0,0,17,18,14,0,0,16]},
+{sl:247,name:"ATIKA AKTAR",roll:"271253",ct:[0,0,0,0,0,0,0,0],sub:[0,0,9,21,12,0,26,11],obj:[0,0,17,18,14,0,23,16]},
 {sl:248,name:"MD. SHOWRAV",roll:"271254",ct:[0,0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0,0]},
 {sl:249,name:"JANNATUL NAIM",roll:"271255",ct:[6,7,8,2,4,2,0,7],sub:[23,32,6,14,3,4,0,27],obj:[17,0,9,11,10,10,0,18]},
 {sl:250,name:"ASADULLAH GALIB",roll:"271256",ct:[4,3,4,2,3,1,0,4],sub:[18,39,3,0,5,0,0,16],obj:[15,0,16,16,17,16,0,16]},
@@ -627,23 +630,19 @@ const RAW=[
 {sl:302,name:"JAHIDUL ISLAM",roll:"271311",ct:[0,0,0,0,0,0,0,0],sub:[0,0,0,0,0,0,0,0],obj:[0,0,0,0,0,0,0,0]}
 ];
 
-// ── CONSTANTS ──────────────────────────────────────────
 const SUBJECTS=["Bangla","English","Physics","Chemistry","Biology","Math","Agriculture","ICT"];
 const SUB_SHORT=["BAN","ENG","PHY","CHEM","BIO","MATH","AGRI","ICT"];
 const COLORS=["#0284c7","#7c3aed","#059669","#d97706","#dc2626","#0891b2","#16a34a","#6366f1"];
 const SUB_COLORS_BG=["#e0f2fe","#ede9fe","#d1fae5","#fef3c7","#fee2e2","#cffafe","#dcfce7","#e0e7ff"];
 
-// ── STUDENT PROCESSING ────────────────────────────────
 const STUDENTS = RAW.map(s=>{
   const totals = s.ct.map((c,i) => c + s.sub[i] + s.obj[i]);
   const grand = totals.reduce((a,b) => a+b, 0);
   const appeared = grand > 0 || s.ct.some(v=>v>0) || s.sub.some(v=>v>0);
-  // Count subjects actually appeared (any entry > 0)
   const subjAppeared = totals.filter((t,i) => t>0 || s.ct[i]>0 || s.sub[i]>0 || s.obj[i]>0).length;
   return {...s, totals, grand, appeared, subjAppeared};
 });
 
-// Rank by grand total descending (only appeared students get numeric rank)
 let rankCounter = 0;
 const RANKED = [...STUDENTS]
   .sort((a,b) => b.grand - a.grand || a.sl - b.sl)
@@ -655,7 +654,6 @@ const RANKED = [...STUDENTS]
 const BY_ROLL = {};
 RANKED.forEach(s => { BY_ROLL[s.roll] = s; });
 
-// ── SUBJECT STATS ────────────────────────────────────
 function subjStats(){
   return SUBJECTS.map((name,i) => {
     const marks = STUDENTS.filter(s => s.totals[i]>0).map(s => s.totals[i]);
@@ -666,7 +664,6 @@ function subjStats(){
   });
 }
 
-// ── CHART HELPERS ────────────────────────────────────
 const CI={};
 function dc(id){if(CI[id]){CI[id].destroy();delete CI[id];}}
 const darkGrid={color:"rgba(0,0,0,0.05)"};
@@ -690,14 +687,12 @@ function mkRadar(id,data){
   CI[id]=new Chart(document.getElementById(id),{type:"radar",data,options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:"#64748b",font:{size:11}}},tooltip:ttpDef},scales:{r:{min:0,max:100,grid:{color:"rgba(0,0,0,0.08)"},angleLines:{color:"rgba(0,0,0,0.08)"},pointLabels:{color:"#64748b",font:{size:11}},ticks:{color:"#94a3b8",backdropColor:"transparent",font:{size:9}}}}}});
 }
 
-// ── RANK BADGE ───────────────────────────────────────
 function rbadge(r){
   if(r==='-') return `<span class="rank-badge">—</span>`;
   const cls=r===1?"gold":r===2?"silver":r===3?"bronze":"";
   return `<span class="rank-badge ${cls}">${r}</span>`;
 }
 
-// ── HERO ─────────────────────────────────────────────
 function heroAC(){
   const v=document.getElementById('heroSearch').value;
   const drop=document.getElementById('heroAcDrop');
@@ -736,7 +731,6 @@ function goToApp(){
   initOverview();
 }
 
-// ── NAV ──────────────────────────────────────────────
 let currentPage=0;
 function showPage(n){
   document.querySelectorAll('.page').forEach((p,i)=>p.classList.toggle('active',i===n));
@@ -749,7 +743,6 @@ function showPage(n){
   if(n===5)renderStatsPage();
 }
 
-// ── OVERVIEW ─────────────────────────────────────────
 function initOverview(){
   const ss=subjStats();
   const appeared=STUDENTS.filter(s=>s.appeared).length;
@@ -795,7 +788,6 @@ function initOverview(){
   </tr>`).join('')}</tbody>`;
 }
 
-// ── RANKINGS ─────────────────────────────────────────
 let rankPage=1, sortDir='desc';
 const RANK_PER=25;
 
@@ -843,7 +835,6 @@ function renderRankings(){
   document.getElementById('rankPager').innerHTML=pager;
 }
 
-// ── AUTOCOMPLETE ─────────────────────────────────────
 function acSuggest(q){
   if(!q.trim()) return [];
   const ql=q.toLowerCase();
@@ -857,7 +848,6 @@ function acHtml(suggs,fn){
   </div>`).join('');
 }
 
-// ── STUDENT DETAIL ───────────────────────────────────
 let stuSelected=null;
 function stuAC(){
   const v=document.getElementById('stuSearch').value;
@@ -929,7 +919,6 @@ function renderStudentDetail(){
   ]});
 }
 
-// ── COMPARE ──────────────────────────────────────────
 let cmpS1=null, cmpS2=null;
 function cmpAC1(){const v=document.getElementById('cmp1').value;const drop=document.getElementById('cmpDrop1');drop.innerHTML=acHtml(acSuggest(v),'pickCmp1');drop.style.display=acSuggest(v).length?'block':'none';}
 function cmpAC2(){const v=document.getElementById('cmp2').value;const drop=document.getElementById('cmpDrop2');drop.innerHTML=acHtml(acSuggest(v),'pickCmp2');drop.style.display=acSuggest(v).length?'block':'none';}
@@ -992,7 +981,6 @@ function renderCompare(){
   ]});
 }
 
-// ── SUBJECT ANALYSIS ─────────────────────────────────
 let activeSubj=0;
 function renderSubjPage(){
   const ss=subjStats();
@@ -1024,7 +1012,6 @@ function renderSubjPage(){
   <tbody>${sorted.map((st,i)=>`<tr><td style="color:var(--slate-m);font-size:12px">${i+1}</td><td style="font-weight:600">${st.name}</td><td class="mono" style="font-size:11px;color:var(--slate-m)">${st.roll}</td><td>${st.ct[activeSubj]}</td><td>${st.sub[activeSubj]}</td><td>${st.obj[activeSubj]}</td><td style="font-weight:700;color:${COLORS[activeSubj]}">${st.totals[activeSubj]}</td></tr>`).join('')}</tbody>`;
 }
 
-// ── STATISTICS PAGE ───────────────────────────────────
 function renderStatsPage(){
   const ss=subjStats();
   const appeared=RANKED.filter(s=>s.appeared);
@@ -1045,7 +1032,6 @@ function renderStatsPage(){
   mkBar('chartScoreDist',{labels:bandLabels,datasets:[{data:bandCounts,backgroundColor:["#05996988","#0891b288","#7c3aed88","#3b82f688","#d9770688","#f9731688","#ef444488"],borderRadius:6,label:"Students"}]});
   mkBar('chartSubjAvg',{labels:SUBJECTS.map(s=>s.substring(0,5)),datasets:[{data:ss.map(s=>s.avg),backgroundColor:COLORS.map(c=>c+'44'),borderColor:COLORS,borderWidth:2,borderRadius:6,label:"Avg"}]});
 
-  // Subject toppers
   document.getElementById('subjectToppers').innerHTML=SUBJECTS.map((subj,i)=>{
     const top=[...STUDENTS].filter(s=>s.totals[i]>0).sort((a,b)=>b.totals[i]-a.totals[i])[0];
     if(!top) return`<div class="subj-card" style="border-top:3px solid ${COLORS[i]}"><div class="sc-name" style="color:${COLORS[i]}">${subj}</div><div style="font-size:12px;color:var(--slate-m);margin-top:8px">No data</div></div>`;
@@ -1057,7 +1043,6 @@ function renderStatsPage(){
     </div>`;
   }).join('');
 
-  // Top 20
   const top20=appeared.slice(0,20);
   document.getElementById('top20Table').innerHTML=`<thead><tr><th>Rank</th><th>Name</th><th>Roll</th>${SUBJECTS.map(s=>`<th>${s.substring(0,4)}</th>`).join('')}<th>Total</th></tr></thead>
   <tbody>${top20.map(s=>`<tr>
@@ -1069,7 +1054,6 @@ function renderStatsPage(){
   </tr>`).join('')}</tbody>`;
 }
 
-// ── PDF DOWNLOAD ──────────────────────────────────────
 function downloadPDF(student){
   if(!student) return;
   const win=window.open('','_blank');
@@ -1111,7 +1095,6 @@ function downloadPDF(student){
   win.document.close();
 }
 
-// ── CSV EXPORT ────────────────────────────────────────
 function exportCSV(){
   const list=getRankList();
   const hdr=['Rank','SL','Name','Roll',...SUBJECTS,'Grand Total'];
@@ -1124,7 +1107,6 @@ function exportCSV(){
   a.click();
 }
 
-// ── CLASS SUMMARY REPORT ──────────────────────────────
 function exportSummary(){
   const ss=subjStats();
   const appeared=RANKED.filter(s=>s.appeared);
@@ -1166,7 +1148,6 @@ function exportSummary(){
   win.document.close();
 }
 
-// ── SCROLL ────────────────────────────────────────────
 window.addEventListener('scroll',()=>{
   document.getElementById('scrollTopBtn').classList.toggle('vis',window.scrollY>300);
 });
